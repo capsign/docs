@@ -38,7 +38,7 @@ Self-hosted CapSign gives you **complete control** over your infrastructure depl
 
 ### CMX Token Pricing (20% Discount)
 
-- **2,000 CMX/month** - Save $500/month
+- **$2,000/month paid in CMX** - Save $500/month
 - **Lock rates** - 7-day price stability for budgeting
 
 **📊 Full cost analysis**: [Self-Hosted vs Managed Comparison](/pricing/comparison.md)

@@ -113,13 +113,13 @@ Choose the deployment model that best fits your team's capabilities and business
 ### **Self-Hosted with CMX**
 
 - 💵 **USD**: $2,500/month = $30,000/year
-- 🪙 **CMX**: 2,000 CMX/month = $24,000/year equivalent
+- 🪙 **CMX**: $2,000/month paid in CMX = $24,000/year equivalent
 - 💰 **Savings**: $6,000/year (20% discount)
 
 ### **Managed with CMX**
 
 - 💵 **USD**: $10,000/month (2 nodes) = $120,000/year
-- 🪙 **CMX**: 8,000 CMX/month = $96,000/year equivalent
+- 🪙 **CMX**: $8,000/month paid in CMX = $96,000/year equivalent
 - 💰 **Savings**: $24,000/year (20% discount)
 
 ### **Volume Discounts**

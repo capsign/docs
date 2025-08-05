@@ -33,7 +33,7 @@ Welcome to CapSign! You have **two main options** to get started with the CMX Pr
 - SOC 1/2/3 compliant hosting
 - Automatic scaling and updates
 
-**Pricing**: Starting at $5,000/month per node (or 4,000 CMX/month with 20% discount)
+**Pricing**: Starting at $5,000/month per node (or $4,000/month paid in CMX with 20% discount)
 
 **[Learn More About Managed Service →](managed.md)**
 
@@ -57,7 +57,7 @@ Welcome to CapSign! You have **two main options** to get started with the CMX Pr
 - Custom configuration capabilities
 - Lower operational costs
 
-**Pricing**: $2,500/month (or 2,000 CMX/month with 20% discount)
+**Pricing**: $2,500/month (or $2,000/month paid in CMX with 20% discount)
 
 **[Learn More About Self-Hosted →](self-hosted.md)**
 

@@ -266,7 +266,7 @@ This distribution reflects the regulatory realities of capital markets infrastru
 **Using Managed Service (2 nodes):**
 
 - **USD cost**: $10,000/month
-- **CMX cost**: 8,000 CMX/month
+- **CMX cost**: $8,000/month paid in CMX
 - **Guaranteed savings**: $2,000/month (20% discount)
 
 **Annual savings**: $24,000 per year with CMX payments

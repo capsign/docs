@@ -46,7 +46,7 @@ CapSign's **Fully Managed Service** provides enterprise-grade blockchain infrast
 
 ### CMX Token Pricing (20% Discount)
 
-- **4,000 CMX/month per node** - Save $1,000/month per node
+- **$4,000/month per node paid in CMX** - Save $1,000/month per node
 - **Additional volume discounts** - Up to 40% total savings
 - **Price stability features** - 7-day rate locks and 30-day averages
 
