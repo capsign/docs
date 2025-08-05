@@ -1,18 +1,36 @@
-# CapSign Network Governance
+# CMX Network Governance
 
-CapSign employs a **unique corporate-controlled governance model** designed specifically for enterprise capital markets infrastructure, combining corporate accountability with supranational oversight while enabling an open ecosystem of applications.
+CapSign employs a **capital markets infrastructure governance model** designed specifically for enterprise financial infrastructure, combining supranational governance leadership with corporate operational accountability and regulated industry participation.
 
-## Corporate-Controlled Token Model
+## Capital Markets Infrastructure Token Model
 
-### CapSign Inc. Control
+### Swiss Foundation Governance Leadership
 
-**CapSign Inc. maintains control of 87.5% of CMX supply** to ensure:
+**Swiss Foundation holds 45% of CMX supply** for supranational governance, providing:
 
-- **Regulatory compliance** and complete paper trail documentation
-- **Enterprise-grade** service delivery and accountability
-- **Predictable pricing** without market volatility impact
-- **Professional support** and service level agreements
-- **Legal accountability** through corporate entity structure
+- **Regulatory credibility** with SEC, FCA, and international regulators
+- **Industry standards management** without corporate conflicts of interest
+- **Professional oversight** similar to SWIFT or DTCC governance models
+- **Clear legal accountability** for protocol standards and compliance
+- **Neutral jurisdiction** for global capital markets infrastructure
+
+### CapSign Inc. Operational Control
+
+**CapSign Inc. maintains 35% of CMX supply** for operational sustainability, ensuring:
+
+- **Technology development** and protocol maintenance
+- **Service delivery** and enterprise support
+- **Corporate accountability** and professional liability
+- **Reference implementation** authority and standards compliance
+
+### Industry Members Reserve
+
+**Licensed institutions hold 15% of CMX supply** for network participation:
+
+- **Banks and broker-dealers** as professional node operators
+- **Regulated technology partners** for ecosystem development
+- **KYC/licensed entities** replacing traditional "community" concept
+- **Institutional partnerships** driving enterprise adoption
 
 ### Benefits for Enterprises
 
@@ -49,7 +67,7 @@ CapSign employs a **unique corporate-controlled governance model** designed spec
 
 ### International Capital Markets Authority
 
-**CapSign will transfer 10% of CMX supply to an independent supranational entity** for global oversight of capital markets protocol standards.
+**CapSign will allocate 45% of CMX supply to an independent supranational entity** for global oversight of capital markets protocol standards.
 
 ### Recommended Hybrid Implementation Strategy
 
@@ -208,7 +226,7 @@ CapSign employs a **unique corporate-controlled governance model** designed spec
 
 - Swiss foundation legal structure formation
 - SEC, FCA, and Open Cap Table Coalition founding member agreements
-- Initial 10% CMX transfer (100M CMX) to foundation
+- Initial 45% CMX allocation (450M CMX) to foundation
 - Board appointment with regulatory and industry representatives
 
 **Years 2-3: Operational Development**

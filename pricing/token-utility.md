@@ -85,63 +85,61 @@ _CMX token service pricing is set by CapSign Inc. at a 20% discount to USD rates
 ```
 CMX Token Supply: 1,000,000,000 CMX
 
-Corporate-Controlled Distribution:
-├── 87.5% - CapSign Inc. Treasury (875M CMX)
-│   ├── Service utility sales
-│   ├── Strategic partnerships
-│   ├── Team incentives
-│   └── Operational reserves
-├── 10% - Supranational Governance Body (100M CMX)
-│   └── Global capital markets oversight
-├── 2.5% - Private Sale Warrants (25M CMX)
-│   └── Strategic investor warrants
+Capital Markets Infrastructure Distribution:
+├── 45% - Swiss Foundation Governance (450M CMX)
+│   ├── Protocol governance & standards
+│   ├── Regulatory engagement & compliance
+│   ├── Industry grants & partnerships
+│   └── Long-term ecosystem stewardship
+├── 35% - CapSign Inc. Operations (350M CMX)
+│   ├── Technology development & maintenance
+│   ├── Service delivery & operations
+│   ├── Team incentives & corporate treasury
+│   └── Reference implementation
+├── 15% - Industry Members Reserve (150M CMX)
+│   ├── Licensed node operators (banks, brokers)
+│   ├── Regulated technology partners
+│   ├── Ecosystem incentives for compliance
+│   └── Strategic institutional partnerships
+├── 5% - Private Sale Warrants (50M CMX)
+│   └── Strategic investor allocation
 ```
 
-### Recommended Distribution Strategy
+### Distribution Strategy
 
-**Phased Transfer Model (75% / 20% / 5% Target)**
+**Capital Markets Infrastructure Model**
 
-**Phase 1 (Years 1-3): Operational Control**
+This distribution reflects the regulatory realities of capital markets infrastructure:
 
-```
-Initial Distribution:
-├── 87.5% - CapSign Inc Treasury (875M CMX)
-├── 10% - Swiss Foundation (100M CMX)
-└── 2.5% - Private Sale Warrants (25M CMX)
-```
+**Governance Leadership (45%)**
+- **Swiss Foundation** provides supranational governance credibility
+- **Professional oversight** similar to SWIFT or DTCC governance models
+- **Clear legal accountability** for SEC, FCA, and international regulators
+- **Industry standards management** without corporate conflicts of interest
 
-**Phase 2 (Years 4-6): Enhanced Governance**
+**Operational Sustainability (35%)**
+- **CapSign Inc.** maintains technology development and service delivery
+- **Sufficient runway** for team, operations, and growth investments
+- **Reference implementation** authority for protocol standards
+- **Corporate responsibility** for service level agreements
 
-```
-Target Distribution:
-├── 75% - CapSign Inc Treasury (750M CMX)
-├── 20% - International Governance Body (200M CMX)
-└── 5% - Strategic Partnerships (50M CMX)
-```
+**Industry Participation (15%)**
+- **Licensed participants only** - banks, broker-dealers, custodians
+- **KYC/regulated entities** replace traditional "community" concept
+- **Professional node operators** rather than retail participants
+- **Institutional partnerships** drive network adoption
 
 **Strategic Benefits:**
 
-- **Maintains corporate accountability** while building international legitimacy
-- **Gradual governance maturation** reduces operational risk during early phases
-- **Enhanced strategic partnerships** through increased warrant allocation
-- **Regulatory acceptance** through demonstrated responsible stewardship
-- **Flexibility** to adjust based on governance body performance
-
-### Alternative Models Considered
-
-**Conservative Model (87.5% / 10% / 2.5%)**
-
-- Maximum corporate control for early phases
-- Minimal governance complexity
-
-**Multi-Category Model (70% / 15% / 10% / 5%)**
-
-- Separate industry development fund
-- More complex governance structure
+- **Regulatory credibility** through foundation governance majority
+- **Professional management** replaces DAO legal complexity  
+- **Industry-standard allocation** similar to financial infrastructure
+- **Clear separation** between governance and operations
+- **Institutional adoption** focus over retail participation
 
 ### Supranational Governance Body
 
-**CapSign will establish an independent supranational entity** to oversee global capital markets protocol governance, receiving 10% of CMX token supply (100M CMX).
+**CapSign will establish an independent supranational entity** to oversee global capital markets protocol governance, receiving 45% of CMX token supply (450M CMX).
 
 **Potential Legal Structures:**
 
