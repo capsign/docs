@@ -15,7 +15,7 @@
 - [Identity Verification](demos/identity-verification.md)
 - [Investor Qualification](demos/investor-qualification.md)
 
-## CMX Protocol
+## 🏦 CMX Protocol
 
 - [Protocol Overview](protocol/README.md)
 - [Smart Contracts](protocol/contracts.md)
@@ -45,11 +45,14 @@
 
 ## 🏗️ Self-Hosted Infrastructure
 
-- [Prerequisites](prerequisites/README.md)
-- [Quick Start Guide](quickstart/README.md)
-- [Repository Setup](installation/setup.md)
-- [Secrets Configuration](installation/secrets.md)
-- [Installation Guide](installation/README.md)
+- [Infrastructure Overview](infrastructure/README.md)
+- [Prerequisites](infrastructure/prerequisites.md)
+- [Quick Start Guide](infrastructure/quickstart.md)
+- [Repository Setup](infrastructure/setup.md)
+- [Secrets Configuration](infrastructure/secrets.md)
+- [Installation Guide](infrastructure/installation.md)
+- [Optional Services](infrastructure/optional-services.md)
+- [SOC Compliance](infrastructure/soc-compliance.md)
 
 ## 👩‍💻 Developer Resources
 
