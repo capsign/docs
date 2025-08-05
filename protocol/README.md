@@ -13,7 +13,7 @@ The CMX Protocol uses a **diamond-based architecture** (EIP-2535) for maximum up
 - **📋 Attestation System** - Identity verification and compliance
 - **💎 Asset Tokenization** - Securities and RWA tokenization
 - **📊 Trading Markets** - Multiple trading venue types
-- **⚖️ Governance** - DAO and voting mechanisms
+- **⚖️ Governance** - Corporate governance and voting mechanisms
 - **📚 Document Management** - Secure document storage and verification
 - **💰 Payment Systems** - Gas abstraction and billing
 - **📖 Accounting Ledgers** - Double-entry bookkeeping
@@ -71,7 +71,7 @@ The CMX Protocol uses a **diamond-based architecture** (EIP-2535) for maximum up
 
 ### Governance & Operations
 
-- **[DAO Governance](contracts.md#governance)** - Decentralized decision making
+- **[Corporate Governance](contracts.md#governance)** - Board and shareholder decision making
 - **[Accounting Ledgers](contracts.md#ledgers)** - Double-entry bookkeeping
 - **[Subscription Billing](contracts.md#billing)** - Payment and subscription management
 
