@@ -1,8 +1,8 @@
-# 🔍 Self-Hosted vs Managed Comparison
+# Self-Hosted vs Managed Comparison
 
 Choose the deployment model that best fits your team's capabilities and business requirements.
 
-## 📊 Feature Comparison
+## Feature Comparison
 
 | Feature               | Community      | Self-Hosted         | Fully Managed       |
 | --------------------- | -------------- | ------------------- | ------------------- |
@@ -15,7 +15,7 @@ Choose the deployment model that best fits your team's capabilities and business
 | **💰 Cost**           | Free           | $2.5K/month         | $5K/month/node      |
 | **🪙 CMX Discount**   | N/A            | 20% off             | 20% off             |
 
-## 🏗️ **Self-Hosted Enterprise**
+## Self-Hosted Enterprise
 
 ### **✅ Best For:**
 
@@ -48,7 +48,7 @@ Choose the deployment model that best fits your team's capabilities and business
 
 ---
 
-## 🚀 **Fully Managed Service**
+## Fully Managed Service
 
 ### **✅ Best For:**
 
@@ -82,7 +82,7 @@ Choose the deployment model that best fits your team's capabilities and business
 
 ---
 
-## 💰 Total Cost of Ownership (TCO)
+## Total Cost of Ownership (TCO)
 
 ### **Self-Hosted Annual Costs**
 
@@ -108,7 +108,7 @@ Choose the deployment model that best fits your team's capabilities and business
 
 **💡 Savings with Managed**: **~$69,000/year** for 2-node deployment
 
-## 🪙 CMX Token Pricing Benefits
+## CMX Token Pricing Benefits
 
 ### **Self-Hosted with CMX**
 
@@ -131,7 +131,7 @@ For 10+ nodes, additional 15% off:
 
 ---
 
-## 🎯 Migration Path
+## Migration Path
 
 ### **Start Self-Hosted → Move to Managed**
 
@@ -149,7 +149,7 @@ For 10+ nodes, additional 15% off:
 
 ---
 
-## 🤔 Decision Framework
+## Decision Framework
 
 ### **Choose Self-Hosted If:**
 
@@ -169,7 +169,7 @@ For 10+ nodes, additional 15% off:
 
 ---
 
-## 📞 Get Expert Advice
+## Get Expert Advice
 
 **Not sure which option fits your needs?**
 

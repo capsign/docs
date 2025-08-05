@@ -1,8 +1,8 @@
-# 💰 CapSign Pricing Overview
+# CapSign Pricing Overview
 
 CapSign offers flexible pricing options to meet the needs of individual developers, enterprises, and institutional capital markets participants. Our **hybrid pricing model** combines USD stability with CMX token utility.
 
-## 🎯 Pricing Philosophy
+## Pricing Philosophy
 
 **Choose how you want to pay:**
 
@@ -10,9 +10,9 @@ CapSign offers flexible pricing options to meet the needs of individual develope
 - 🪙 **CMX Tokens** - Save with token utility discounts
 - 🔄 **Hybrid** - Best of both worlds
 
-## 📊 Service Tiers
+## Service Tiers
 
-### 🌟 **Community** (Free)
+### Community (Free)
 
 **Perfect for developers and proof-of-concepts**
 
@@ -26,7 +26,7 @@ CapSign offers flexible pricing options to meet the needs of individual develope
 
 ---
 
-### 🏢 **Enterprise Self-Hosted**
+### Enterprise Self-Hosted
 
 **For teams managing their own infrastructure**
 
@@ -47,7 +47,7 @@ CapSign offers flexible pricing options to meet the needs of individual develope
 
 ---
 
-### 🚀 **Fully Managed Service**
+### Fully Managed Service
 
 **Complete infrastructure management by CapSign**
 
@@ -76,34 +76,34 @@ CapSign offers flexible pricing options to meet the needs of individual develope
 
 ---
 
-## 🪙 CMX Token Utility & Discounts
+## CMX Token Utility & Discounts
 
-### **Why Pay with CMX Tokens?**
+### Why Pay with CMX Tokens?
 
 1. **💰 Cost Savings**: 20% discount on all services
 2. **🔒 Token Utility**: Direct use case drives CMX value
 3. **🎯 Ecosystem Alignment**: Support the CapSign ecosystem
 4. **📈 Potential Appreciation**: Tokens may increase in value
 
-### **Token Pricing Mechanism**
+### Token Pricing Mechanism
 
-- **📊 Dynamic Conversion**: USD prices converted to CMX at 30-day moving average
-- **🔄 Monthly Billing**: Tokens locked for service period
-- **⚖️ Price Stability**: Minimum 7-day price lock for budgeting
-- **🛡️ Volatility Protection**: Price caps and collars for enterprise customers
+- **Fixed Service Rates**: CapSign sets CMX service prices directly at 20% discount to USD
+- **Monthly Billing**: Consistent CMX token amounts for predictable costs
+- **Enterprise Stability**: Annual rate locks available for enterprise contracts
+- **Treasury Control**: No market volatility impact on service pricing
 
-### **How to Acquire CMX Tokens**
+### How to Acquire CMX Tokens
 
-1. **🏦 DEX Trading**: Uniswap, Balancer on Ethereum/Optimism
-2. **💼 Enterprise Purchase**: Direct from CapSign treasury
-3. **⛏️ Network Validation**: Earn CMX by running CMX Network validators
-4. **🎁 Service Credits**: Convert unused enterprise credits to CMX
+1. **Enterprise Purchase**: Direct from CapSign treasury (recommended for service payments)
+2. **Network Validation**: Earn CMX by running CMX Network validators
+3. **Service Credits**: Convert unused enterprise credits to CMX
+4. **Secondary Markets**: DEX trading available for smaller amounts
 
 ---
 
-## 🏛️ Enterprise & Institutional
+## Enterprise & Institutional
 
-### **Custom Enterprise Solutions**
+### Custom Enterprise Solutions
 
 For large financial institutions and capital markets participants:
 
@@ -116,7 +116,7 @@ For large financial institutions and capital markets participants:
 
 **💬 Contact Sales**: [enterprise@capsign.com](mailto:enterprise@capsign.com)
 
-### **Volume Discounts**
+### Volume Discounts
 
 | Nodes | USD Discount | CMX Discount |
 | ----- | ------------ | ------------ |
@@ -127,31 +127,31 @@ For large financial institutions and capital markets participants:
 
 ---
 
-## 💡 **Which Option Is Right for You?**
+## Which Option Is Right for You?
 
-### 👨‍💻 **Individual Developers**
+### Individual Developers
 
 - **Start with**: Community (Free)
 - **Upgrade to**: Enterprise Self-Hosted when going to production
 
-### 🏢 **Enterprises**
+### Enterprises
 
 - **Technical teams**: Enterprise Self-Hosted
 - **Focus on business**: Fully Managed Service
 
-### 🏛️ **Financial Institutions**
+### Financial Institutions
 
 - **Regulated entities**: Custom Enterprise Solutions
 - **High volume**: Fully Managed with volume discounts
 
-### 🪙 **CMX Token Holders**
+### CMX Token Holders
 
 - **All tiers**: Save 20%+ with token payments
 - **Long-term believers**: Maximum savings and ecosystem support
 
 ---
 
-## 📞 Get Started
+## Get Started
 
 1. **🆓 Try Community**: Start building with free tier
 2. **📊 Calculate Costs**: Use our [pricing calculator](mailto:sales@capsign.com?subject=Pricing%20Calculator)

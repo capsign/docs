@@ -1,8 +1,8 @@
-# 🪙 CMX Token Utility & Economics
+# CMX Token Utility & Economics
 
 The CMX token is the native asset of the CMX Network and provides real utility across the CapSign ecosystem, including **significant discounts** on infrastructure services.
 
-## 🎯 **Core Token Utilities**
+## Core Token Utilities
 
 ### **1. 🏗️ Infrastructure Service Payments**
 
@@ -36,9 +36,9 @@ The CMX token is the native asset of the CMX Network and provides real utility a
 
 ---
 
-## 💸 **Service Pricing with CMX**
+## Service Pricing with CMX
 
-### **Payment Method Comparison**
+### Payment Method Comparison
 
 | Service Tier               | USD Price     | CMX Price        | Your Savings      |
 | -------------------------- | ------------- | ---------------- | ----------------- |
@@ -47,9 +47,9 @@ The CMX token is the native asset of the CMX Network and provides real utility a
 | **Managed (5 nodes)**      | $22,500/month | 15,000 CMX/month | **$6,300/month**  |
 | **Managed (10 nodes)**     | $42,500/month | 26,000 CMX/month | **$11,900/month** |
 
-_Prices based on $1.25 CMX token price for illustration_
+_CMX service pricing is set by CapSign at a 20% discount to USD rates, providing immediate cost savings_
 
-### **Volume Discount Tiers**
+### Volume Discount Tiers
 
 ```
 💰 CMX Token Volume Discounts
@@ -77,9 +77,9 @@ _Prices based on $1.25 CMX token price for illustration_
 
 ---
 
-## 📊 **Token Economics Model**
+## Token Economics Model
 
-### **Supply & Distribution**
+### Supply & Distribution
 
 ```
 🪙 CMX Token Supply: 1,000,000,000 CMX
@@ -93,7 +93,7 @@ _Prices based on $1.25 CMX token price for illustration_
 ├── 10% - Liquidity Rewards (100M CMX)
 ```
 
-### **Demand Drivers**
+### Demand Drivers
 
 1. **🏗️ Infrastructure Payments**
 
@@ -120,47 +120,29 @@ _Prices based on $1.25 CMX token price for illustration_
 
 ---
 
-## 🔄 **Price Stability Mechanisms**
+## Service Pricing Mechanism
 
-### **Enterprise Pricing Protection**
+### CapSign-Controlled Pricing
 
-**Problem**: Token volatility affects enterprise budgeting
-**Solution**: Multiple stability mechanisms
+**CapSign sets CMX service prices directly**, ensuring predictable enterprise billing:
 
-1. **📊 30-Day Moving Average**
+1. **Fixed Service Rates**
 
-   - Service prices based on 30-day CMX price average
-   - Reduces short-term volatility impact
-   - Provides predictable billing
+   - CMX service prices set by CapSign treasury
+   - Built-in 20% discount vs USD pricing
+   - Stable, predictable monthly costs
 
-2. **🔒 7-Day Price Locks**
+2. **Enterprise Pricing Stability**
 
-   - Lock CMX/USD rate for 7 days when purchasing
-   - Enterprise budget certainty
-   - Optional longer locks for annual contracts
-
-3. **📈 Price Caps & Collars**
-   - Maximum 25% monthly price increase
-   - Automatic discounts if CMX price spikes
-   - Enterprise-friendly pricing stability
-
-### **Volatility Management**
-
-```
-🛡️ Price Protection Example:
-
-Month 1: CMX = $1.00, Service = 2,000 CMX
-Month 2: CMX = $1.50 (+50% spike)
-├── Without protection: 1,333 CMX (33% price increase)
-├── With 30-day average: 1,800 CMX (10% increase)
-└── With price cap: 1,600 CMX (25% max increase)
-```
+   - No market volatility impact on service costs
+   - Annual rate locks available for enterprise contracts
+   - Transparent pricing with advance notice of changes
 
 ---
 
-## 💡 **Token Acquisition Strategies**
+## Token Acquisition Strategies
 
-### **🏢 For Enterprises**
+### For Enterprises
 
 1. **📊 Treasury Purchase**
 
@@ -179,7 +161,7 @@ Month 2: CMX = $1.50 (+50% spike)
    - Lock in current pricing
    - Portfolio diversification
 
-### **👨‍💻 For Developers**
+### For Developers
 
 1. **🏊 DEX Trading**
 
@@ -200,27 +182,21 @@ Month 2: CMX = $1.50 (+50% spike)
 
 ---
 
-## 🎯 **ROI Analysis for Service Users**
+## Value Proposition for Service Users
 
-### **Break-Even Scenarios**
+### Immediate Cost Savings
 
-**Assumption**: Using Managed Service (2 nodes)
+**Using Managed Service (2 nodes):**
 
 - **USD cost**: $10,000/month
-- **CMX cost**: 8,000 CMX/month (20% discount)
+- **CMX cost**: 8,000 CMX/month 
+- **Guaranteed savings**: $2,000/month (20% discount)
 
-```
-🪙 CMX Price Scenarios:
+**Annual savings**: $24,000 per year with CMX payments
 
-💚 CMX at $1.00: Pay $8,000 (20% savings)
-💚 CMX at $1.25: Pay $10,000 (break-even)
-💚 CMX at $1.50: Pay $12,000 (-20% vs USD)
-🟡 CMX at $2.00: Pay $16,000 (-60% vs USD)
-```
+**Strategy**: Acquire CMX tokens through CapSign treasury or approved exchanges for consistent service cost savings
 
-**Strategy**: Purchase CMX during price dips, use price locks during volatility
-
-### **Long-Term Value Proposition**
+### Long-Term Value Proposition
 
 1. **📈 Network Growth**: As CMX Network adoption grows, CMX value increases
 2. **💰 Service Savings**: Immediate 20%+ cost reduction
@@ -229,9 +205,9 @@ Month 2: CMX = $1.50 (+50% spike)
 
 ---
 
-## 🤖 **Automated Payment Solutions**
+## Automated Payment Solutions
 
-### **Smart Contract Integration**
+### Smart Contract Integration
 
 ```solidity
 // Example: Automated CMX service payments
@@ -255,7 +231,7 @@ contract CapSignServicePayment {
 }
 ```
 
-### **Enterprise Treasury Management**
+### Enterprise Treasury Management
 
 - **🔄 Automated purchases** - DCA into CMX for service payments
 - **📊 Treasury dashboard** - Real-time CMX balance and service costs
@@ -264,7 +240,7 @@ contract CapSignServicePayment {
 
 ---
 
-## 📞 **Getting Started with CMX Payments**
+## Getting Started with CMX Payments
 
 ### **Step 1: Acquire CMX Tokens**
 
