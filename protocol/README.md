@@ -33,7 +33,7 @@ The CMX Protocol uses a **diamond-based architecture** (EIP-2535) for maximum up
 - **Diamond Architecture** - Secure upgradeable contracts
 - **Role-based Access** - Granular permission system
 - **Multi-signature** - Enterprise governance controls
-- **Formal Verification** - Mathematically proven contract security
+- **Security-First Design** - Built with security best practices
 
 ### Capital Markets Focus
 
@@ -132,11 +132,11 @@ const asset = await client.assets.create({
 
 ## Security Considerations
 
-### Audit Status
+### Security Status
 
-- **Trail of Bits** - Core contracts audited ✅
-- **Consensys Diligence** - Diamond architecture review ✅
-- **Certora** - Formal verification in progress 🔄
+- **Active Development** - Contracts are in active development and testing
+- **Internal Review** - Ongoing internal security review and testing
+- **Future Audits** - Professional security audits planned before mainnet deployment
 
 ### Best Practices
 
@@ -178,7 +178,6 @@ const asset = await client.assets.create({
 - **[Regulatory Framework](compliance.md)** - Regulatory compliance approach
 - **[KYC/AML Implementation](kyc-aml.md)** - Identity verification system
 - **[Securities Law](securities.md)** - Securities regulation compliance
-- **[Audit Requirements](auditing.md)** - Audit and reporting capabilities
 
 ## License
 
