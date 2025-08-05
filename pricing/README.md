@@ -109,7 +109,7 @@ CapSign offers flexible pricing options to meet the needs of individual develope
 **For Investment/Holding (Optional):**
 
 1. **Enterprise Treasury Sales**: Direct purchases from CapSign Inc. with full compliance documentation
-2. **Private Sale Warrants**: Limited allocation (5% of supply) for strategic investors  
+2. **Private Sale Warrants**: Limited allocation (5% of supply) for strategic investors
 3. **Secondary Market Trading**: Once listed on exchanges (future)
 4. **Node Operator Rewards**: Earn CMX through network validation participation
 
@@ -122,22 +122,25 @@ CapSign offers flexible pricing options to meet the needs of individual develope
 
 **Legal Clarity:** CMX has genuine utility (service payments, network gas fees, governance) and operates similar to other established utility tokens like ETH, BTC, and XRP. Holding tokens for investment purposes doesn't change their fundamental utility nature.
 
-### Open Ecosystem with CapSign Standards
+### Open Ecosystem for Capital Markets Innovation
 
-**CapSign Network is designed as open infrastructure** where other companies can build capital markets applications using CapSign Protocol standards:
+**CMX Network provides open infrastructure** for the entire capital markets industry. Any company can build applications using CMX Protocol standards while benefiting from shared compliance and infrastructure.
 
-- **Common standards** for all capital markets operations
-- **Unified token utility** (CST) across all network applications
-- **CapSign Inc. standards authority** ensures regulatory compliance
-- **Enterprise-grade infrastructure** available to all developers
-- **Interoperability** between applications built on shared protocols
+**Ecosystem Benefits:**
 
-**Examples of applications others could build:**
+- **Shared compliance framework** - KYC, AML, and regulatory standards work across all applications
+- **Common CMX token utility** - unified payment, gas, and governance token across the entire ecosystem  
+- **Enterprise-grade infrastructure** - SOC compliant hosting and 99.99% uptime available to all builders
+- **Interoperable applications** - seamless integration between different capital markets tools
 
-- Alternative trading interfaces using CapSign Protocol
-- Specialized compliance tools for different jurisdictions
-- Industry-specific capital markets solutions (real estate, commodities, etc.)
-- Integration tools connecting to existing financial systems
+**Standards Governance:** Swiss Foundation oversight (CapSign Inc. interim) ensures regulatory compliance and industry neutrality.
+
+**Build on CMX Network:**
+
+- **Trading platforms** - Alternative interfaces for different market segments
+- **Compliance solutions** - Jurisdiction-specific regulatory tools  
+- **Vertical markets** - Real estate, commodities, private equity specialized applications
+- **Integration services** - Connect existing financial systems to blockchain infrastructure
 
 ---
 
