@@ -54,6 +54,26 @@
 - [Optional Services](infrastructure/optional-services.md)
 - [SOC Compliance](infrastructure/soc-compliance.md)
 
+## 🚢 Kubernetes & Helm
+
+- [Helm Charts Overview](kubernetes/README.md)
+- [Helm Charts](kubernetes/helm-charts.md)
+- [Monitoring Setup](kubernetes/monitoring.md)
+- [Scaling](kubernetes/scaling.md)
+- [Storage](kubernetes/storage.md)
+- [Networking](kubernetes/networking.md)
+- [Troubleshooting](kubernetes/troubleshooting.md)
+
+## ⚡ Blockchain Infrastructure
+
+- [Node Overview](blockchain/README.md)
+- [Reth (Ethereum)](blockchain/reth.md)
+- [Prysm (Consensus)](blockchain/prysm.md)
+- [Optimism Stack](blockchain/optimism.md)
+- [Node Management](blockchain/management.md)
+- [Validator Setup](blockchain/validators.md)
+- [Sync Strategies](blockchain/sync.md)
+
 ## 👩‍💻 Developer Resources
 
 - [Developer Overview](developers/README.md)
