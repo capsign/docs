@@ -15,7 +15,7 @@
 - [Identity Verification](demos/identity-verification.md)
 - [Investor Qualification](demos/investor-qualification.md)
 
-## 🏦 CMX Protocol
+## 🏦 Capital Markets Protocol
 
 - [Protocol Overview](protocol/README.md)
 - [Smart Contracts](protocol/contracts.md)

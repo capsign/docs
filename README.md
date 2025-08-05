@@ -1,6 +1,6 @@
-# CMX Protocol Documentation
+# CMX Ecosystem Documentation
 
-Welcome to CapSign's comprehensive documentation hub. This resource covers the complete **CMX ecosystem**: the CMX Protocol smart contracts, CMX Network deployment, infrastructure tools, and developer resources.
+Welcome to CapSign's comprehensive documentation hub. This resource covers the complete **CMX ecosystem**: the Capital Markets Protocol smart contracts, CMX Network deployment, infrastructure tools, and developer resources.
 
 **New to CapSign?** Start with our [Interactive Demos](/demos/README.md) to experience the platform without creating an account.
 
@@ -14,11 +14,11 @@ Welcome to CapSign's comprehensive documentation hub. This resource covers the c
 - **Role**: Develops, maintains, and provides enterprise services for the CMX ecosystem
 - **Services**: Managed infrastructure, enterprise support, compliance consulting
 
-### **CMX Protocol**
+### **Capital Markets Protocol**
 
-- **What it is**: Smart contract framework for tokenizing and trading capital markets assets
+- **What it is**: Multi-chain smart contract framework for tokenizing and trading capital markets assets
 - **Built for**: Regulatory compliance, institutional-grade security, and capital markets workflows
-- **Technology**: Diamond Pattern (EIP-2535) on Ethereum with Layer 2 scaling
+- **Technology**: Diamond Pattern (EIP-2535) deployable on Ethereum, CMX Network, Base, and other EVM chains
 
 ### **CMX Network**
 
@@ -32,7 +32,7 @@ Welcome to CapSign's comprehensive documentation hub. This resource covers the c
 - **Uses**: Network gas fees, service payments (20% discount), governance participation
 - **Advantage**: Predictable pricing with 7-day rate locks for enterprise budgeting
 
-**In Summary**: CapSign Inc. is the company behind the CMX ecosystem, which includes the CMX Protocol (smart contracts), CMX Network (blockchain), and CMX Token (utility token).
+**In Summary**: CapSign Inc. is the company behind the CMX ecosystem, which includes the Capital Markets Protocol (smart contracts), CMX Network (blockchain), and CMX Token (utility token).
 
 ## Documentation Structure
 
@@ -49,9 +49,9 @@ Welcome to CapSign's comprehensive documentation hub. This resource covers the c
 - **[Identity Verification](/demos/identity-verification.md)** - KYC/AML process demo
 - **[Investor Qualification](/demos/investor-qualification.md)** - Accreditation verification
 
-### CMX Protocol
+### Capital Markets Protocol
 
-- **[Protocol Overview](/protocol/README.md)** - Capital markets smart contracts industry standard
+- **[Protocol Overview](/protocol/README.md)** - Multi-chain smart contract framework for capital markets
 - **[Smart Contracts](/protocol/contracts.md)** - Contract architecture and APIs
 - **[ERC-7752 Lot Tokens](/protocol/erc-7752.md)** - Revolutionary token standard for capital markets
 - **[Deployment Guide](/protocol/deployment.md)** - Protocol deployment instructions
