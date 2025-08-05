@@ -1,6 +1,6 @@
-# CapSign Token Utility & Economics
+# CMX Token Utility & Economics
 
-The CapSign Token (CST) is the native utility token of the CapSign Network and provides real utility across the entire CapSign ecosystem, including **significant discounts** on infrastructure services.
+The CMX token is the native utility token of the CMX Network and provides real utility across the entire CapSign ecosystem, including **significant discounts** on infrastructure services.
 
 ## Core Token Utilities
 

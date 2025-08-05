@@ -113,12 +113,13 @@ CapSign offers flexible pricing options to meet the needs of individual develope
 **CapSign Network is designed as open infrastructure** where other companies can build capital markets applications using CapSign Protocol standards:
 
 - **Common standards** for all capital markets operations
-- **Unified token utility** (CST) across all network applications  
+- **Unified token utility** (CST) across all network applications
 - **CapSign Inc. standards authority** ensures regulatory compliance
 - **Enterprise-grade infrastructure** available to all developers
 - **Interoperability** between applications built on shared protocols
 
 **Examples of applications others could build:**
+
 - Alternative trading interfaces using CapSign Protocol
 - Specialized compliance tools for different jurisdictions
 - Industry-specific capital markets solutions (real estate, commodities, etc.)

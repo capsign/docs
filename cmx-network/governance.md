@@ -1,6 +1,6 @@
-# CMX Network Governance
+# CapSign Network Governance
 
-CapSign employs a **unique corporate-controlled governance model** designed specifically for enterprise capital markets infrastructure, combining corporate accountability with supranational oversight.
+CapSign employs a **unique corporate-controlled governance model** designed specifically for enterprise capital markets infrastructure, combining corporate accountability with supranational oversight while enabling an open ecosystem of applications.
 
 ## Corporate-Controlled Token Model
 
