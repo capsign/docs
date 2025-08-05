@@ -45,8 +45,8 @@ The CMX token is the native utility token of the CMX Network and provides real u
 | -------------------------- | ------------- | ------------- | ---------------- |
 | **Enterprise Self-Hosted** | $2,500/month  | $2,000/month  | **$500/month**   |
 | **Managed (1 node)**       | $5,000/month  | $4,000/month  | **$1,000/month** |
-| **Managed (5 nodes)**      | $22,500/month | $18,000/month | **$4,500/month** |
-| **Managed (10 nodes)**     | $42,500/month | $34,000/month | **$8,500/month** |
+| **Managed (3 nodes)**      | $13,500/month | $10,800/month | **$2,700/month** |
+| **Managed (7 nodes)**      | $29,750/month | $23,800/month | **$5,950/month** |
 
 _CMX payments automatically convert USD to CMX at market rates, providing 20% discount with just-in-time conversion_
 
@@ -55,24 +55,28 @@ _CMX payments automatically convert USD to CMX at market rates, providing 20% di
 ```
 💰 CMX Token Volume Discounts
 
-🥉 Base Tier (1-4 nodes)
+🥉 Base Tier (1-2 nodes)
 ├── USD discount: 0%
 ├── CMX discount: 20%
+├── Use case: Single region, prod + staging
 └── Effective savings: 20%
 
-🥈 Silver Tier (5-9 nodes)
+🥈 Silver Tier (3-5 nodes)
 ├── USD discount: 10%
 ├── CMX discount: 28% (20% + 10%)
+├── Use case: Multi-region operations
 └── Effective savings: 28%
 
-🥇 Gold Tier (10-19 nodes)
+🥇 Gold Tier (6-10 nodes)
 ├── USD discount: 15%
 ├── CMX discount: 32% (20% + 15%)
+├── Use case: Global institutions
 └── Effective savings: 32%
 
-💎 Platinum Tier (20+ nodes)
+💎 Platinum Tier (11+ nodes)
 ├── USD discount: 25%
 ├── CMX discount: 40% (20% + 25%)
+├── Use case: Mega banks (JPMorgan, Goldman)
 └── Effective savings: 40%
 ```
 

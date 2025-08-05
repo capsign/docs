@@ -70,9 +70,9 @@ CapSign offers flexible pricing options to meet the needs of individual develope
 
 **Enterprise Volume Discounts:**
 
-- 💼 **5+ nodes**: Additional 10% discount
-- 🏛️ **10+ nodes**: Additional 15% discount
-- 🌐 **Custom enterprise**: Contact sales
+- 💼 **3+ nodes**: Additional 10% discount (multi-region)
+- 🏛️ **6+ nodes**: Additional 15% discount (global institutions)
+- 🌐 **11+ nodes**: Additional 25% discount (mega banks)
 
 ---
 
@@ -129,7 +129,7 @@ CapSign offers flexible pricing options to meet the needs of individual develope
 **Ecosystem Benefits:**
 
 - **Shared compliance framework** - KYC, AML, and regulatory standards work across all applications
-- **Common CMX token utility** - unified payment, gas, and governance token across the entire ecosystem  
+- **Common CMX token utility** - unified payment, gas, and governance token across the entire ecosystem
 - **Enterprise-grade infrastructure** - SOC compliant hosting and 99.99% uptime available to all builders
 - **Interoperable applications** - seamless integration between different capital markets tools
 
@@ -138,7 +138,7 @@ CapSign offers flexible pricing options to meet the needs of individual develope
 **Build on CMX Network:**
 
 - **Trading platforms** - Alternative interfaces for different market segments
-- **Compliance solutions** - Jurisdiction-specific regulatory tools  
+- **Compliance solutions** - Jurisdiction-specific regulatory tools
 - **Vertical markets** - Real estate, commodities, private equity specialized applications
 - **Integration services** - Connect existing financial systems to blockchain infrastructure
 
@@ -161,12 +161,12 @@ For large financial institutions and capital markets participants:
 
 ### Volume Discounts
 
-| Nodes | USD Discount | CMX Discount |
-| ----- | ------------ | ------------ |
-| 1-4   | Base Price   | 20% off USD  |
-| 5-9   | 10% off      | 28% off USD  |
-| 10-19 | 15% off      | 32% off USD  |
-| 20+   | 25% off      | 40% off USD  |
+| Nodes | USD Discount | CMX Discount | Typical Use Case |
+| ----- | ------------ | ------------ | ---------------- |
+| 1-2   | Base Price   | 20% off USD  | Single region, prod + staging |
+| 3-5   | 10% off      | 28% off USD  | Multi-region operations |
+| 6-10  | 15% off      | 32% off USD  | Global institutions |
+| 11+   | 25% off      | 40% off USD  | Mega banks (JPMorgan, Goldman) |
 
 ---
 
