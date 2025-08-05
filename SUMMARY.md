@@ -28,6 +28,8 @@
 
 - [Compliance Overview](compliance/README.md)
 - [Framework Implementation](compliance/framework-implementation.md)
+- [Attestation Schemas](/compliance/attestation-schemas.md)
+- [Verification Process](/compliance/verification-process.md)
 
 ## 🌐 CMX Network
 
