@@ -42,48 +42,8 @@ The CMX Protocol uses a **diamond-based architecture** (EIP-2535) for maximum up
 - **Trading Infrastructure** - Order books, auctions, OTC markets
 - **Settlement Systems** - Automated clearing and settlement
 
-## Token Standards
 
-### ERC-7752: Lot-Based Tokens
-
-The CMX Protocol implements **ERC-7752**, a revolutionary token standard that treats every acquisition (lot) as its own on-chain record, enabling precise capital markets compliance and accounting.
-
-**Why Lot-Based Tokens Matter for Capital Markets:**
-
-- **Per-Lot Cost Basis** - Every token acquisition maintains its own cost basis for accurate tax reporting
-- **Regulatory Lineage** - Complete audit trail from initial issuance through all transfers
-- **Compliance Controls** - Granular restrictions based on acquisition method and timing
-- **Tax Reporting** - Built-in FIFO/LIFO accounting for automated regulatory filing
-
-**Key Capital Markets Use Cases:**
-
-| Asset Type | ERC-7752 Benefits |
-|------------|-------------------|
-| **Equity & Options** | Track every stock certificate or grant as individual lots with vesting metadata |
-| **Debt & Convertibles** | Maintain coupon payment history and conversion lineage via parentLotId |
-| **Private Securities** | Handle lock-ups, vesting schedules, and wash-sale rule compliance |
-| **Fund Accounting** | Generate investor K-1s and Form 8949 reports automatically from on-chain data |
-
-**Transfer Types for Regulatory Context:**
-
-- `INTERNAL` - Administrative transfers between controlled wallets (typically non-taxable)
-- `SALE` - Market transactions for consideration (taxable events)
-- `GIFT` - Gratuitous transfers between parties (gift tax implications)
-- `INHERITANCE` - Estate/probate distributions (stepped-up basis)
-- `REWARD` - Airdrops, staking yields, payroll RSUs (compensation income)
-
-**Technical Implementation:**
-
-ERC-7752 uses a linked ERC-1155 architecture where each `tokenId` represents a unique lot with complete transaction history. This provides:
-
-- **Efficient Auditing** - Easy tracking of any token's complete history
-- **Unique Metadata** - Each transfer can have its own URI pointing to legal documents
-- **Compliance Benefits** - Essential for private RWA issuers requiring detailed reporting
-
-**Learn More:**
-- [ERC-7752 Specification](https://ethereum-magicians.org/t/erc-7752-lot-token/20735) - Full technical specification and discussion
-- [Smart Contract Implementation](contracts.md#erc-7752-lot-tokens) - CMX Protocol's ERC-7752 contracts
-
+**For detailed information about our lot-based token implementation, see [ERC-7752: Lot-Based Tokens](erc-7752.md).**
 
 ## Smart Contract Modules
 
@@ -232,7 +192,6 @@ Business Source License 1.1 (BUSL-1.1) - See [LICENSE](../LICENSE.md) for detail
 - **Technical Support**: [support@capsign.com](mailto:support@capsign.com)
 - **Discord**: [Join our Discord](https://discord.gg/capsign)
 - **GitHub Issues**: [Report issues](https://github.com/capsign/protocol/issues)
-
 
 The CMX Protocol is a comprehensive capital markets blockchain infrastructure providing enterprise-grade smart contracts for tokenized securities, asset management, trading, and regulatory compliance. Built with regulatory compliance and institutional-grade security at its core.
 

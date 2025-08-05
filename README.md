@@ -104,7 +104,7 @@ Welcome to CapSign's comprehensive documentation hub. This resource covers the c
 - **[Security Hardening](/security/hardening.md)** - Production security checklist
 - **[Audit & Compliance](/security/audit.md)** - Regulatory compliance
 
-### 💰 Pricing & Business
+### Pricing & Business
 
 - **[Pricing Overview](/pricing/README.md)** - Service tiers and CMX token discounts
 - **[Self-Hosted vs Managed](/pricing/comparison.md)** - Deployment option comparison
