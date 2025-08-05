@@ -1,4 +1,4 @@
-# 🔐 Secrets Setup Checklist
+# Secrets Setup Checklist
 
 Quick reference for setting up GitHub secrets after creating repositories.
 

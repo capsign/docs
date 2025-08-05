@@ -1,4 +1,4 @@
-# 🏛️ Enterprise & Institutional Solutions
+# Enterprise & Institutional Solutions
 
 CapSign provides specialized solutions for financial institutions, capital markets participants, and large enterprises requiring custom compliance, security, and integration capabilities.
 

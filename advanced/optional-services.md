@@ -1,4 +1,4 @@
-# 🔧 Optional Third-Party Services
+# Optional Third-Party Services
 
 CapSign infrastructure includes several **optional** third-party services that enhance your workflow but aren't required for core functionality. Here's what they do and how much they cost.
 
