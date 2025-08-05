@@ -4,6 +4,32 @@ Welcome to CapSign's comprehensive documentation hub. This resource covers the c
 
 **New to CapSign?** Start with our [Interactive Demos](/demos/README.md) to experience the platform without creating an account.
 
+## About CapSign & CMX
+
+**CapSign Inc.** is the company that built and maintains the CMX ecosystem. Here's how the components work together:
+
+### **CapSign Inc.**
+- **The Company**: Financial technology company focused on capital markets infrastructure
+- **Role**: Develops, maintains, and provides enterprise services for the CMX ecosystem
+- **Services**: Managed infrastructure, enterprise support, compliance consulting
+
+### **CMX Protocol** 
+- **What it is**: Smart contract framework for tokenizing and trading capital markets assets
+- **Built for**: Regulatory compliance, institutional-grade security, and capital markets workflows
+- **Technology**: Diamond Pattern (EIP-2535) on Ethereum with Layer 2 scaling
+
+### **CMX Network**
+- **What it is**: Optimism-based Layer 2 blockchain optimized for capital markets
+- **Purpose**: Fast, low-cost transactions while maintaining Ethereum security
+- **Features**: Built-in compliance, institutional custody support, regulatory reporting
+
+### **CMX Token**
+- **What it is**: Native utility token of the CMX Network
+- **Uses**: Network gas fees, service payments (20% discount), governance participation
+- **Advantage**: Predictable pricing with 7-day rate locks for enterprise budgeting
+
+**In Summary**: CapSign Inc. is the company behind the CMX ecosystem, which includes the CMX Protocol (smart contracts), CMX Network (blockchain), and CMX Token (utility token).
+
 ## Documentation Structure
 
 ### Getting Started
