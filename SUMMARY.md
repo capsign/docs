@@ -2,7 +2,7 @@
 
 - [CapSign Ecosystem Overview](README.md)
 
-## Getting Started
+## 🚀 Getting Started
 
 - [Choose Your Path](getting-started/README.md)
 - [Managed Service](getting-started/managed.md)
@@ -15,7 +15,7 @@
 - [Identity Verification](demos/identity-verification.md)
 - [Investor Qualification](demos/investor-qualification.md)
 
-## 🏦 CapSign Protocol
+## 🏦 CMX Protocol
 
 - [Protocol Overview](protocol/README.md)
 - [Smart Contracts](protocol/contracts.md)

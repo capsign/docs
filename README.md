@@ -1,6 +1,6 @@
 # CapSign Documentation
 
-Welcome to CapSign's comprehensive documentation hub. This resource covers the complete **CapSign ecosystem**: the CapSign Protocol smart contracts, CMX Network deployment, infrastructure tools, and developer resources.
+Welcome to CapSign's comprehensive documentation hub. This resource covers the complete **CMX ecosystem**: the CMX Protocol smart contracts, CMX Network deployment, infrastructure tools, and developer resources.
 
 **New to CapSign?** Start with our [Interactive Demos](/demos/README.md) to experience the platform without creating an account.
 
@@ -19,9 +19,9 @@ Welcome to CapSign's comprehensive documentation hub. This resource covers the c
 - **[Identity Verification](/demos/identity-verification.md)** - KYC/AML process demo
 - **[Investor Qualification](/demos/investor-qualification.md)** - Accreditation verification
 
-### CapSign Protocol
+### CMX Protocol
 
-- **[Protocol Overview](/protocol/README.md)** - Capital markets smart contracts
+- **[Protocol Overview](/protocol/README.md)** - Capital markets smart contracts industry standard
 - **[Smart Contracts](/protocol/contracts.md)** - Contract architecture and APIs
 - **[Solidity Documentation](/protocol/solidity.md)** - Developer reference
 - **[Capital Markets Features](/protocol/capital-markets.md)** - Trading and compliance

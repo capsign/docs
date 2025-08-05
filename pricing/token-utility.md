@@ -6,73 +6,73 @@ The CMX token is the native utility token of the CMX Network and provides real u
 
 ### **1. 🏗️ Infrastructure Service Payments**
 
-- **20% discount** on all CapSign services when paying with CST
+- **20% discount** on all CapSign services when paying with CMX
 - **Volume discounts** up to 40% off USD pricing for large deployments
 - **Predictable pricing** with 7-day price locks for budgeting
 
-### **2. ⛽ CapSign Network Gas Fees**
+### **2. ⛽ CMX Network Gas Fees**
 
-- **Native gas token** for all CapSign Network transactions
+- **Native gas token** for all CMX Network transactions
 - **Lower fees** compared to Ethereum mainnet
 - **Fast finality** with Optimism's 2-second block times
-- **Universal utility** for all applications built on CapSign Network
+- **Universal utility** for all applications built on CMX Network
 
 ### **3. 🏛️ Network Governance**
 
 - **Vote on network upgrades** and parameter changes
-- **Propose improvements** to the CapSign Network
-- **Participate in standards development** for capital markets applications
+- **Propose improvements** to the CMX Network
+- **Participate in CMX Protocol standards development** for capital markets
 
 ### **4. 🔒 Protocol Staking**
 
-- **Stake CST** to secure the CapSign Protocol standards
+- **Stake CMX** to secure the CMX Protocol standards
 - **Earn rewards** from protocol fees and network usage
-- **Validator requirements** for CapSign Network consensus
+- **Validator requirements** for CMX Network consensus
 
 ### **5. 💰 Fee Value Accrual**
 
-- **Protocol fees** collected in CapSign Tokens
+- **Protocol fees** collected in CMX tokens
 - **Network usage** drives token demand across all applications
 - **Buyback mechanisms** from CapSign Inc. service revenue
 
 ---
 
-## Service Pricing with CapSign Token
+## Service Pricing with CMX Token
 
 ### Payment Method Comparison
 
-| Service Tier               | USD Price     | CST Price        | Your Savings      |
+| Service Tier               | USD Price     | CMX Price        | Your Savings      |
 | -------------------------- | ------------- | ---------------- | ----------------- |
-| **Enterprise Self-Hosted** | $2,500/month  | 2,000 CST/month  | **$500/month**    |
-| **Managed (1 node)**       | $5,000/month  | 4,000 CST/month  | **$1,000/month**  |
-| **Managed (5 nodes)**      | $22,500/month | 15,000 CST/month | **$6,300/month**  |
-| **Managed (10 nodes)**     | $42,500/month | 26,000 CST/month | **$11,900/month** |
+| **Enterprise Self-Hosted** | $2,500/month  | 2,000 CMX/month  | **$500/month**    |
+| **Managed (1 node)**       | $5,000/month  | 4,000 CMX/month  | **$1,000/month**  |
+| **Managed (5 nodes)**      | $22,500/month | 15,000 CMX/month | **$6,300/month**  |
+| **Managed (10 nodes)**     | $42,500/month | 26,000 CMX/month | **$11,900/month** |
 
-_CapSign Token service pricing is set by CapSign Inc. at a 20% discount to USD rates, providing immediate cost savings_
+_CMX token service pricing is set by CapSign Inc. at a 20% discount to USD rates, providing immediate cost savings_
 
 ### Volume Discount Tiers
 
 ```
-💰 CapSign Token Volume Discounts
+💰 CMX Token Volume Discounts
 
 🥉 Base Tier (1-4 nodes)
 ├── USD discount: 0%
-├── CST discount: 20%
+├── CMX discount: 20%
 └── Effective savings: 20%
 
 🥈 Silver Tier (5-9 nodes)
 ├── USD discount: 10%
-├── CST discount: 28% (20% + 10%)
+├── CMX discount: 28% (20% + 10%)
 └── Effective savings: 28%
 
 🥇 Gold Tier (10-19 nodes)
 ├── USD discount: 15%
-├── CST discount: 32% (20% + 15%)
+├── CMX discount: 32% (20% + 15%)
 └── Effective savings: 32%
 
 💎 Platinum Tier (20+ nodes)
 ├── USD discount: 25%
-├── CST discount: 40% (20% + 25%)
+├── CMX discount: 40% (20% + 25%)
 └── Effective savings: 40%
 ```
 
@@ -83,17 +83,17 @@ _CapSign Token service pricing is set by CapSign Inc. at a 20% discount to USD r
 ### Supply & Distribution
 
 ```
-CapSign Token Supply: 1,000,000,000 CST
+CMX Token Supply: 1,000,000,000 CMX
 
 Corporate-Controlled Distribution:
-├── 87.5% - CapSign Inc. Treasury (875M CST)
+├── 87.5% - CapSign Inc. Treasury (875M CMX)
 │   ├── Service utility sales
 │   ├── Strategic partnerships
 │   ├── Team incentives
 │   └── Operational reserves
-├── 10% - Supranational Governance Body (100M CST)
+├── 10% - Supranational Governance Body (100M CMX)
 │   └── Global capital markets oversight
-├── 2.5% - Private Sale Warrants (25M CST)
+├── 2.5% - Private Sale Warrants (25M CMX)
 │   └── Strategic investor warrants
 ```
 
@@ -105,18 +105,18 @@ Corporate-Controlled Distribution:
 
 ```
 Initial Distribution:
-├── 87.5% - CapSign Inc Treasury (875M CST)
-├── 10% - Swiss Foundation (100M CST)
-└── 2.5% - Private Sale Warrants (25M CST)
+├── 87.5% - CapSign Inc Treasury (875M CMX)
+├── 10% - Swiss Foundation (100M CMX)
+└── 2.5% - Private Sale Warrants (25M CMX)
 ```
 
 **Phase 2 (Years 4-6): Enhanced Governance**
 
 ```
 Target Distribution:
-├── 75% - CapSign Inc Treasury (750M CST)
-├── 20% - International Governance Body (200M CST)
-└── 5% - Strategic Partnerships (50M CST)
+├── 75% - CapSign Inc Treasury (750M CMX)
+├── 20% - International Governance Body (200M CMX)
+└── 5% - Strategic Partnerships (50M CMX)
 ```
 
 **Strategic Benefits:**
@@ -141,7 +141,7 @@ Target Distribution:
 
 ### Supranational Governance Body
 
-**CapSign will establish an independent supranational entity** to oversee global capital markets protocol governance, receiving 10% of CapSign Token supply (100M CST).
+**CapSign will establish an independent supranational entity** to oversee global capital markets protocol governance, receiving 10% of CMX token supply (100M CMX).
 
 **Potential Legal Structures:**
 
