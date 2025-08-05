@@ -1,6 +1,6 @@
 # Choose Your Path
 
-Welcome to CapSign! You have **two main options** to get started with the CapSign Protocol and CMX Network infrastructure:
+Welcome to CapSign! You have **two main options** to get started with the CMX Protocol and CMX Network infrastructure:
 
 ## Individual Node Operators Welcome
 
@@ -28,7 +28,7 @@ Welcome to CapSign! You have **two main options** to get started with the CapSig
 
 **What you get:**
 
-- Fully managed CapSign Protocol nodes
+- Fully managed CMX Protocol nodes
 - 24/7 enterprise support
 - SOC 1/2/3 compliant hosting
 - Automatic scaling and updates

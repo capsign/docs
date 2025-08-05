@@ -1,6 +1,6 @@
 # Create an Account
 
-Experience the CapSign account creation process through this interactive demo. Learn how to set up your Smart Wallet and begin your journey with the CapSign Protocol.
+Experience the CapSign account creation process through this interactive demo. Learn how to set up your Smart Wallet and begin your journey with the CMX Protocol.
 
 ## 🎮 Interactive Demo
 
@@ -61,7 +61,7 @@ CapSign uses **Coinbase Smart Wallet** technology to provide:
 
 ### Blockchain Integration
 
-- **CMX Network Native** - Optimized for CapSign Protocol operations
+- **CMX Network Native** - Optimized for CMX Protocol operations
 - **Ethereum Compatible** - Full compatibility with Ethereum ecosystem
 - **Layer 2 Benefits** - Fast transactions with low fees
 - **DeFi Ready** - Compatible with decentralized finance protocols
@@ -70,7 +70,7 @@ CapSign uses **Coinbase Smart Wallet** technology to provide:
 
 Your CapSign account connects you to:
 
-### CapSign Protocol
+### CMX Protocol
 
 - **Capital Markets Operations** - Access to digital securities and investments
 - **Compliance Integration** - Built-in regulatory compliance features

@@ -1,12 +1,12 @@
 # Quick Start Guide
 
-Deploy production-ready **CapSign Protocol infrastructure** in **30 minutes** using our automated tools.
+Deploy production-ready **CMX Protocol infrastructure** in **30 minutes** using our automated tools.
 
 ## 🎯 What You'll Deploy
 
 By the end of this guide, you'll have infrastructure ready for the CapSign ecosystem:
 
-- ✅ **AWS EKS cluster** optimized for CapSign Protocol and CMX Network
+- ✅ **AWS EKS cluster** optimized for CMX Protocol and CMX Network
 - ✅ **Reth Ethereum client** for L1 connectivity
 - ✅ **Prysm consensus client** with validator support
 - ✅ **Optimism-ready infrastructure** for CMX Network deployment
@@ -269,4 +269,4 @@ Your blockchain infrastructure is now live! Here are recommended next steps:
 
 ---
 
-**🚀 Congratulations!** You've deployed enterprise-grade infrastructure ready for the CapSign Protocol and CMX Network. Welcome to the CapSign community!
+**🚀 Congratulations!** You've deployed enterprise-grade infrastructure ready for the CMX Protocol and CMX Network. Welcome to the CapSign community!

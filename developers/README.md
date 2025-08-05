@@ -1,6 +1,6 @@
 # Developer Resources Overview
 
-Welcome to CapSign's developer ecosystem! Build the next generation of capital markets applications using the **CapSign Protocol** on the **CMX Network**.
+Welcome to CapSign's developer ecosystem! Build the next generation of capital markets applications using the **CMX Protocol** on the **CMX Network**.
 
 ## 🚀 Quick Start for Developers
 
@@ -32,7 +32,7 @@ capsign deploy --network testnet
 
 ### Smart Contract Development
 
-- **[Solidity Documentation](/protocol/solidity.md)** - CapSign Protocol contract reference
+- **[Solidity Documentation](/protocol/solidity.md)** - CMX Protocol contract reference
 - **[Hardhat Integration](/developers/hardhat.md)** - Development environment setup
 - **[Testing Framework](/developers/testing.md)** - Comprehensive testing tools
 - **[Contract Templates](/developers/templates.md)** - Starter smart contracts

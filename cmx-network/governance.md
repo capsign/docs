@@ -169,7 +169,7 @@ CapSign employs a **capital markets infrastructure governance model** designed s
 
 - Regional regulatory authorities
 - Major institutional investors and asset managers
-- Global financial institutions using CapSign Protocol
+- Global financial institutions using CMX Protocol
 - Academic institutions and research organizations
 
 **Observer Status**

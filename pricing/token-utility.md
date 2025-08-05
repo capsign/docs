@@ -158,7 +158,7 @@ This distribution reflects the regulatory realities of capital markets infrastru
 
 **Governance Model:**
 
-- **Independent oversight** of CapSign Protocol standards
+- **Independent oversight** of CMX Protocol standards
 - **Cross-border regulatory coordination** for capital markets
 - **Protocol upgrade governance** for international compliance
 - **Dispute resolution** between jurisdictions

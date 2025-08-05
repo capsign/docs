@@ -10,7 +10,7 @@ CapSign's **Fully Managed Service** provides enterprise-grade blockchain infrast
 
 ### Complete Infrastructure Management
 
-- **Hosted CapSign Protocol nodes** - Production-ready blockchain infrastructure
+- **Hosted CMX Protocol nodes** - Production-ready blockchain infrastructure
 - **Managed CMX Network** - Optimism L2 with 2-second finality
 - **Auto-scaling Kubernetes** - Handles traffic spikes automatically
 - **Multi-region deployment** - Global availability and disaster recovery

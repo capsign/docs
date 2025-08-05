@@ -1,6 +1,6 @@
 # Interactive Demos
 
-Experience CapSign without creating an account! This section provides hands-on interactive demonstrations of the CapSign Protocol and CMX Network functionality using [Arcade](https://arcade.software/) guided walkthroughs.
+Experience CapSign without creating an account! This section provides hands-on interactive demonstrations of the CMX Protocol and CMX Network functionality using [Arcade](https://arcade.software/) guided walkthroughs.
 
 ## What You'll Learn
 
@@ -61,7 +61,7 @@ Coming from the guides section:
 
 These demos showcase integration between:
 
-- **CapSign Protocol** - Smart contracts for capital markets operations
+- **CMX Protocol** - Smart contracts for capital markets operations
 - **CMX Network** - Layer 2 blockchain for scalable transactions
 - **Ethereum Attestation Service** - Decentralized compliance verification
 - **Traditional Finance** - Compliant bridge to existing financial systems

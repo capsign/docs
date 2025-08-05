@@ -6,12 +6,12 @@
 
 CapSign is a **capital markets blockchain ecosystem** consisting of:
 
-- **🏦 CapSign Protocol** - Smart contracts for capital markets operations
-- **🌐 CMX Network** - Optimism-based L2 with CapSign Protocol preinstalled
+- **🏦 CMX Protocol** - Smart contracts for capital markets operations
+- **🌐 CMX Network** - Optimism-based L2 with CMX Protocol preinstalled
 - **💎 CMX Token** - Native asset for seamless capital markets transactions
 - **🏗️ Infrastructure Tools** - Open-source deployment tools for running the ecosystem
 
-Our open-source Infrastructure as Code (Terraform) and Kubernetes Helm charts make it easy to deploy and manage CapSign Protocol infrastructure on AWS.
+Our open-source Infrastructure as Code (Terraform) and Kubernetes Helm charts make it easy to deploy and manage CMX Protocol infrastructure on AWS.
 
 ### How long does deployment take?
 

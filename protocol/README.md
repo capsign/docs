@@ -1,10 +1,10 @@
-# CapSign Protocol Overview
+# CMX Protocol Overview
 
-The **CapSign Protocol** is a comprehensive smart contract framework designed specifically for **capital markets operations** on blockchain. Built with regulatory compliance and institutional-grade security at its core.
+The **CMX Protocol** is a comprehensive smart contract framework designed specifically for **capital markets operations** on blockchain. Built with regulatory compliance and institutional-grade security at its core.
 
-## 🏦 What is the CapSign Protocol?
+## 🏦 What is the CMX Protocol?
 
-The CapSign Protocol provides the foundational smart contracts and compliance frameworks that power capital markets operations on the **CMX Network**. It enables:
+The CMX Protocol provides the foundational smart contracts and compliance frameworks that power capital markets operations on the **CMX Network**. It enables:
 
 - **📊 Capital Markets Operations** - Trading, settlement, and custody
 - **⚖️ Regulatory Compliance** - Built-in compliance frameworks
@@ -24,7 +24,7 @@ The CapSign Protocol provides the foundational smart contracts and compliance fr
 ### Smart Contract Modules
 
 ```
-CapSign Protocol
+CMX Protocol
 ├── Core Contracts
 │   ├── AccessControl.sol
 │   ├── ComplianceManager.sol
@@ -45,7 +45,7 @@ CapSign Protocol
 
 ## 🌐 CMX Network Integration
 
-The CapSign Protocol is **preinstalled** on the CMX Network, providing:
+The CMX Protocol is **preinstalled** on the CMX Network, providing:
 
 - **⚡ Optimized Performance** - L2 speed with mainnet security
 - **💰 Low Transaction Costs** - Efficient capital markets operations
@@ -70,7 +70,7 @@ The CapSign Protocol is **preinstalled** on the CMX Network, providing:
 
 ## ⚖️ Compliance & Regulation
 
-The CapSign Protocol is designed with regulatory compliance as a first-class feature:
+The CMX Protocol is designed with regulatory compliance as a first-class feature:
 
 ### Built-in Compliance
 
@@ -88,7 +88,7 @@ The CapSign Protocol is designed with regulatory compliance as a first-class fea
 
 ## 🚀 Getting Started
 
-Ready to start building with the CapSign Protocol?
+Ready to start building with the CMX Protocol?
 
 1. **[Read the Protocol Documentation](/protocol/contracts.md)**
 2. **[Set up your Development Environment](/developers/README.md)**

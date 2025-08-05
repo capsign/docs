@@ -1,6 +1,6 @@
 # Self-Hosted CapSign Infrastructure
 
-**Deploy and manage CapSign Protocol infrastructure in your own environment with complete control and customization.**
+**Deploy and manage CMX Protocol infrastructure in your own environment with complete control and customization.**
 
 ## What Is Self-Hosted?
 

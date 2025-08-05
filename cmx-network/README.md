@@ -1,6 +1,6 @@
 # CMX Network Overview
 
-The **CMX Network** is an Optimism-based Layer 2 blockchain specifically optimized for capital markets operations. It comes with the **CapSign Protocol preinstalled** and features the **CMX Token** as its native asset.
+The **CMX Network** is an Optimism-based Layer 2 blockchain specifically optimized for capital markets operations. It comes with the **CMX Protocol preinstalled** and features the **CMX Token** as its native asset.
 
 ## 🌐 What is CMX Network?
 
@@ -28,7 +28,7 @@ Built on the **Optimism Stack**, CMX Network provides:
 ```
 CMX Network Architecture
 ├── Execution Layer
-│   ├── CapSign Protocol (Preinstalled)
+│   ├── CMX Protocol (Preinstalled)
 │   ├── CMX Token Economics
 │   └── Capital Markets Infrastructure
 ├── Consensus Layer
@@ -139,7 +139,7 @@ Ready to start building on CMX Network?
 
 1. **[Set up Development Environment](/developers/README.md)**
 2. **[Deploy Your First Contract](/tutorials/first-deployment.md)**
-3. **[Integrate CapSign Protocol](/protocol/README.md)**
+3. **[Integrate CMX Protocol](/protocol/README.md)**
 
 ### For Validators
 
