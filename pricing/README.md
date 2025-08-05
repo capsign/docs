@@ -161,11 +161,11 @@ For large financial institutions and capital markets participants:
 
 ### Volume Discounts
 
-| Nodes | USD Discount | CMX Discount | Typical Use Case |
-| ----- | ------------ | ------------ | ---------------- |
-| 1-2   | Base Price   | 20% off USD  | Single region, prod + staging |
-| 3-5   | 10% off      | 28% off USD  | Multi-region operations |
-| 6-10  | 15% off      | 32% off USD  | Global institutions |
+| Nodes | USD Discount | CMX Discount | Typical Use Case               |
+| ----- | ------------ | ------------ | ------------------------------ |
+| 1-2   | Base Price   | 20% off USD  | Single region, prod + staging  |
+| 3-5   | 10% off      | 28% off USD  | Multi-region operations        |
+| 6-10  | 15% off      | 32% off USD  | Global institutions            |
 | 11+   | 25% off      | 40% off USD  | Mega banks (JPMorgan, Goldman) |
 
 ---
