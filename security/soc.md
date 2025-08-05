@@ -286,7 +286,6 @@ Our infrastructure automatically collects SOC audit evidence:
 
 **🎯 Result**: Following this guide will position CapSign for successful SOC 1, SOC 2, and SOC 3 certification with a robust, auditable infrastructure platform.
 
-
 CapSign infrastructure is designed to support **SOC 1, SOC 2, and SOC 3** certification requirements. This guide outlines how our infrastructure components align with SOC controls and what additional steps are needed for certification.
 
 ## 📋 SOC Certification Overview

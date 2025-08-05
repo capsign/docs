@@ -256,7 +256,6 @@ npm run dev
 
 **Ready to build the future of capital markets? [Start with our Quick Start Guide](/developers/quickstart.md)!** 🚀💼
 
-
 Welcome to CapSign's developer ecosystem! Build the next generation of capital markets applications using the **CMX Protocol** on the **CMX Network**.
 
 ## 🚀 Quick Start for Developers
