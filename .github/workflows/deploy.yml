@@ -1,0 +1,74 @@
+name: Deploy GitBook
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+          cache: "npm"
+
+      - name: Install GitBook CLI
+        run: |
+          npm install -g gitbook-cli
+          gitbook --version
+
+      - name: Install dependencies
+        run: |
+          npm install
+          gitbook install
+
+      - name: Build GitBook
+        run: |
+          gitbook build
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
+
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_book
+          publish_branch: gh-pages
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
+          commit_message: "Deploy GitBook ${{ github.sha }}"
+
+      - name: Notify Discord on success
+        if: success() && github.ref == 'refs/heads/main'
+        uses: Ilshidur/action-discord@master
+        with:
+          args: |
+            📚 Documentation updated successfully!
+
+            **Commit**: `${{ github.sha }}`
+            **Author**: ${{ github.actor }}
+            **URL**: https://docs.capsign.com
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+
+      - name: Notify Discord on failure
+        if: failure()
+        uses: Ilshidur/action-discord@master
+        with:
+          args: |
+            ❌ Documentation deployment failed!
+
+            **Commit**: `${{ github.sha }}`
+            **Author**: ${{ github.actor }}
+            **Check**: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}

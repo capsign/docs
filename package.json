@@ -1,0 +1,60 @@
+{
+  "name": "capsign-docs",
+  "version": "1.0.0",
+  "description": "CapSign Documentation - Enterprise blockchain infrastructure guides",
+  "main": "README.md",
+  "scripts": {
+    "dev": "gitbook serve",
+    "build": "gitbook build",
+    "install": "gitbook install",
+    "serve": "gitbook serve",
+    "clean": "rm -rf _book",
+    "deploy": "npm run clean && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/capsign/docs.git"
+  },
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "infrastructure",
+    "kubernetes",
+    "aws",
+    "terraform",
+    "helm",
+    "documentation",
+    "gitbook"
+  ],
+  "author": "CapSign Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/capsign/docs/issues"
+  },
+  "homepage": "https://docs.capsign.com",
+  "devDependencies": {
+    "gitbook-cli": "^2.3.2"
+  },
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=6.0.0"
+  },
+  "gitbook": {
+    "plugins": [
+      "advanced-emoji",
+      "anchors",
+      "codeblock-filename",
+      "copy-code-button",
+      "edit-link",
+      "expandable-chapters",
+      "github",
+      "hide-element",
+      "mermaid-gb3",
+      "prism",
+      "search-pro",
+      "sitemap-general",
+      "splitter",
+      "theme-api"
+    ]
+  }
+}
