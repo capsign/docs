@@ -85,9 +85,9 @@ _CMX service pricing is set by CapSign at a 20% discount to USD rates, providing
 CMX Token Supply: 1,000,000,000 CMX
 
 Corporate-Controlled Distribution:
-├── 87.5% - CapSign Inc Treasury (875M CMX)
+├── 87.5% - CapSign Inc. Treasury (875M CMX)
 │   ├── Service utility sales
-│   ├── Strategic partnerships  
+│   ├── Strategic partnerships
 │   ├── Team incentives
 │   └── Operational reserves
 ├── 10% - Supranational Governance Body (100M CMX)
@@ -96,17 +96,42 @@ Corporate-Controlled Distribution:
 │   └── Strategic investor warrants
 ```
 
+### Alternative Distribution Models
+
+**Option A: Current Model (87.5% / 10% / 2.5%)**
+- **Maximum corporate control** for enterprise accountability
+- **Minimal governance complexity** during early phases
+- **Clear regulatory compliance** through corporate structure
+
+**Option B: Enhanced Governance (75% / 20% / 5%)**
+- **75% CapSign Inc Treasury** - Reduced but still controlling
+- **20% Supranational Governance Body** - Enhanced international legitimacy
+- **5% Private Sale Warrants** - Increased strategic investor participation
+
+**Option C: Phased Transfer Model (Initial: 87.5% / 10% / 2.5%)**
+- **Year 1-3**: Current distribution for operational control
+- **Year 4-6**: Transfer additional 10% to governance body (77.5% / 20% / 2.5%)
+- **Year 7+**: Final distribution based on governance body maturity
+
+**Option D: Multi-Category Model (70% / 15% / 10% / 5%)**
+- **70% CapSign Inc Treasury** - Core operations and service delivery
+- **15% Supranational Governance Body** - Protocol standards and regulation
+- **10% Industry Development Fund** - Research, standards, ecosystem growth
+- **5% Strategic Partnerships** - Regulatory relationships and market development
+
 ### Supranational Governance Body
 
 **CapSign will establish an independent supranational entity** to oversee global capital markets protocol governance, receiving 10% of CMX supply (100M CMX).
 
 **Potential Legal Structures:**
+
 - **Swiss Foundation** - Neutral jurisdiction, established legal framework
-- **Singapore Foundation** - Global financial hub, clear digital asset regulation  
+- **Singapore Foundation** - Global financial hub, clear digital asset regulation
 - **International Treaty Organization** - Multi-jurisdictional oversight authority
 - **Liechtenstein Foundation** - EU access, established financial services law
 
 **Governance Model:**
+
 - **Independent oversight** of CapSign Protocol standards
 - **Cross-border regulatory coordination** for capital markets
 - **Protocol upgrade governance** for international compliance
@@ -114,6 +139,7 @@ Corporate-Controlled Distribution:
 - **Standard setting** for global digital capital markets
 
 **Similar to Existing Bodies:**
+
 - **Bank for International Settlements (BIS)** - Central bank coordination
 - **International Organization of Securities Commissions (IOSCO)** - Securities regulation
 - **Financial Stability Board (FSB)** - Global financial stability oversight
@@ -165,21 +191,23 @@ Corporate-Controlled Distribution:
 
 ---
 
-## Token Acquisition Through CapSign Inc
+## Token Acquisition Through CapSign Inc.
 
 ### Corporate-Controlled Distribution
 
-**All CMX tokens are sold directly through CapSign Inc** to maintain proper regulatory compliance and paper trail documentation.
+**All CMX tokens are sold directly through CapSign Inc.** to maintain proper regulatory compliance and paper trail documentation.
 
 ### For Enterprises
 
 1. **Direct Treasury Sales**
-   - Purchase directly from CapSign Inc treasury
+
+   - Purchase directly from CapSign Inc. treasury
    - Full regulatory compliance and documentation
    - Structured payment plans available for large volumes
    - Complete KYC/AML compliance for all purchasers
 
 2. **Service Payment Programs**
+
    - Monthly CMX purchases for ongoing service payments
    - Automated procurement through approved channels
    - Enterprise treasury management integration
@@ -192,6 +220,7 @@ Corporate-Controlled Distribution:
 ### For Qualified Investors
 
 1. **Private Sale Warrants (Limited)**
+
    - Only 2.5% of total supply (25M CMX) available
    - Warrant-based structure for strategic investors
    - Full accreditation and regulatory compliance required

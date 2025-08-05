@@ -102,6 +102,7 @@ CapSign offers flexible pricing options to meet the needs of individual develope
 4. **Strategic Partnerships**: CMX allocations tied to formal business development agreements
 
 **Benefits of Corporate Distribution:**
+
 - **Complete regulatory compliance** and paper trail documentation
 - **No market volatility** affecting service pricing
 - **Enterprise-grade** KYC/AML compliance for all purchasers
