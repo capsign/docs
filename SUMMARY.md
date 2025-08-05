@@ -15,14 +15,12 @@
 - [Identity Verification](demos/identity-verification.md)
 - [Investor Qualification](demos/investor-qualification.md)
 
-## 🏦 CMX Protocol
+## CMX Protocol
 
 - [Protocol Overview](protocol/README.md)
 - [Smart Contracts](protocol/contracts.md)
-- [Solidity Documentation](protocol/solidity.md)
-- [Capital Markets Features](protocol/capital-markets.md)
-- [Protocol APIs](protocol/api.md)
-- [Contract Deployment](protocol/deployment.md)
+- [Deployment Guide](protocol/deployment.md)
+- [API Reference](protocol/api.md)  
 - [Testing Guide](protocol/testing.md)
 
 ## ⚖️ Compliance Framework
