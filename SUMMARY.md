@@ -2,7 +2,7 @@
 
 - [CapSign Ecosystem Overview](README.md)
 
-## 🚀 Getting Started
+## Getting Started
 
 - [Choose Your Path](getting-started/README.md)
 - [Managed Service](getting-started/managed.md)

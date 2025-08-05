@@ -2,7 +2,7 @@
 
 CapSign's compliance framework integrates traditional regulatory requirements with blockchain technology to create a transparent, immutable, and decentralized compliance system. By leveraging the Ethereum Attestation Service (EAS), CapSign provides a secure and verifiable method for maintaining regulatory compliance across digital asset offerings.
 
-## 📋 Executive Summary
+## Executive Summary
 
 CapSign's compliance framework represents a paradigm shift in regulatory compliance for digital assets. By leveraging blockchain technology through the Ethereum Attestation Service and purpose-built attestation schemas, we enable:
 
