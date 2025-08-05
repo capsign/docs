@@ -1,162 +1,217 @@
-# Self-Hosted CapSign Infrastructure
+# Self-Hosted CMX Protocol
 
-**Deploy and manage CMX Protocol infrastructure in your own environment with complete control and customization.**
+**Deploy the CMX Protocol in your own environment with complete control - from simple node deployment to enterprise-grade infrastructure.**
 
-## What Is Self-Hosted?
+## What Is Self-Hosting?
 
-Self-hosted CapSign gives you **complete control** over your infrastructure deployment. You manage the Kubernetes clusters, AWS resources, and operational aspects while benefiting from our production-ready Terraform modules and Helm charts.
+Self-hosting means running the CMX Protocol stack in your own environment. You have two main options:
 
-## What You Get
+### 🆓 **Open Source Deployment** (Free)
 
-### Complete Documentation & Guides
+Deploy the CMX Protocol however you want using our open-source components:
 
-- **Production-ready infrastructure** - Battle-tested Terraform and Helm
-- **Step-by-step deployment guides** - From AWS setup to running nodes
-- **Security best practices** - Hardening and compliance configurations
-- **Private support channel** - Direct access to our engineering team
+- **CMX geth node** from GitHub - The core blockchain client
+- **Connect to Ethereum L1** - Attach to any Ethereum node
+- **Your infrastructure** - Use any cloud, on-premise, or hybrid setup
+- **Community support** - GitHub issues and Discord community
 
-### Infrastructure Components
+### 🏗️ **Recommended Architecture** (Battle-Tested)
 
-- **🏗️ Terraform modules** - VPC, EKS, security groups, IAM roles
-- **☸️ Kubernetes manifests** - Production-ready Helm charts
-- **⛓️ Blockchain nodes** - Reth (Ethereum) and Optimism stack
-- **📊 Monitoring stack** - Prometheus, Grafana, and AlertManager
+Use CapSign's production-ready infrastructure blueprints:
 
-### Enterprise Support
+- **Terraform modules** - AWS VPC, EKS, security configurations
+- **Kubernetes Helm charts** - Production-ready deployment manifests
+- **Monitoring stack** - Prometheus, Grafana, AlertManager
+- **Security hardening** - SOC compliance configurations
+- **Step-by-step guides** - From setup to production operations
 
-- **Private Slack channel** - Direct engineering support
-- **Priority bug fixes** - Issues resolved quickly
-- **SLA for documentation** - Always up-to-date guides
-- **Advanced configuration help** - Custom deployment assistance
+## Core Requirements (All Deployments)
 
-## Pricing
+Regardless of how you deploy, every CMX Protocol deployment needs:
 
-### USD Pricing
+### Essential Components
 
-- **$2,500/month** - Per organization (unlimited nodes)
-- **Annual contracts** - 15% discount available
+1. **CMX geth node** - Download from [GitHub](https://github.com/capsign/cmx-geth)
+2. **Ethereum L1 connection** - Mainnet, Sepolia, or your preferred testnet
+3. **Database storage** - For blockchain state and transaction data
+4. **Network connectivity** - P2P networking for blockchain sync
 
-### CMX Token Pricing (20% Discount)
+### Basic Architecture
 
-- **$2,000/month paid in CMX** - Save $500/month
-- **Lock rates** - 7-day price stability for budgeting
+```
+[Your Application]
+       ↓
+[CMX geth node] ← Your Infrastructure Choice
+       ↓
+[Ethereum L1 node] ← Can be external provider
+```
 
-**📊 Full cost analysis**: [Self-Hosted vs Managed Comparison](/pricing/comparison.md)
+## Deployment Options
 
-## Perfect for These Teams
+### Option 1: Simple Node Deployment
 
-### Technical Organizations
+**Perfect for**: Development, testing, small applications
 
-- Teams with **strong DevOps/Kubernetes expertise**
-- Organizations with **dedicated infrastructure teams**
-- Companies wanting **maximum customization** control
+**What you need**:
 
-### Security-First Companies
+- Linux server (cloud or on-premise)
+- Docker or direct binary installation
+- Connection to Ethereum L1 (can use Infura, Alchemy, etc.)
 
-- **Data sovereignty** requirements
-- **Air-gapped environments** or private clouds
-- **Custom compliance** frameworks needed
+**Getting started**:
 
-### Cost-Optimized Deployments
+1. Download CMX geth from GitHub releases
+2. Configure connection to Ethereum L1
+3. Start the node and sync blockchain state
+4. Connect your application via RPC
 
-- **Existing AWS/cloud infrastructure** to leverage
-- **High-volume usage** where managed costs add up
-- **Long-term projects** with stable requirements
+**Cost**: Infrastructure only (typically $50-200/month)
 
-## ## What You'll Need
+### Option 2: CapSign Recommended Architecture
 
-### Team Requirements
+**Perfect for**: Production applications, enterprise deployments, compliance requirements
 
-- **Kubernetes expertise** - EKS, pods, services, ingress
-- **AWS knowledge** - VPC, IAM, security groups, S3
-- **DevOps experience** - CI/CD, monitoring, incident response
-- **Blockchain familiarity** - Node operation and maintenance
+**What you get**:
 
-### Time Investment
+- **Production-ready Terraform** - AWS VPC, EKS, security groups, IAM
+- **Kubernetes Helm charts** - Scalable, monitored, highly available
+- **Security configurations** - SOC compliance, encryption, access controls
+- **Monitoring & alerting** - Full observability stack
+- **Documentation** - Step-by-step deployment and operations guides
 
-- **Initial setup**: 2-4 weeks following our guides
-- **Ongoing maintenance**: 10-20 hours/month
-- **Learning curve**: Kubernetes and blockchain operations
+**What you need**:
 
-### Infrastructure Costs (Beyond CapSign License)
+- AWS account and DevOps expertise
+- Kubernetes and infrastructure management skills
+- 2-4 weeks for initial setup and customization
 
-- **AWS infrastructure**: ~$1,000-2,000/month for production setup
-- **Monitoring tools**: Included in our stack
-- **Security scanning**: Optional third-party tools
+**Cost**: Infrastructure only (typically $1,000-3,000/month depending on scale)
 
-## Ready to Get Started?
+## Enterprise Support (Optional)
 
-### Complete Self-Hosted Documentation
+For organizations wanting additional support beyond community resources:
 
-All the technical details are in our **Self-Hosted Infrastructure** section:
+### Support Packages
 
-**👉 [Start with Infrastructure Overview →](/infrastructure/README.md)**
+**🥉 Professional Support - $500/month**
 
-**📋 Step-by-Step Path:**
+- Email support with 48-hour response SLA
+- Documentation access and updates
+- Best practices consultation
 
-1. **[Prerequisites](/prerequisites/README.md)** - Required tools and accounts
-2. **[Quick Start Guide](/quickstart/README.md)** - 30-minute overview deployment
-3. **[Repository Setup](/installation/setup.md)** - Create GitHub repositories
-4. **[Secrets Configuration](/installation/secrets.md)** - AWS, Kubernetes, CI/CD setup
-5. **[Full Installation Guide](/installation/README.md)** - Complete production deployment
+**🥈 Enterprise Support - $2,000/month**
 
-### Get Support
+- Private Slack channel with engineering team
+- Priority bug fixes and feature requests
+- Architecture review and optimization
+- Compliance consultation (SOC, regulatory)
 
-**Enterprise Self-Hosted Sales**: [sales@capsign.com](mailto:sales@capsign.com)
+**🥇 Strategic Partnership - Custom Pricing**
 
-- Licensing and pricing questions
-- Technical pre-sales consultation
-- Custom deployment planning
+- Dedicated customer success manager
+- Custom development and integrations
+- On-site training and workshops
+- 24/7 incident support
 
-**Community Support**: [Discord](https://discord.gg/gSmnZ9wmNv)
+## Why Use Our Recommended Architecture?
 
-- General questions and discussion
-- Community best practices
-- Open source contribution
+### Battle-Tested Components
 
-## Migration Options
+Our Terraform and Kubernetes setup has been proven in production with:
 
-### **Start Self-Hosted, Move to Managed Later**
+- **99.99% uptime** across customer deployments
+- **SOC 2 Type II compliance** ready configurations
+- **Security best practices** built-in from day one
+- **Cost optimization** through right-sizing and automation
 
-Many customers start self-hosted and migrate to managed as they scale:
+### Enterprise Features
 
-- **Zero-downtime migration** - We handle the transition
-- **Data migration support** - Complete blockchain state transfer
-- **Flexible timing** - Migrate when it makes business sense
+- **High availability** across multiple AWS availability zones
+- **Auto-scaling** for both infrastructure and blockchain nodes
+- **Monitoring & alerting** with Prometheus and Grafana
+- **Backup & disaster recovery** automated procedures
+- **Security scanning** with Checkov and other tools
 
-### **Hybrid Deployments**
+### Operational Excellence
 
-Enterprise customers can mix approaches:
+- **Infrastructure as Code** - All changes tracked and versioned
+- **CI/CD integration** - Automated testing and deployment
+- **Secrets management** - Secure handling of keys and credentials
+- **Documentation** - Comprehensive guides for all operations
 
-- **Development**: Self-hosted for control and cost
-- **Production**: Managed for reliability and support
-- **Geographic**: Self-hosted in some regions, managed in others
+## Getting Started
 
-**📊 Migration planning**: [Contact our solutions architects](mailto:enterprise@capsign.com?subject=Migration%20Planning)
+### 🚀 Quick Start (Open Source)
 
-## Still Deciding?
+1. **Download CMX geth**: Visit [GitHub releases](https://github.com/capsign/cmx-geth/releases)
+2. **Configure L1 connection**: Point to your Ethereum node or provider
+3. **Start the node**: Follow README instructions
+4. **Connect your app**: Use standard JSON-RPC interface
 
-### **Compare Your Options:**
+### 🏗️ Production Deployment (Recommended Architecture)
 
-📊 **[Managed vs Self-Hosted Comparison](/pricing/comparison.md)** - Complete analysis including TCO
+1. **[Prerequisites](/infrastructure/prerequisites.md)** - AWS account, tools setup
+2. **[Quick Start Guide](/infrastructure/quickstart.md)** - 30-minute deployment overview
+3. **[Repository Setup](/infrastructure/setup.md)** - Fork our templates
+4. **[Secrets Configuration](/infrastructure/secrets.md)** - Configure credentials
+5. **[Full Installation](/infrastructure/installation.md)** - Complete production setup
 
-### **Try Before You Commit:**
+### 💬 Get Support
 
-🎮 **[Interactive Demos](/demos/README.md)** - Experience CapSign without any infrastructure
+**Community Support (Free)**:
 
-### **See What's Involved:**
+- [GitHub Issues](https://github.com/capsign/cmx-geth/issues) - Bug reports and features
+- [Discord](https://discord.gg/capsign) - Community discussion
 
-🏗️ **[Infrastructure Overview](/infrastructure/README.md)** - Understand the technical scope
+**Enterprise Support (Paid)**:
+
+- [sales@capsign.com](mailto:sales@capsign.com) - Support package pricing
+- [enterprise@capsign.com](mailto:enterprise@capsign.com) - Strategic partnerships
+
+## Migration and Flexibility
+
+### Start Simple, Scale Up
+
+Many customers follow this progression:
+
+1. **Development**: Simple node deployment for testing
+2. **Staging**: Recommended architecture for pre-production
+3. **Production**: Full enterprise setup with support
+
+### Hybrid Options
+
+- **Self-hosted development** + **Managed production**
+- **Multiple regions**: Self-hosted in some, managed in others
+- **Gradual migration**: Move workloads as needs change
+
+## Compare Your Options
+
+| Aspect                  | Simple Node   | Recommended Architecture | Managed Service |
+| ----------------------- | ------------- | ------------------------ | --------------- |
+| **Control**             | Complete      | Complete                 | Shared          |
+| **Setup Time**          | Hours         | 2-4 weeks                | Minutes         |
+| **Expertise Required**  | Basic Linux   | DevOps/Kubernetes        | None            |
+| **Infrastructure Cost** | $50-200/month | $1-3K/month              | Included        |
+| **Support**             | Community     | Optional paid            | Included        |
+| **Compliance**          | DIY           | SOC-ready                | SOC certified   |
+| **High Availability**   | DIY           | Built-in                 | Guaranteed      |
+
+**📊 Detailed comparison**: [Self-Hosted vs Managed Analysis](/pricing/comparison.md)
 
 ---
 
 ## Ready to Deploy?
 
-**Start your self-hosted journey:**
+### For Simple Deployment:
 
-1. **📚 Review the [Infrastructure Overview](/infrastructure/README.md)**
-2. **✅ Check [Prerequisites](/prerequisites/README.md)**
-3. **⚡ Try the [Quick Start Guide](/quickstart/README.md)**
-4. **📞 Contact us** for your enterprise license: [sales@capsign.com](mailto:sales@capsign.com)
+👉 **[Download CMX Node from GitHub](https://github.com/capsign/cmx-node)** and follow the README
 
-**💪 With self-hosted CapSign, you get enterprise-grade blockchain infrastructure with complete control, comprehensive documentation, and expert support when you need it.**
+### For Production Architecture:
+
+👉 **[Start with Infrastructure Overview](/infrastructure/README.md)** to understand the full setup
+
+### Need Help Deciding?
+
+👉 **[Try our Interactive Demos](/demos/README.md)** to experience CMX Protocol without any infrastructure
+
+**The CMX Protocol gives you the flexibility to deploy however fits your needs - from simple development setups to enterprise-grade production infrastructure.**
