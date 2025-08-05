@@ -5,18 +5,21 @@ CapSign provides specialized solutions for financial institutions, capital marke
 ## 🎯 **Enterprise Customer Types**
 
 ### **🏦 Traditional Financial Institutions**
+
 - **Banks & Credit Unions** - Digital transformation initiatives
-- **Investment Banks** - Capital markets infrastructure modernization  
+- **Investment Banks** - Capital markets infrastructure modernization
 - **Asset Managers** - Portfolio management and compliance automation
 - **Insurance Companies** - Claims processing and risk management
 
 ### **💼 Capital Markets Participants**
+
 - **Hedge Funds** - Trading infrastructure and compliance
 - **Private Equity** - Investor management and reporting
 - **Family Offices** - Wealth management and allocation
 - **Broker-Dealers** - Trade settlement and regulatory reporting
 
 ### **🏢 Large Enterprises**
+
 - **Fortune 500 Companies** - Treasury and corporate finance
 - **Multinational Corporations** - Cross-border compliance
 - **Technology Companies** - DeFi and blockchain integration
@@ -42,16 +45,19 @@ CapSign provides specialized solutions for financial institutions, capital marke
 ### **🏗️ Infrastructure Options**
 
 **1. 🌐 Multi-Cloud Deployment**
+
 - AWS, Google Cloud, Microsoft Azure
 - Region-specific deployments for data sovereignty
 - Cross-cloud disaster recovery and failover
 
 **2. 🏢 Private Cloud Integration**
+
 - VMware, OpenStack, Kubernetes on-premises
 - Hybrid cloud architectures
 - Air-gapped environments for maximum security
 
 **3. 🔒 On-Premises Deployment**
+
 - Complete infrastructure in your data centers
 - No external dependencies or cloud providers
 - Maximum control and security compliance
@@ -71,13 +77,13 @@ CapSign provides specialized solutions for financial institutions, capital marke
 
 ### **🎯 Flexible Pricing Options**
 
-| Pricing Model | Best For | Payment Terms |
-|---------------|----------|---------------|
-| **Per-Node Monthly** | Predictable workloads | Standard monthly billing |
-| **Usage-Based** | Variable transaction volumes | Pay for actual usage |
-| **Annual Contracts** | Budget planning | 15% discount, annual payment |
-| **Multi-Year Deals** | Long-term partnerships | Up to 30% discount |
-| **Custom Licensing** | Unique requirements | Negotiated terms |
+| Pricing Model        | Best For                     | Payment Terms                |
+| -------------------- | ---------------------------- | ---------------------------- |
+| **Per-Node Monthly** | Predictable workloads        | Standard monthly billing     |
+| **Usage-Based**      | Variable transaction volumes | Pay for actual usage         |
+| **Annual Contracts** | Budget planning              | 15% discount, annual payment |
+| **Multi-Year Deals** | Long-term partnerships       | Up to 30% discount           |
+| **Custom Licensing** | Unique requirements          | Negotiated terms             |
 
 ### **📊 Volume Pricing Tiers**
 
@@ -89,7 +95,7 @@ CapSign provides specialized solutions for financial institutions, capital marke
 ├── CMX discount: 28%
 └── Annual savings: $54,000 (vs. $600K base)
 
-🥈 Tier 2: 10-19 Nodes  
+🥈 Tier 2: 10-19 Nodes
 ├── Base discount: 15%
 ├── CMX discount: 32%
 └── Annual savings: $192,000 (vs. $1.2M base)
@@ -108,6 +114,7 @@ CapSign provides specialized solutions for financial institutions, capital marke
 ### **🪙 Enterprise CMX Token Benefits**
 
 **Large Volume Purchases:**
+
 - **OTC trading desk** - Direct treasury purchases
 - **Custom payment schedules** - Quarterly, semi-annual options
 - **Price protection** - Longer-term rate locks (up to 12 months)
@@ -120,6 +127,7 @@ CapSign provides specialized solutions for financial institutions, capital marke
 ### **👥 Dedicated Account Management**
 
 **🎯 Your Enterprise Team:**
+
 - **Solutions Architect** - Technical strategy and design
 - **Account Manager** - Business relationship and growth
 - **Implementation Manager** - Deployment and onboarding
@@ -128,13 +136,14 @@ CapSign provides specialized solutions for financial institutions, capital marke
 ### **📞 Enterprise Support SLAs**
 
 | Issue Severity | Response Time | Resolution Target |
-|----------------|---------------|-------------------|
-| **Critical** | 15 minutes | 4 hours |
-| **High** | 1 hour | 24 hours |
-| **Medium** | 4 hours | 72 hours |
-| **Low** | 24 hours | 1 week |
+| -------------- | ------------- | ----------------- |
+| **Critical**   | 15 minutes    | 4 hours           |
+| **High**       | 1 hour        | 24 hours          |
+| **Medium**     | 4 hours       | 72 hours          |
+| **Low**        | 24 hours      | 1 week            |
 
 **🔄 Support Channels:**
+
 - **📞 24/7 phone support** - Direct hotline to enterprise team
 - **💬 Private Slack channel** - Real-time collaboration
 - **🎟️ Priority ticketing** - Dedicated support portal
@@ -143,12 +152,14 @@ CapSign provides specialized solutions for financial institutions, capital marke
 ### **🎓 Training & Enablement**
 
 **🏫 Enterprise Training Programs:**
+
 - **Technical workshops** - 2-day on-site or virtual training
 - **Administrator certification** - Official CapSign credentials
 - **Developer bootcamps** - Protocol integration training
 - **Executive briefings** - C-suite and board presentations
 
 **📚 Exclusive Resources:**
+
 - **Private documentation** - Advanced configuration guides
 - **Video library** - Training materials and use cases
 - **Best practices** - Industry-specific implementation guides
@@ -161,12 +172,14 @@ CapSign provides specialized solutions for financial institutions, capital marke
 ### **🛠️ Professional Services**
 
 **🏗️ Architecture & Design:**
+
 - **Solution architecture** - Custom system design
 - **Integration planning** - Legacy system connectivity
 - **Performance optimization** - Scaling and tuning
 - **Security assessment** - Penetration testing and hardening
 
 **💻 Custom Development:**
+
 - **Protocol modifications** - Custom smart contract features
 - **API development** - Specialized integration endpoints
 - **Dashboard creation** - Custom monitoring and analytics
@@ -183,7 +196,7 @@ CapSign provides specialized solutions for financial institutions, capital marke
 ├── ✅ Finastra Fusion
 └── ✅ Custom core banking platforms
 
-💼 Capital Markets Platforms  
+💼 Capital Markets Platforms
 ├── ✅ Bloomberg Terminal/API
 ├── ✅ Refinitiv Eikon
 ├── ✅ Charles River IMS
@@ -209,6 +222,7 @@ CapSign provides specialized solutions for financial institutions, capital marke
 ### **🗺️ Regional Infrastructure**
 
 **Available Regions:**
+
 - **🇺🇸 North America** - US East, US West, Canada
 - **🇪🇺 Europe** - Ireland, Frankfurt, London, Paris
 - **🌏 Asia Pacific** - Singapore, Tokyo, Sydney, Mumbai
@@ -217,17 +231,18 @@ CapSign provides specialized solutions for financial institutions, capital marke
 
 ### **⚖️ Jurisdiction-Specific Compliance**
 
-| Region | Regulatory Framework | Data Residency |
-|--------|---------------------|----------------|
-| **United States** | SEC, CFTC, FINRA, OCC | US-only data centers |
-| **European Union** | MiFID II, GDPR, PSD2 | EU-only data centers |
-| **United Kingdom** | FCA, PRA, Data Protection Act | UK-only data centers |
-| **Singapore** | MAS, PDPA | Singapore data centers |
-| **Canada** | CSA, OSFI, PIPEDA | Canadian data centers |
+| Region             | Regulatory Framework          | Data Residency         |
+| ------------------ | ----------------------------- | ---------------------- |
+| **United States**  | SEC, CFTC, FINRA, OCC         | US-only data centers   |
+| **European Union** | MiFID II, GDPR, PSD2          | EU-only data centers   |
+| **United Kingdom** | FCA, PRA, Data Protection Act | UK-only data centers   |
+| **Singapore**      | MAS, PDPA                     | Singapore data centers |
+| **Canada**         | CSA, OSFI, PIPEDA             | Canadian data centers  |
 
 ### **🏛️ Government & Public Sector**
 
 **FedRAMP Authorized:**
+
 - **Security controls** - 325+ controls implemented
 - **Continuous monitoring** - Real-time security assessment
 - **Government-grade** - Suitable for federal agencies
@@ -291,4 +306,4 @@ CapSign provides specialized solutions for financial institutions, capital marke
 
 **💡 Ready to transform your capital markets infrastructure?** Our enterprise team is standing by to help you build a custom solution that meets your exact requirements.
 
-*Enterprise pricing and terms subject to negotiation. All enterprise customers receive dedicated support and service level agreements.*
+_Enterprise pricing and terms subject to negotiation. All enterprise customers receive dedicated support and service level agreements._

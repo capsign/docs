@@ -4,26 +4,28 @@ Choose the deployment model that best fits your team's capabilities and business
 
 ## 📊 Feature Comparison
 
-| Feature | Community | Self-Hosted | Fully Managed |
-|---------|-----------|-------------|---------------|
-| **📚 Documentation** | ✅ Public docs | ✅ + Private guides | ✅ + Dedicated docs |
-| **🛠️ Infrastructure** | DIY | You manage | We manage |
-| **⚖️ Compliance** | DIY | You handle | SOC included |
-| **📞 Support** | Discord | Private Slack | 24/7 dedicated |
-| **🔄 Updates** | Manual | Manual | Automatic |
-| **📈 Scaling** | Manual | Manual | Auto-scaling |
-| **💰 Cost** | Free | $2.5K/month | $5K/month/node |
-| **🪙 CMX Discount** | N/A | 20% off | 20% off |
+| Feature               | Community      | Self-Hosted         | Fully Managed       |
+| --------------------- | -------------- | ------------------- | ------------------- |
+| **📚 Documentation**  | ✅ Public docs | ✅ + Private guides | ✅ + Dedicated docs |
+| **🛠️ Infrastructure** | DIY            | You manage          | We manage           |
+| **⚖️ Compliance**     | DIY            | You handle          | SOC included        |
+| **📞 Support**        | Discord        | Private Slack       | 24/7 dedicated      |
+| **🔄 Updates**        | Manual         | Manual              | Automatic           |
+| **📈 Scaling**        | Manual         | Manual              | Auto-scaling        |
+| **💰 Cost**           | Free           | $2.5K/month         | $5K/month/node      |
+| **🪙 CMX Discount**   | N/A            | 20% off             | 20% off             |
 
 ## 🏗️ **Self-Hosted Enterprise**
 
 ### **✅ Best For:**
+
 - 🧑‍💻 **Technical teams** with Kubernetes expertise
 - 🏢 **Organizations** wanting full infrastructure control
 - 🔒 **Security-first** companies with strict data requirements
 - 💰 **Cost-conscious** teams with DevOps resources
 
 ### **What You Get:**
+
 - 📖 **Private documentation** and advanced guides
 - 🎯 **Priority support** via private Slack channel
 - 🛡️ **Security best practices** and SOC compliance docs
@@ -31,6 +33,7 @@ Choose the deployment model that best fits your team's capabilities and business
 - 🔧 **Custom configuration** support and guidance
 
 ### **What You Manage:**
+
 - ☸️ **Kubernetes clusters** - EKS, GKE, or AKS setup
 - 🔐 **Security patches** - OS and container updates
 - 📊 **Monitoring setup** - Prometheus, Grafana, alerting
@@ -38,6 +41,7 @@ Choose the deployment model that best fits your team's capabilities and business
 - 📈 **Scaling decisions** - Resource planning and optimization
 
 ### **Time Investment:**
+
 - 🚀 **Initial setup**: 2-4 weeks with our guides
 - 🔧 **Ongoing maintenance**: 10-20 hours/month
 - 📚 **Learning curve**: Kubernetes and blockchain expertise required
@@ -47,12 +51,14 @@ Choose the deployment model that best fits your team's capabilities and business
 ## 🚀 **Fully Managed Service**
 
 ### **✅ Best For:**
+
 - 🎯 **Business-focused** teams wanting to build applications
 - ⚡ **Fast time-to-market** requirements
 - 🏛️ **Regulated institutions** needing SOC compliance
 - 📈 **Scaling businesses** with unpredictable loads
 
 ### **What We Handle:**
+
 - 🏗️ **Complete infrastructure** - Kubernetes, networking, storage
 - 🔐 **Security management** - Patches, updates, vulnerability scanning
 - 📊 **Monitoring & alerting** - 24/7 system monitoring
@@ -61,12 +67,14 @@ Choose the deployment model that best fits your team's capabilities and business
 - ⚖️ **Compliance** - SOC 1/2/3 certification maintenance
 
 ### **What You Focus On:**
+
 - 🎯 **Your application** - Building capital markets solutions
 - 👥 **Your users** - Customer experience and onboarding
 - 📊 **Your data** - Analytics and business intelligence
 - 💼 **Your business** - Growth and market expansion
 
 ### **Service Level Agreements:**
+
 - ⚡ **99.99% uptime** - Maximum 4.3 minutes downtime/month
 - 🚨 **< 15 minute** response time for critical issues
 - 📞 **24/7 support** - Phone, email, and chat
@@ -103,17 +111,21 @@ Choose the deployment model that best fits your team's capabilities and business
 ## 🪙 CMX Token Pricing Benefits
 
 ### **Self-Hosted with CMX**
+
 - 💵 **USD**: $2,500/month = $30,000/year
 - 🪙 **CMX**: 2,000 CMX/month = $24,000/year equivalent
 - 💰 **Savings**: $6,000/year (20% discount)
 
 ### **Managed with CMX**
+
 - 💵 **USD**: $10,000/month (2 nodes) = $120,000/year
 - 🪙 **CMX**: 8,000 CMX/month = $96,000/year equivalent
 - 💰 **Savings**: $24,000/year (20% discount)
 
 ### **Volume Discounts**
+
 For 10+ nodes, additional 15% off:
+
 - 🪙 **CMX pricing**: Effective 32% off USD pricing
 - 💰 **Annual savings**: $38,400 on $120,000 base cost
 
@@ -129,6 +141,7 @@ For 10+ nodes, additional 15% off:
 4. **🔄 Seamless**: Zero-downtime migration support
 
 ### **Migration Support**
+
 - 📞 **Dedicated migration team** - Technical specialists
 - 🔄 **Data migration tools** - Automated blockchain data sync
 - 📊 **Performance testing** - Validate before cutover
@@ -139,6 +152,7 @@ For 10+ nodes, additional 15% off:
 ## 🤔 Decision Framework
 
 ### **Choose Self-Hosted If:**
+
 - ✅ You have **strong DevOps/Kubernetes expertise**
 - ✅ **Data sovereignty** is critical requirement
 - ✅ You want **maximum customization** control
@@ -146,6 +160,7 @@ For 10+ nodes, additional 15% off:
 - ✅ You have **dedicated technical team**
 
 ### **Choose Managed If:**
+
 - ✅ You want to **focus on application development**
 - ✅ **Fast time-to-market** is essential
 - ✅ **Compliance** requirements are complex
@@ -163,6 +178,7 @@ For 10+ nodes, additional 15% off:
 💬 **Join our Discord**: [Get community feedback](https://discord.gg/gSmnZ9wmNv)
 
 Our solutions architects will help you:
+
 - 📋 **Assess your requirements** - Technical and business needs
 - 💰 **Calculate true costs** - Including hidden operational expenses
 - 🗺️ **Plan your architecture** - Optimal deployment strategy

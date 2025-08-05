@@ -4,11 +4,9 @@
 
 ## 🚀 Getting Started
 
-- [Quick Start](quickstart/README.md)
-- [Prerequisites](prerequisites/README.md)
-- [Installation Guide](installation/README.md)
-- [Repository Setup](installation/setup.md)
-- [Secrets Configuration](installation/secrets.md)
+- [Choose Your Path](getting-started/README.md)
+- [Managed Service](getting-started/managed.md)
+- [Self-Hosted](getting-started/self-hosted.md)
 
 ## 🎮 Interactive Demos
 
@@ -47,9 +45,14 @@
 - [Validator Guide](cmx-network/validators.md)
 - [Network Upgrades](cmx-network/upgrades.md)
 
-## 🏗️ Infrastructure Deployment
+## 🏗️ Self-Hosted Infrastructure
 
 - [Infrastructure Overview](infrastructure/README.md)
+- [Prerequisites](prerequisites/README.md)
+- [Quick Start Guide](quickstart/README.md)
+- [Repository Setup](installation/setup.md)
+- [Secrets Configuration](installation/secrets.md)
+- [Installation Guide](installation/README.md)
 - [AWS Setup](infrastructure/aws.md)
 - [Terraform Guide](infrastructure/terraform.md)
 - [EKS Configuration](infrastructure/eks.md)

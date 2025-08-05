@@ -8,9 +8,9 @@ Welcome to CapSign's comprehensive documentation hub. This GitBook covers the co
 
 ### 🚀 Getting Started
 
-- **[Quick Start](/quickstart/README.md)** - Deploy CapSign infrastructure in 30 minutes
-- **[Installation Guide](/installation/README.md)** - Complete ecosystem setup
-- **[Prerequisites](/prerequisites/README.md)** - Required tools and accounts
+- **[Choose Your Path](/getting-started/README.md)** - Managed service vs self-hosted decision guide
+- **[Managed Service](/getting-started/managed.md)** - Let CapSign handle infrastructure (recommended)
+- **[Self-Hosted](/getting-started/self-hosted.md)** - Deploy and manage infrastructure yourself
 
 ### 🎮 Interactive Demos
 

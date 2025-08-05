@@ -5,6 +5,7 @@ CapSign offers flexible pricing options to meet the needs of individual develope
 ## 🎯 Pricing Philosophy
 
 **Choose how you want to pay:**
+
 - 💵 **USD** - Predictable enterprise budgeting
 - 🪙 **CMX Tokens** - Save with token utility discounts
 - 🔄 **Hybrid** - Best of both worlds
@@ -12,11 +13,12 @@ CapSign offers flexible pricing options to meet the needs of individual develope
 ## 📊 Service Tiers
 
 ### 🌟 **Community** (Free)
+
 **Perfect for developers and proof-of-concepts**
 
 - ✅ Public documentation access
 - ✅ Open source Helm charts
-- ✅ Community Discord support  
+- ✅ Community Discord support
 - ✅ Basic tutorials and guides
 - ✅ Protocol testnet access
 
@@ -25,9 +27,11 @@ CapSign offers flexible pricing options to meet the needs of individual develope
 ---
 
 ### 🏢 **Enterprise Self-Hosted**
+
 **For teams managing their own infrastructure**
 
 **Included:**
+
 - ✅ Everything in Community
 - ✅ Private Slack channel support
 - ✅ SLA for documentation updates
@@ -37,15 +41,18 @@ CapSign offers flexible pricing options to meet the needs of individual develope
 - ✅ Mainnet protocol access
 
 **Pricing:**
+
 - 💵 **USD**: `$2,500/month` per organization
 - 🪙 **CMX**: `2,000 CMX/month` (**20% discount**)
 
 ---
 
 ### 🚀 **Fully Managed Service**
+
 **Complete infrastructure management by CapSign**
 
 **Included:**
+
 - ✅ Everything in Enterprise Self-Hosted
 - ✅ **Hosted CapSign Protocol nodes**
 - ✅ **Managed CMX Network infrastructure**
@@ -57,10 +64,12 @@ CapSign offers flexible pricing options to meet the needs of individual develope
 - ✅ **White-glove onboarding**
 
 **Pricing per node/month:**
+
 - 💵 **USD**: `$5,000/month` per node
 - 🪙 **CMX**: `4,000 CMX/month` (**20% discount**)
 
 **Enterprise Volume Discounts:**
+
 - 💼 **5+ nodes**: Additional 10% discount
 - 🏛️ **10+ nodes**: Additional 15% discount
 - 🌐 **Custom enterprise**: Contact sales
@@ -110,7 +119,7 @@ For large financial institutions and capital markets participants:
 ### **Volume Discounts**
 
 | Nodes | USD Discount | CMX Discount |
-|-------|--------------|--------------|
+| ----- | ------------ | ------------ |
 | 1-4   | Base Price   | 20% off USD  |
 | 5-9   | 10% off      | 28% off USD  |
 | 10-19 | 15% off      | 32% off USD  |
@@ -121,18 +130,22 @@ For large financial institutions and capital markets participants:
 ## 💡 **Which Option Is Right for You?**
 
 ### 👨‍💻 **Individual Developers**
+
 - **Start with**: Community (Free)
 - **Upgrade to**: Enterprise Self-Hosted when going to production
 
 ### 🏢 **Enterprises**
+
 - **Technical teams**: Enterprise Self-Hosted
 - **Focus on business**: Fully Managed Service
 
 ### 🏛️ **Financial Institutions**
+
 - **Regulated entities**: Custom Enterprise Solutions
 - **High volume**: Fully Managed with volume discounts
 
 ### 🪙 **CMX Token Holders**
+
 - **All tiers**: Save 20%+ with token payments
 - **Long-term believers**: Maximum savings and ecosystem support
 
@@ -149,4 +162,4 @@ For large financial institutions and capital markets participants:
 
 ---
 
-*Prices subject to change. Enterprise customers receive 30-day notice of pricing changes. CMX token discounts subject to minimum purchase requirements.*
+_Prices subject to change. Enterprise customers receive 30-day notice of pricing changes. CMX token discounts subject to minimum purchase requirements._
