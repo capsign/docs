@@ -76,30 +76,30 @@ CapSign offers flexible pricing options to meet the needs of individual develope
 
 ---
 
-## CMX Token Utility & Discounts
+## CapSign Token Utility & Discounts
 
-### Why Pay with CMX Tokens?
+### Why Pay with CapSign Tokens?
 
 1. **💰 Cost Savings**: 20% discount on all services
-2. **🔒 Token Utility**: Direct use case drives CMX value
-3. **🎯 Ecosystem Alignment**: Support the CapSign ecosystem
-4. **📈 Potential Appreciation**: Tokens may increase in value
+2. **🔒 Token Utility**: Direct use case drives CST value across entire network
+3. **🎯 Ecosystem Alignment**: Support the CapSign ecosystem and open standards
+4. **📈 Network Effects**: More applications on CapSign Network increase token demand
 
 ### Token Pricing Mechanism
 
-- **Fixed Service Rates**: CapSign sets CMX service prices directly at 20% discount to USD
-- **Monthly Billing**: Consistent CMX token amounts for predictable costs
+- **Fixed Service Rates**: CapSign sets CST service prices directly at 20% discount to USD
+- **Monthly Billing**: Consistent CapSign Token amounts for predictable costs
 - **Enterprise Stability**: Annual rate locks available for enterprise contracts
 - **Treasury Control**: No market volatility impact on service pricing
 
-### How to Acquire CMX Tokens
+### How to Acquire CapSign Tokens
 
-**All CMX tokens are distributed directly through CapSign Inc** to ensure regulatory compliance and proper documentation.
+**All CapSign Tokens are distributed directly through CapSign Inc.** to ensure regulatory compliance and proper documentation.
 
-1. **Enterprise Treasury Sales**: Direct purchases from CapSign Inc with full compliance documentation
+1. **Enterprise Treasury Sales**: Direct purchases from CapSign Inc. with full compliance documentation
 2. **Private Sale Warrants**: Limited allocation (2.5% of supply) for strategic investors
-3. **Validator Rewards**: Earn CMX through CMX Network validation participation
-4. **Strategic Partnerships**: CMX allocations tied to formal business development agreements
+3. **Validator Rewards**: Earn CST through CapSign Network validation participation
+4. **Strategic Partnerships**: CST allocations tied to formal business development agreements
 
 **Benefits of Corporate Distribution:**
 
@@ -107,6 +107,22 @@ CapSign offers flexible pricing options to meet the needs of individual develope
 - **No market volatility** affecting service pricing
 - **Enterprise-grade** KYC/AML compliance for all purchasers
 - **Predictable supply** and transparent pricing mechanism
+
+### Open Ecosystem with CapSign Standards
+
+**CapSign Network is designed as open infrastructure** where other companies can build capital markets applications using CapSign Protocol standards:
+
+- **Common standards** for all capital markets operations
+- **Unified token utility** (CST) across all network applications  
+- **CapSign Inc. standards authority** ensures regulatory compliance
+- **Enterprise-grade infrastructure** available to all developers
+- **Interoperability** between applications built on shared protocols
+
+**Examples of applications others could build:**
+- Alternative trading interfaces using CapSign Protocol
+- Specialized compliance tools for different jurisdictions
+- Industry-specific capital markets solutions (real estate, commodities, etc.)
+- Integration tools connecting to existing financial systems
 
 ---
 
