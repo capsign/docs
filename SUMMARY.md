@@ -45,38 +45,11 @@
 
 ## 🏗️ Self-Hosted Infrastructure
 
-- [Infrastructure Overview](infrastructure/README.md)
 - [Prerequisites](prerequisites/README.md)
 - [Quick Start Guide](quickstart/README.md)
 - [Repository Setup](installation/setup.md)
 - [Secrets Configuration](installation/secrets.md)
 - [Installation Guide](installation/README.md)
-- [AWS Setup](infrastructure/aws.md)
-- [Terraform Guide](infrastructure/terraform.md)
-- [EKS Configuration](infrastructure/eks.md)
-- [Architecture Overview](infrastructure/architecture.md)
-- [DNS & Domains](infrastructure/dns.md)
-- [Cost Monitoring](infrastructure/cost-monitoring.md)
-
-## 🚢 Kubernetes & Helm
-
-- [Helm Charts Overview](kubernetes/README.md)
-- [Helm Charts](kubernetes/helm-charts.md)
-- [Monitoring Setup](kubernetes/monitoring.md)
-- [Scaling](kubernetes/scaling.md)
-- [Storage](kubernetes/storage.md)
-- [Networking](kubernetes/networking.md)
-- [Troubleshooting](kubernetes/troubleshooting.md)
-
-## ⚡ Blockchain Infrastructure
-
-- [Node Overview](blockchain/README.md)
-- [Reth (Ethereum)](blockchain/reth.md)
-- [Prysm (Consensus)](blockchain/prysm.md)
-- [Optimism Stack](blockchain/optimism.md)
-- [Node Management](blockchain/management.md)
-- [Validator Setup](blockchain/validators.md)
-- [Sync Strategies](blockchain/sync.md)
 
 ## 👩‍💻 Developer Resources
 
