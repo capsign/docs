@@ -1,6 +1,6 @@
 # Table of Contents
 
-- [CapSign Ecosystem Overview](README.md)
+- [CMX Ecosystem Overview](README.md)
 
 ## 🚀 Getting Started
 
