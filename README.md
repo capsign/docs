@@ -53,56 +53,39 @@ Welcome to CapSign's comprehensive documentation hub. This resource covers the c
 
 - **[Protocol Overview](/protocol/README.md)** - Capital markets smart contracts industry standard
 - **[Smart Contracts](/protocol/contracts.md)** - Contract architecture and APIs
-- **[Solidity Documentation](/protocol/solidity.md)** - Developer reference
-- **[Capital Markets Features](/protocol/capital-markets.md)** - Trading and compliance
-- **[Protocol APIs](/protocol/api.md)** - Integration endpoints
+- **[ERC-7752 Lot Tokens](/protocol/erc-7752.md)** - Revolutionary token standard for capital markets
+- **[Deployment Guide](/protocol/deployment.md)** - Protocol deployment instructions
+- **[API Reference](/protocol/api.md)** - Integration endpoints
+- **[Testing Guide](/protocol/testing.md)** - Testing frameworks and strategies
 
 ### Compliance Framework
 
 - **[Compliance Overview](/compliance/README.md)** - Regulatory compliance architecture
 - **[Framework Implementation](/compliance/framework-implementation.md)** - Technical implementation
-- **[Attestation Schemas](/compliance/attestation-schemas.md)** - KYC, qualification, jurisdiction
-- **[Verification Process](/compliance/verification-process.md)** - Document processing
-- **[Regulatory Requirements](/compliance/regulatory-requirements.md)** - Global compliance
-- **[Risk Management](/compliance/risk-management.md)** - Compliance monitoring
 
 ### CMX Network
 
 - **[Network Overview](/cmx-network/README.md)** - L2 network architecture
-- **[CMX Token](/cmx-network/token.md)** - Native token economics
 - **[Network Governance](/cmx-network/governance.md)** - Participation and voting
-- **[Bridges & Interoperability](/cmx-network/bridges.md)** - Cross-chain operations
-- **[Validator Guide](/cmx-network/validators.md)** - Run network validators
 
-### Infrastructure Deployment
+### Self-Hosted Infrastructure
 
 - **[Infrastructure Overview](/infrastructure/README.md)** - AWS deployment architecture
-- **[AWS Setup](/infrastructure/aws.md)** - Configure cloud resources
-- **[Terraform Guide](/infrastructure/terraform.md)** - Infrastructure as Code
-- **[Kubernetes & Helm](/kubernetes/README.md)** - Container orchestration
-- **[Blockchain Nodes](/blockchain/README.md)** - Ethereum and L2 nodes
+- **[Prerequisites](/infrastructure/prerequisites.md)** - System requirements
+- **[Quick Start Guide](/infrastructure/quickstart.md)** - Fast deployment
+- **[Repository Setup](/infrastructure/setup.md)** - Project configuration
+- **[Secrets Configuration](/infrastructure/secrets.md)** - Security setup
+- **[Installation Guide](/infrastructure/installation.md)** - Step-by-step deployment
+- **[Optional Services](/infrastructure/optional-services.md)** - Third-party integrations
+- **[SOC Compliance](/infrastructure/soc-compliance.md)** - Compliance guidelines
 
 ### Developer Resources
 
 - **[Developer Overview](/developers/README.md)** - Start building with CapSign
-- **[SDK Documentation](/developers/sdk.md)** - JavaScript, Python, and Go SDKs
-- **[API Reference](/api/rest.md)** - REST, GraphQL, and WebSocket APIs
-- **[Integration Examples](/developers/examples.md)** - Code samples and tutorials
-- **[Testing Guide](/developers/testing.md)** - Testing frameworks and strategies
-
-### Monitoring & Operations
-
-- **[Monitoring Overview](/monitoring/README.md)** - Observability strategy
-- **[Metrics & KPIs](/monitoring/metrics.md)** - Protocol and infrastructure metrics
-- **[Alerting](/monitoring/alerting.md)** - Production alert configuration
-- **[Performance Monitoring](/monitoring/performance.md)** - Optimization guides
 
 ### Security & Compliance
 
-- **[Security Overview](/security/README.md)** - Comprehensive security model
 - **[SOC Compliance](/security/soc.md)** - SOC 1/2/3 certification guide
-- **[Security Hardening](/security/hardening.md)** - Production security checklist
-- **[Audit & Compliance](/security/audit.md)** - Regulatory compliance
 
 ### Pricing & Business
 
@@ -111,19 +94,14 @@ Welcome to CapSign's comprehensive documentation hub. This resource covers the c
 - **[Enterprise Solutions](/pricing/enterprise.md)** - Custom institutional offerings
 - **[CMX Token Utility](/pricing/token-utility.md)** - Token economics and savings
 
-### Tutorials & Examples
+### Advanced Topics
 
-- **[First Protocol Deployment](/tutorials/first-deployment.md)** - End-to-end setup
-- **[Token Integration](/tutorials/token-integration.md)** - CMX Token usage
-- **[DApp Development](/tutorials/dapp-development.md)** - Building applications
-- **[Production Migration](/tutorials/production.md)** - Going live checklist
+- **[Optional Services](/advanced/optional-services.md)** - Third-party service integrations
 
 ### Help & Support
 
 - **[FAQ](/help/faq.md)** - Frequently asked questions
-- **[Common Issues](/help/common-issues.md)** - Troubleshooting guide
-- **[Community](/help/community.md)** - Discord, GitHub, support channels
-- **[Enterprise Support](/help/enterprise.md)** - Commercial support options
+- **[Glossary](/GLOSSARY.md)** - Technical terms and definitions
 
 ---
 

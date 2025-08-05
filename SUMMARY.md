@@ -20,6 +20,7 @@
 - [Protocol Overview](protocol/README.md)
 - [Smart Contracts](protocol/contracts.md)
 - [Deployment Guide](protocol/deployment.md)
+- [ERC-7752 Lot Token](protocol/erc-7752.md)
 - [API Reference](protocol/api.md)
 - [Testing Guide](protocol/testing.md)
 
