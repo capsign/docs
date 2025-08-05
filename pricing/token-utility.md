@@ -96,28 +96,42 @@ Corporate-Controlled Distribution:
 │   └── Strategic investor warrants
 ```
 
-### Alternative Distribution Models
+### Recommended Distribution Strategy
 
-**Option A: Current Model (87.5% / 10% / 2.5%)**
-- **Maximum corporate control** for enterprise accountability
-- **Minimal governance complexity** during early phases
-- **Clear regulatory compliance** through corporate structure
+**Phased Transfer Model (75% / 20% / 5% Target)**
 
-**Option B: Enhanced Governance (75% / 20% / 5%)**
-- **75% CapSign Inc Treasury** - Reduced but still controlling
-- **20% Supranational Governance Body** - Enhanced international legitimacy
-- **5% Private Sale Warrants** - Increased strategic investor participation
+**Phase 1 (Years 1-3): Operational Control**
+```
+Initial Distribution:
+├── 87.5% - CapSign Inc Treasury (875M CMX)
+├── 10% - Swiss Foundation (100M CMX)  
+└── 2.5% - Private Sale Warrants (25M CMX)
+```
 
-**Option C: Phased Transfer Model (Initial: 87.5% / 10% / 2.5%)**
-- **Year 1-3**: Current distribution for operational control
-- **Year 4-6**: Transfer additional 10% to governance body (77.5% / 20% / 2.5%)
-- **Year 7+**: Final distribution based on governance body maturity
+**Phase 2 (Years 4-6): Enhanced Governance**
+```
+Target Distribution:
+├── 75% - CapSign Inc Treasury (750M CMX)
+├── 20% - International Governance Body (200M CMX)
+└── 5% - Strategic Partnerships (50M CMX)
+```
 
-**Option D: Multi-Category Model (70% / 15% / 10% / 5%)**
-- **70% CapSign Inc Treasury** - Core operations and service delivery
-- **15% Supranational Governance Body** - Protocol standards and regulation
-- **10% Industry Development Fund** - Research, standards, ecosystem growth
-- **5% Strategic Partnerships** - Regulatory relationships and market development
+**Strategic Benefits:**
+- **Maintains corporate accountability** while building international legitimacy
+- **Gradual governance maturation** reduces operational risk during early phases
+- **Enhanced strategic partnerships** through increased warrant allocation
+- **Regulatory acceptance** through demonstrated responsible stewardship
+- **Flexibility** to adjust based on governance body performance
+
+### Alternative Models Considered
+
+**Conservative Model (87.5% / 10% / 2.5%)**
+- Maximum corporate control for early phases
+- Minimal governance complexity
+
+**Multi-Category Model (70% / 15% / 10% / 5%)**
+- Separate industry development fund
+- More complex governance structure
 
 ### Supranational Governance Body
 

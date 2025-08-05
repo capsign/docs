@@ -4,9 +4,9 @@ CapSign employs a **unique corporate-controlled governance model** designed spec
 
 ## Corporate-Controlled Token Model
 
-### CapSign Inc Control
+### CapSign Inc. Control
 
-**CapSign Inc maintains control of 87.5% of CMX supply** to ensure:
+**CapSign Inc. maintains control of 87.5% of CMX supply** to ensure:
 
 - **Regulatory compliance** and complete paper trail documentation
 - **Enterprise-grade** service delivery and accountability
@@ -51,9 +51,27 @@ CapSign employs a **unique corporate-controlled governance model** designed spec
 
 **CapSign will transfer 10% of CMX supply to an independent supranational entity** for global oversight of capital markets protocol standards.
 
-### Potential Legal Structures
+### Recommended Hybrid Implementation Strategy
 
-**Swiss Foundation (Recommended - Practical Path)**
+**Phase 1: Swiss Foundation (Years 1-3)**
+
+- **Immediate establishment** (6-12 months) with proven legal framework
+- **SEC/FCA founding members** for regulatory legitimacy
+- **Open Cap Table Coalition** integration for industry support
+- **Operational foundation** while exploring treaty pathways
+- **Neutral jurisdiction** with digital asset regulatory clarity
+
+**Phase 2: IOSCO Committee Expansion (Years 4-6)**
+
+- **Transition to treaty model** through IOSCO permanent committee
+- **Government-backed authority** with diplomatic recognition
+- **Integration with existing** international financial architecture
+- **Enhanced CMX allocation** (20% vs initial 10%) upon treaty establishment
+- **Maximum international legitimacy** while preserving operational efficiency
+
+### Legal Structure Details
+
+**Swiss Foundation (Phase 1 Implementation)**
 
 - **Neutral jurisdiction** with established legal framework
 - **Quick establishment** (6-12 months) with known legal process
@@ -63,18 +81,14 @@ CapSign employs a **unique corporate-controlled governance model** designed spec
 - **SEC/FCA acceptance** - familiar foundation structure
 - **Lower complexity** and operational costs
 
-**International Treaty Organization (Ideal - Complex Path)**
+**IOSCO Committee Model (Phase 2 Target)**
 
 - **Highest legitimacy** - multi-jurisdictional government authority
 - **Maximum neutrality** - true supranational status like BIS/IOSCO
 - **Government backing** and diplomatic immunity
 - **Direct regulatory integration** with existing international bodies
-- **Complex implementation** - requires formal government agreements
-- **Potential pathways:**
-  - **IOSCO expansion** - new permanent committee for digital markets
-  - **G20 initiative** - establish through Financial Stability Board
-  - **Bilateral treaties** - start with US-UK agreement, expand
-  - **UN framework** - UNCITRAL model for digital capital markets
+- **Permanent committee** structure for digital capital markets oversight
+- **Secretariat support** from existing IOSCO infrastructure
 
 **Singapore Foundation**
 
@@ -188,26 +202,44 @@ CapSign employs a **unique corporate-controlled governance model** designed spec
 
 ## Implementation Timeline
 
-### Phase 1: Foundation Establishment (Months 1-6)
+### Phase 1: Swiss Foundation Launch (Years 1-3)
 
-- Legal structure formation and regulatory approval
-- Board appointment and staff recruitment
-- Initial governance framework development
-- Relationship building with international regulators
+**Year 1: Foundation Establishment**
 
-### Phase 2: Operational Launch (Months 7-12)
+- Swiss foundation legal structure formation
+- SEC, FCA, and Open Cap Table Coalition founding member agreements
+- Initial 10% CMX transfer (100M CMX) to foundation
+- Board appointment with regulatory and industry representatives
 
-- CMX token transfer to governance foundation
-- Initial protocol standards development
-- Membership recruitment and onboarding
-- International regulatory coordination agreements
+**Years 2-3: Operational Development**
 
-### Phase 3: Full Operations (Months 13+)
+- Protocol standards development and implementation
+- International regulatory coordination framework
+- Industry best practices establishment
+- IOSCO relationship building and treaty pathway exploration
 
-- Complete governance framework implementation
-- Regular protocol review and upgrade processes
-- Ongoing regulatory coordination and standard setting
-- Dispute resolution and enforcement mechanisms
+### Phase 2: IOSCO Committee Transition (Years 4-6)
+
+**Year 4: Treaty Negotiations**
+
+- IOSCO permanent committee proposal development
+- Government-level negotiations (US Treasury, UK Treasury, etc.)
+- Legal framework development for international treaty status
+- Enhanced CMX allocation preparation (additional 10% transfer)
+
+**Years 5-6: Treaty Implementation**
+
+- Formal IOSCO committee establishment
+- Enhanced CMX transfer (total 20% = 200M CMX) to treaty body
+- Full international recognition and diplomatic status
+- Expanded membership and governance capabilities
+
+### Phase 3: Mature International Operations (Years 7+)
+
+- Complete treaty-based governance framework
+- Full integration with international financial architecture
+- Advanced dispute resolution and enforcement mechanisms
+- Potential additional CMX transfers based on governance performance
 
 ---
 
