@@ -74,6 +74,13 @@ Welcome to CapSign's comprehensive documentation hub. This GitBook covers the co
 - **[Security Hardening](/security/hardening.md)** - Production security checklist
 - **[Audit & Compliance](/security/audit.md)** - Regulatory compliance
 
+### 💰 Pricing & Business
+
+- **[Pricing Overview](/pricing/README.md)** - Service tiers and CMX token discounts
+- **[Self-Hosted vs Managed](/pricing/comparison.md)** - Deployment option comparison
+- **[Enterprise Solutions](/pricing/enterprise.md)** - Custom institutional offerings
+- **[CMX Token Utility](/pricing/token-utility.md)** - Token economics and savings
+
 ### 💡 Tutorials & Examples
 
 - **[First Protocol Deployment](/tutorials/first-deployment.md)** - End-to-end setup

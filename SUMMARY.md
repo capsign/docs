@@ -140,6 +140,13 @@
 - [Multi-Chain Setup](tutorials/multi-chain.md)
 - [Custom Configurations](tutorials/custom-config.md)
 
+## 💰 Pricing & Business
+
+- [Pricing Overview](pricing/README.md)
+- [Self-Hosted vs Managed](pricing/comparison.md)
+- [Enterprise Solutions](pricing/enterprise.md)
+- [CMX Token Utility](pricing/token-utility.md)
+
 ## ❓ Help & Support
 
 - [FAQ](help/faq.md)
