@@ -5,15 +5,18 @@ Welcome to CapSign! You have **two main options** to get started with the CapSig
 ## 🎯 **Which Option Is Right for You?**
 
 ### 🏢 **Managed Service** (Recommended for Most Users)
+
 **Let CapSign handle the infrastructure while you focus on building**
 
 ✅ **Best for:**
+
 - Teams wanting to **focus on application development**
 - **Fast time-to-market** requirements
 - **Regulated institutions** needing SOC compliance
 - Organizations wanting **99.99% uptime** guarantees
 
 ✅ **What you get:**
+
 - Fully managed CapSign Protocol nodes
 - 24/7 enterprise support
 - SOC 1/2/3 compliant hosting
@@ -26,15 +29,18 @@ Welcome to CapSign! You have **two main options** to get started with the CapSig
 ---
 
 ### 🏗️ **Self-Hosted** (For Technical Teams)
+
 **Deploy and manage CapSign infrastructure yourself**
 
 ✅ **Best for:**
+
 - **Technical teams** with Kubernetes expertise
 - Organizations wanting **full infrastructure control**
 - **Cost-conscious** teams with DevOps resources
 - **Data sovereignty** requirements
 
 ✅ **What you get:**
+
 - Complete infrastructure control
 - Private documentation and support
 - Custom configuration capabilities
