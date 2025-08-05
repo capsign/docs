@@ -1,550 +1,479 @@
 # CMX Protocol Smart Contracts
 
-Complete reference for all smart contracts in the CMX Protocol ecosystem.
+Complete reference for all smart contracts deployed in the CMX Protocol ecosystem on Base Sepolia.
+
+## Deployment Information
+
+**Network**: Base Sepolia (Chain ID: 84532)  
+**Block Explorer**: https://sepolia.basescan.org  
+**Latest Deployment**: July 31, 2025
+
+### Core System Contracts
+
+| Contract | Address | Description |
+|----------|---------|-------------|
+| GlobalAccessManager | `0x81574D4c3BC62d6A9Ff166608af328824a0694bd` | Central access control system |
+| FacetRegistry | `0x49Df9c09A41eCAC13203E70Db04F1025C8982B20` | Diamond facet registry |
+| Factory | TBD | Main diamond factory contract |
+| SubscriptionManager | TBD | Payment and subscription management |
 
 ## Architecture Overview
 
-The CMX Protocol uses the **Diamond Pattern (EIP-2535)** for upgradeable, modular smart contracts. This architecture provides:
+The CMX Protocol uses the **Diamond Pattern (EIP-2535)** for upgradeable, modular smart contracts. Each functional area is implemented as separate facets that can be added, updated, or removed from diamond contracts.
 
-- **Modularity**: Each feature is a separate facet
-- **Upgradability**: Add/remove/replace functionality without changing addresses
-- **Gas Efficiency**: Only load required functionality
-- **Size Limits**: Bypass 24KB contract size limits
+### Diamond Core Facets
 
-## Diamond Factories
+These facets provide the fundamental diamond functionality:
 
-Central factory contracts that create and manage diamond-based assets and systems.
+#### DiamondCutFacet
+**Address**: `0xd805e4480b4227d60887d2c70f292b3888eb4681`
 
-### WalletFactory
-
-Creates smart wallets with configurable facets for different user types.
-
-**Address**: `0x...` (Base Sepolia)
+Handles diamond upgrades by adding, replacing, or removing facets.
 
 **Key Functions**:
-
 ```solidity
-function createWallet(
-    bytes32 salt,
-    address[] calldata facets,
-    bytes[] calldata facetCalls
-) external returns (address wallet);
-
-function getWallet(address owner, bytes32 salt) external view returns (address);
+function diamondCut(
+    FacetCut[] calldata _diamondCut,
+    address _init,
+    bytes calldata _calldata
+) external;
 ```
 
-**Facets Available**:
+#### DiamondLoupeFacet
+**Address**: `0xc5478314b0d2e2b7447dd9d5a2ff6a750451bb78`
 
-- **ERC4337Facet** - Account abstraction support
-- **MultisigFacet** - Multi-signature functionality
-- **DelegationFacet** - Voting delegation
-- **ComplianceFacet** - KYC/AML integration
-
-### AssetFactory
-
-Creates tokenized assets including securities, RWAs, and share classes.
-
-**Address**: `0x...` (Base Sepolia)
+Provides introspection into diamond structure and facets.
 
 **Key Functions**:
-
 ```solidity
-function createShareClass(
-    string calldata name,
-    string calldata symbol,
-    uint256 totalShares,
-    ShareClassConfig calldata config
-) external returns (address shareClass);
-
-function createOffChainAsset(
-    string calldata name,
-    string calldata symbol,
-    AssetConfig calldata config
-) external returns (address asset);
+function facets() external view returns (Facet[] memory facets_);
+function facetFunctionSelectors(address _facet) external view returns (bytes4[] memory);
+function facetAddresses() external view returns (address[] memory);
+function facetAddress(bytes4 _functionSelector) external view returns (address);
 ```
 
-**Asset Types**:
+#### OwnableFacet
+**Address**: `0x5c474dcaf95f2763e47f463d6f0de24801a3d895`
 
-- **ShareClass** - Corporate equity instruments
-- **OffChainAsset** - Real-world asset representation
-- **Bond** - Debt instruments
-- **Derivative** - Financial derivatives
+Provides ownership management for diamond contracts.
 
-### FundFactory
+#### AccessControlFacet
+**Address**: `0xb171c70c7d084c85d6f1a1aff4ea8d4c70efded3`
 
-Creates investment funds with configurable strategies and governance.
+Implements role-based access control within diamond contracts.
 
-**Address**: `0x...` (Base Sepolia)
+## Asset Management Facets
 
-**Key Functions**:
+### ShareClassFacet
+Implements corporate equity shares with voting and dividend rights.
 
-```solidity
-function createUniversalFund(
-    string calldata name,
-    string calldata symbol,
-    FundConfig calldata config
-) external returns (address fund);
-```
+**Features**:
+- ERC20-compatible token functionality
+- Voting rights management
+- Dividend distribution
+- Transfer restrictions
+- Corporate actions
+
+### OffChainAssetFacet
+Manages tokenized real-world assets with off-chain components.
+
+**Asset Types Supported**:
+- Real estate properties
+- Commodities
+- Art and collectibles
+- Infrastructure assets
+- Private debt instruments
+
+### AssetCoreFacet
+Core asset functionality shared across all asset types.
+
+### AssetAdminFacet
+Administrative functions for asset management.
+
+### AssetConfigFacet
+Configuration and parameter management for assets.
+
+### AssetDeploymentFacet
+Factory functionality for creating new asset instances.
+
+### AssetPaymasterFacet
+Gas abstraction for asset-related transactions.
+
+## Wallet & Account Management
+
+### CoreWalletFacet
+Core smart wallet functionality with account abstraction support.
+
+**Features**:
+- ERC4337 account abstraction
+- Multi-signature support
+- Transaction batching
+- Gas payment flexibility
+
+### WebAuthnProxyFacet
+Biometric authentication integration for enhanced security.
+
+### AccountManagementFacet
+User account lifecycle management.
+
+### WalletConfigFacet
+Wallet configuration and personalization settings.
+
+### WalletDeploymentFacet
+**Address**: `0xaee4f63c3bab3feffcbf02eb7dda336e70f1dede`
+
+Factory for creating new smart wallet instances.
+
+### WalletPaymasterFacet
+Gas sponsorship and payment abstraction for wallet operations.
+
+## Asset Deployment System
+
+### AssetDeploymentFacet
+**Address**: `0x55aa4a7c25e85c7716c6895d41277afd62996ce5`
+
+Factory functionality for creating new tokenized asset instances.
+
+### FundDeploymentFacet
+**Address**: `0x57671c9848fee178ff752976123cbb42e0f40744`
+
+Factory for creating new investment fund instances.
+
+### LedgerDeploymentFacet
+**Address**: `0xe4fb3753029aeb0ccb0d051014578753e7a9babe`
+
+Factory for creating accounting ledger instances.
+
+### OfferingDeploymentFacet
+**Address**: `0xeecf66ebb9458d8c564c7bb23f08f28a13939b39`
+
+Factory for creating securities offering instances.
+
+## Governance Facets
+
+### GovernanceDeploymentFacet
+**Address**: `0x176565846d05f2cfd3bcc832a3aa43c28f541efb`
+
+Factory for creating governance instances.
+
+### GovernanceRegistryFacet
+**Address**: `0x7a8abffc159b69b0d7e44dcc2404aba5391af0d0`
+
+Governance proposal and voting registry.
+
+### GovernanceConfigFacet
+**Address**: `0xbc28e385de188bcf4b18d91995a81fcc466be5b5`
+
+Governance parameter configuration.
+
+### GovernancePaymasterFacet
+**Address**: `0xc78072109fbd65ad58e0608edb873595b7b026e3`
+
+Gas abstraction for governance operations.
+
+### DelegationFacet
+Voting power delegation functionality.
+
+## Ledger & Accounting Facets
+
+### LedgerConfigFacet
+**Address**: `0x73956370c5873749e477e0d3a60db878f34dbe00`
+
+Ledger configuration and chart of accounts.
+
+### LedgerFacet
+Double-entry bookkeeping implementation.
+
+### LedgerPaymasterFacet
+Gas abstraction for ledger operations.
+
+## Investment Funds
+
+### UniversalFundCoreFacet
+Core investment fund functionality supporting multiple fund types.
 
 **Fund Types**:
+- Hedge funds
+- Mutual funds
+- Private equity funds
+- Real estate investment trusts (REITs)
 
-- **UniversalFund** - General investment fund
-- **HedgeFund** - Alternative investment strategies
-- **MutualFund** - Regulated mutual funds
-- **ETF** - Exchange-traded funds
+### InvestmentFacet
+Investment execution and portfolio management.
 
-### OfferingFactory
+### DistributionFacet
+Distribution payments to fund investors.
 
-Creates securities offerings compliant with various regulations.
+### AdvancedDistributionFacet
+Complex distribution strategies and waterfall calculations.
 
-**Address**: `0x...` (Base Sepolia)
+### FundUnitFacet
+Fund share/unit management and tracking.
 
-**Key Functions**:
+### CapitalCallFacet
+Capital call management for private funds.
 
-```solidity
-function createRule506b(
-    address asset,
-    OfferingConfig calldata config
-) external returns (address offering);
+### CapitalAccountFacet
+Capital account tracking for partnership-style funds.
 
-function createRule506c(
-    address asset,
-    OfferingConfig calldata config
-) external returns (address offering);
-```
+## Trading & Transfer Facets
 
-**Offering Types**:
+### TransferFacet
+Handles compliant asset transfers with regulatory checks.
 
-- **Rule506b** - Private placement (accredited investors)
-- **Rule506c** - General solicitation allowed
-- **Rule701** - Employee stock option plans
-- **RegA+** - Mini public offerings
+**Features**:
+- KYC/AML compliance verification
+- Transfer restrictions enforcement
+- Regulatory jurisdiction checks
+- Accredited investor verification
 
-## Access Management
+### TransactionFacet
+Core transaction processing and settlement.
 
-Unified access control system providing role-based permissions across the entire protocol.
+### LotManagementFacet
+Manages trading lots and position tracking.
 
-### GlobalAccessManager
+### SanctionsFacet
+OFAC and international sanctions screening.
 
-Central access control contract managing all protocol permissions.
+### Rule144Facet
+Implements SEC Rule 144 compliance for restricted securities.
 
-**Address**: `0x...` (Base Sepolia)
+## Employee Stock Options (Rule 701)
 
-**Key Functions**:
+### Rule701ConfigFacet
+Configuration for employee stock option plans.
 
-```solidity
-function grantRole(bytes32 role, address account, uint32 delay) external;
-function revokeRole(bytes32 role, address account) external;
-function hasRole(bytes32 role, address account) external view returns (bool);
-```
+### Rule701DeploymentFacet
+Factory for creating option plan instances.
 
-**System Roles**:
+### ExerciseFacet
+Option exercise functionality.
 
-- **ADMIN_ROLE** - Protocol administration
-- **OPERATOR_ROLE** - Operational functions
-- **COMPLIANCE_ROLE** - KYC/AML operations
-- **AUDIT_ROLE** - Read-only audit access
+### VestingFacet
+Vesting schedule management and tracking.
 
-## Attestations
+### LockupFacet
+Post-exercise lockup period management.
 
-Decentralized identity verification and compliance system based on Ethereum Attestation Service (EAS).
+### EsoFacet
+Employee stock option core functionality.
 
-### AttestationRegistry
+### WarrantFacet
+Warrant instrument management.
 
-Manages attestation schemas and verification processes.
+### SarFacet
+Stock Appreciation Rights (SAR) implementation.
 
-**Address**: `0x...` (Base Sepolia)
+## Compliance & Attestations
 
-**Key Functions**:
+### AttestationCoreFacet
+Core attestation functionality for identity verification.
 
-```solidity
-function createSchema(
-    string calldata schema,
-    bool revocable
-) external returns (bytes32 schemaId);
+### AttestationAdminFacet
+Administrative functions for attestation management.
 
-function attest(
-    bytes32 schemaId,
-    address recipient,
-    bytes calldata data
-) external returns (bytes32 attestationId);
-```
+### AttestationQueryFacet
+Query interface for attestation verification.
+
+### AttestationFacet
+User-facing attestation interface.
+
+### SchemaManagementFacet
+Manages attestation schemas for different verification types.
 
 **Attestation Types**:
-
-- **KYC Verification** - Identity verification
-- **Accredited Investor** - Investment qualification
-- **Qualified Purchaser** - High net worth verification
-- **Professional Investor** - Professional status
-
-### ERC20PaymentResolver
-
-Handles payment requirements for creating attestations.
-
-**Key Functions**:
-
-```solidity
-function pay(
-    bytes32 schemaId,
-    uint256 amount,
-    address token
-) external returns (bool);
-```
-
-## Tokenization
-
-Framework for creating and managing tokenized real-world assets and securities.
-
-### Share Classes
-
-Corporate equity instruments with configurable rights and restrictions.
-
-**Key Features**:
-
-- **Voting Rights** - Configurable voting power
-- **Dividend Rights** - Automatic dividend distribution
-- **Transfer Restrictions** - Compliance-based transfer controls
-- **Anti-Dilution** - Protection mechanisms
-
-**Functions**:
-
-```solidity
-function transfer(address to, uint256 amount) external returns (bool);
-function vote(uint256 proposalId, bool support) external;
-function claimDividends() external;
-```
-
-### Off-Chain Assets
-
-Real-world asset representation with on-chain management.
-
-**Asset Types**:
-
-- **Real Estate** - Property tokenization
-- **Commodities** - Physical commodity representation
-- **Art & Collectibles** - High-value collectible assets
-- **Infrastructure** - Infrastructure project tokens
-
-## Trading Markets
-
-Multiple trading venue types for different market structures and regulatory requirements.
-
-### Order Book Markets
-
-Traditional exchange-style order matching with full order book depth.
-
-**Key Functions**:
-
-```solidity
-function placeBuyOrder(
-    address asset,
-    uint256 amount,
-    uint256 price
-) external returns (uint256 orderId);
-
-function placeSellOrder(
-    address asset,
-    uint256 amount,
-    uint256 price
-) external returns (uint256 orderId);
-
-function cancelOrder(uint256 orderId) external;
-```
-
-### Auction Markets
-
-Price discovery through various auction mechanisms.
-
-**Auction Types**:
-
-- **English Auction** - Ascending price auction
-- **Dutch Auction** - Descending price auction
-- **Sealed Bid** - Private bid submission
-- **Batch Auction** - Periodic clearing
-
-### OTC Markets
-
-Over-the-counter trading for private negotiations and large block trades.
-
-**Key Functions**:
-
-```solidity
-function createOTCOffer(
-    address asset,
-    uint256 amount,
-    uint256 price,
-    address counterparty
-) external returns (uint256 offerId);
-
-function acceptOTCOffer(uint256 offerId) external;
-```
-
-## Funds Management
-
-Investment fund operations including NAV calculation, fee management, and investor relations.
-
-### Universal Fund
-
-Flexible fund structure supporting various investment strategies.
-
-**Key Functions**:
-
-```solidity
-function deposit(uint256 amount) external returns (uint256 shares);
-function withdraw(uint256 shares) external returns (uint256 amount);
-function calculateNAV() external view returns (uint256);
-```
-
-**Features**:
-
-- **Performance Fees** - Management and performance fee calculation
-- **High Water Mark** - Performance fee protection
-- **Redemption Gates** - Liquidity management
-- **Side Pockets** - Illiquid asset management
-
-## Governance
-
-Decentralized governance system for protocol upgrades and parameter changes.
-
-### DAO Governance
-
-Multi-signature and voting-based governance for critical protocol decisions.
-
-**Key Functions**:
-
-```solidity
-function propose(
-    address[] calldata targets,
-    uint256[] calldata values,
-    bytes[] calldata calldatas,
-    string calldata description
-) external returns (uint256 proposalId);
-
-function vote(uint256 proposalId, bool support) external;
-function execute(uint256 proposalId) external;
-```
-
-**Governance Parameters**:
-
-- **Proposal Threshold** - Minimum tokens to propose
-- **Voting Period** - Duration of voting
-- **Quorum** - Minimum participation required
-- **Time Lock** - Execution delay for security
-
-## Accounting Ledgers
-
-Double-entry bookkeeping system for transparent financial reporting.
-
-### Ledger System
-
-Enterprise-grade accounting with automated journal entries.
-
-**Key Functions**:
-
-```solidity
-function createJournalEntry(
-    uint256 debitAccount,
-    uint256 creditAccount,
-    uint256 amount,
-    string calldata description
-) external;
-
-function getBalance(uint256 accountId) external view returns (int256);
-```
-
-**Account Types**:
-
-- **Assets** - Cash, securities, receivables
-- **Liabilities** - Payables, debt obligations
-- **Equity** - Owner's equity, retained earnings
-- **Income** - Fee income, investment gains
-- **Expenses** - Operating expenses, management fees
-
-## Billing & Subscriptions
-
-Payment and subscription management system for protocol usage fees.
-
-### Subscription Manager
-
-Handles tiered subscriptions and usage-based billing.
-
-**Key Functions**:
-
-```solidity
-function subscribe(uint256 tierId) external;
-function payUsageFee(uint256 amount) external;
-function cancelSubscription() external;
-```
-
-**Subscription Tiers**:
-
-- **Basic** - Limited functionality
-- **Professional** - Full feature access
-- **Enterprise** - Custom limits and support
-- **Institutional** - White-glove service
-
-## Payment Abstraction
-
-Gas abstraction and payment systems for improved user experience.
-
-### CMX Paymaster
-
-ERC-4337 paymaster supporting CMX token gas payments.
-
-**Key Functions**:
-
-```solidity
-function depositFor(address account) external payable;
-function withdrawTo(address account, uint256 amount) external;
-```
-
-**Features**:
-
-- **CMX Gas Payments** - Pay gas fees with CMX tokens
-- **Sponsored Transactions** - Gasless transactions for users
-- **Batch Operations** - Multiple operations in one transaction
+- KYC verification (Basic, Enhanced)
+- Accredited investor status
+- Qualified purchaser status
+- Professional investor designation
+- Jurisdiction-specific compliance
+
+### AttestationRegistryFactory
+Factory for creating attestation registry instances.
+
+### ComplianceFacet
+Regulatory compliance checks and enforcement.
 
 ## Document Management
 
-Secure document storage and verification system for compliance and legal requirements.
+### DocumentCoreFacet
+Core document storage and verification functionality.
 
-### Document Registry
+### DocumentAdminFacet
+Administrative document management functions.
 
-IPFS-based document storage with on-chain verification.
+### DocumentSigningFacet
+Digital signature and document execution.
 
-**Key Functions**:
+### DocumentTemplateFacet
+Document template management for common legal documents.
 
-```solidity
-function registerDocument(
-    bytes32 documentHash,
-    string calldata ipfsHash,
-    DocumentType docType
-) external;
+### DocumentRegistryFactory
+Factory for creating document registry instances.
 
-function verifyDocument(bytes32 documentHash) external view returns (bool);
-```
+## Securities Offerings
 
-**Document Types**:
+### OfferingConfigFacet
+Configuration for securities offerings under various regulations.
 
-- **Legal Documents** - Contracts, agreements
-- **Compliance Reports** - Audit reports, certifications
-- **Financial Statements** - Balance sheets, income statements
-- **Prospectuses** - Investment offering documents
+### OfferingPaymasterFacet
+Gas abstraction for offering-related transactions.
 
-## Utilities
+**Supported Offering Types**:
+- Rule 506(b) private placements
+- Rule 506(c) general solicitation offerings
+- Rule 701 employee stock option plans
+- Regulation A+ mini-public offerings
 
-Supporting contracts and utilities for enhanced functionality.
+## Access Management
 
-### Price Feeds
+### IssuerAccessManagerCoreFacet
+Core access management for asset issuers.
 
-Oracle-based price feeds for asset valuation and trading.
+### IssuerAccessManagerConfigFacet
+Configuration for issuer-specific access controls.
 
-**Key Functions**:
+### IssuerAccessManagerDeploymentFacet
+Factory for creating issuer access manager instances.
 
-```solidity
-function getPrice(address asset) external view returns (uint256);
-function updatePrice(address asset, uint256 price) external;
-```
+### IssuerAccessManagerGovernanceFacet
+Governance functionality for issuer access management.
 
-### Escrow
+### IssuerAccessManagerSubscriptionFacet
+Subscription management for issuer services.
 
-Secure escrow services for conditional transfers and settlements.
+### IssuerAccessManagerWalletFacet
+Wallet integration for issuer access management.
 
-**Key Functions**:
+### IssuerAccessManagerPaymasterFacet
+Gas abstraction for access management operations.
 
-```solidity
-function createEscrow(
-    address asset,
-    uint256 amount,
-    address beneficiary,
-    uint256 releaseTime
-) external returns (uint256 escrowId);
+## Payment & Gas Abstraction
 
-function releaseEscrow(uint256 escrowId) external;
-```
+### PaymasterManagementFacet
+Core paymaster functionality for gas abstraction.
 
-## Events and Monitoring
+### PaymasterValidationFacet
+Validation logic for sponsored transactions.
 
-Comprehensive event logging for transparency and monitoring.
+**Payment Features**:
+- CMX token gas payments
+- Sponsored transactions
+- Batch operations
+- Cross-chain payments
 
-### Event Types
+## Query & Data Access
 
-**Asset Events**:
+### QueryFacet
+General-purpose query interface for protocol data.
 
-- `AssetCreated(address indexed asset, string name, string symbol)`
-- `Transfer(address indexed from, address indexed to, uint256 amount)`
-- `Approval(address indexed owner, address indexed spender, uint256 amount)`
+**Query Capabilities**:
+- Asset information and balances
+- Compliance status verification
+- Transaction history
+- Governance proposal status
+- Fund performance metrics
 
-**Trading Events**:
+## Utility Contracts
 
-- `OrderPlaced(uint256 indexed orderId, address indexed trader, uint256 amount, uint256 price)`
-- `OrderMatched(uint256 indexed buyOrderId, uint256 indexed sellOrderId, uint256 price, uint256 amount)`
-- `OrderCancelled(uint256 indexed orderId, address indexed trader)`
+### CMX Token
+The native utility token of the CMX Network.
 
-**Governance Events**:
+**Contract**: `CMX.sol`
 
-- `ProposalCreated(uint256 indexed proposalId, address indexed proposer, string description)`
-- `VoteCast(uint256 indexed proposalId, address indexed voter, bool support, uint256 votes)`
-- `ProposalExecuted(uint256 indexed proposalId)`
+**Features**:
+- ERC20 standard compliance
+- Governance token functionality
+- Gas payment utility
+- Staking mechanisms
+- Cross-chain bridge support
+
+### USD Stablecoin
+USD-pegged stablecoin for protocol operations.
+
+**Contract**: `USD.sol`
+
+### TokenSale
+Token sale and distribution contract.
+
+**Contract**: `TokenSale.sol`
+
+### SafeFacet
+Multi-signature wallet functionality integration.
+
+## Factory System
+
+### AttestationRegistryFactory
+Creates new attestation registry instances for different jurisdictions or use cases.
+
+### DocumentRegistryFactory
+Creates document registry instances for secure document management.
+
+### Factory (Main)
+Primary factory contract coordinating all other factories.
+
+## Integration Patterns
+
+### Diamond Upgrade Process
+
+1. **Deploy New Facet**: Deploy the new facet contract
+2. **Prepare Diamond Cut**: Create the facet cut data structure
+3. **Execute Upgrade**: Call `diamondCut()` with appropriate permissions
+4. **Verify Upgrade**: Confirm new functionality is available
+
+### Asset Creation Workflow
+
+1. **Compliance Setup**: Create required attestation schemas
+2. **Asset Deployment**: Use AssetDeploymentFacet to create new asset
+3. **Configuration**: Configure asset parameters via AssetConfigFacet
+4. **Compliance Integration**: Link compliance requirements
+5. **Trading Setup**: Configure transfer restrictions and market access
+
+### Fund Management Workflow
+
+1. **Fund Creation**: Deploy fund diamond via FundDeploymentFacet
+2. **Strategy Configuration**: Set investment strategy parameters
+3. **Compliance Setup**: Configure investor requirements
+4. **Accounting Integration**: Link to accounting ledger
+5. **Investor Onboarding**: Process investor applications and KYC
 
 ## Security Considerations
 
 ### Access Control
-
-- All privileged functions require appropriate roles
-- Multi-signature requirements for administrative actions
-- Time-delayed execution for critical changes
+- All facets inherit from AccessControlFacet for role-based permissions
+- GlobalAccessManager provides protocol-wide access coordination
+- Multi-signature requirements for sensitive operations
 
 ### Upgrade Safety
+- Diamond cuts require appropriate admin roles
+- Time delays for critical upgrades
+- Emergency pause mechanisms available
 
-- Diamond cuts require multi-signature approval
-- Upgrade delays for community review
-- Emergency pause mechanisms
-
-### Audit Trail
-
-- Complete event logging for all operations
-- Immutable transaction history
-- Compliance-ready reporting
+### Compliance Integration
+- All asset transfers go through compliance checks
+- Automated sanctions screening
+- Regulatory jurisdiction enforcement
 
 ## Gas Optimization
 
-### Efficient Patterns
+### Facet Design
+- Minimal storage in diamond proxy
+- Efficient function selector routing
+- Batch operations where possible
 
-- Batch operations to reduce transaction costs
-- Lazy evaluation for expensive computations
-- Optimized storage layouts
+### Payment Abstraction
+- CMX token gas payments reduce costs
+- Sponsored transactions for user experience
+- Batch operations for efficiency
 
-### Cost Estimates
+## Event Monitoring
 
-- Asset creation: ~500K gas
-- Simple transfer: ~100K gas
-- Order placement: ~200K gas
-- Governance vote: ~150K gas
+### Key Events
+- Asset creation and transfers
+- Compliance status changes
+- Governance proposal lifecycle
+- Fund performance updates
+- System admin actions
 
-## Integration Patterns
-
-### Common Workflows
-
-**Asset Tokenization**:
-
-1. Create attestation schema for asset type
-2. Verify asset ownership via attestation
-3. Create tokenized asset via AssetFactory
-4. Configure transfer restrictions and compliance rules
-
-**Investment Fund Setup**:
-
-1. Create fund via FundFactory
-2. Configure fee structure and governance
-3. Set up accounting ledger
-4. Launch marketing and investor onboarding
-
-**Securities Offering**:
-
-1. Create share class or asset
-2. Set up offering via OfferingFactory
-3. Configure investor verification requirements
-4. Launch offering and manage subscriptions
-
-This comprehensive smart contract system provides all the infrastructure needed for compliant, enterprise-grade capital markets operations on blockchain.
+This comprehensive smart contract system provides enterprise-grade capital markets infrastructure with regulatory compliance, security, and scalability built in from the ground up.
