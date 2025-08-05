@@ -25,12 +25,14 @@ CapSign employs a **capital markets infrastructure governance model** designed s
 
 ### Industry Members Reserve
 
-**Licensed institutions hold 15% of CMX supply** for network participation:
+**Licensed participants hold 15% of CMX supply** for network participation:
 
-- **Banks and broker-dealers** as professional node operators
+- **KYC'd individuals** running nodes (hosted or self-hosted)
+- **Banks and broker-dealers** as institutional node operators
+- **Financial professionals and advisors** as individual node operators
+- **Professional service providers** (auditors, compliance firms, financial advisors)
 - **Regulated technology partners** for ecosystem development
-- **KYC/licensed entities** replacing traditional "community" concept
-- **Institutional partnerships** driving enterprise adoption
+- **Any verified/licensed participants** meeting compliance requirements
 
 ### Benefits for Enterprises
 

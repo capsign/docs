@@ -2,6 +2,17 @@
 
 Welcome to CapSign! You have **two main options** to get started with the CapSign Protocol and CMX Network infrastructure:
 
+## Individual Node Operators Welcome
+
+**KYC'd individuals can run CMX Network nodes** alongside institutional participants:
+
+- **Financial professionals** (advisors, CPAs, compliance officers)
+- **Licensed individuals** in supported jurisdictions
+- **Hosted infrastructure** available - no technical expertise required
+- **Geographic distribution** encouraged for network resilience
+
+**Requirements**: Valid KYC/compliance verification for capital markets participation
+
 ## Which Option Is Right for You?
 
 ### Managed Service (Recommended for Most Users)

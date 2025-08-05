@@ -54,7 +54,7 @@ CapSign offers flexible pricing options to meet the needs of individual develope
 **Included:**
 
 - ✅ Everything in Enterprise Self-Hosted
-- ✅ **Hosted CapSign Protocol nodes**
+- ✅ **Hosted CMX Protocol nodes** (for individuals and institutions)
 - ✅ **Managed CMX Network infrastructure**
 - ✅ **99.99% uptime SLA**
 - ✅ **24/7 enterprise support**
@@ -169,6 +169,12 @@ For large financial institutions and capital markets participants:
 
 - **Regulated entities**: Custom Enterprise Solutions
 - **High volume**: Fully Managed with volume discounts
+
+### Individual Node Operators
+
+- **KYC'd individuals**: Fully Managed Service (hosted infrastructure)
+- **Financial professionals**: All compliance requirements included
+- **Geographic distribution**: Run nodes from anywhere with proper licensing
 
 ### CMX Token Holders
 

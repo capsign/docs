@@ -112,27 +112,31 @@ Capital Markets Infrastructure Distribution:
 This distribution reflects the regulatory realities of capital markets infrastructure:
 
 **Governance Leadership (45%)**
+
 - **Swiss Foundation** provides supranational governance credibility
 - **Professional oversight** similar to SWIFT or DTCC governance models
 - **Clear legal accountability** for SEC, FCA, and international regulators
 - **Industry standards management** without corporate conflicts of interest
 
 **Operational Sustainability (35%)**
+
 - **CapSign Inc.** maintains technology development and service delivery
 - **Sufficient runway** for team, operations, and growth investments
 - **Reference implementation** authority for protocol standards
 - **Corporate responsibility** for service level agreements
 
 **Industry Participation (15%)**
-- **Licensed participants only** - banks, broker-dealers, custodians
-- **KYC/regulated entities** replace traditional "community" concept
-- **Professional node operators** rather than retail participants
-- **Institutional partnerships** drive network adoption
+
+- **KYC'd individuals** and institutional participants
+- **Licensed entities** including financial professionals, firms, and institutions
+- **Compliant node operators** (hosted or self-hosted infrastructure)
+- **Professional participants** meeting regulatory requirements
+- **Network decentralization** through diverse verified operators
 
 **Strategic Benefits:**
 
 - **Regulatory credibility** through foundation governance majority
-- **Professional management** replaces DAO legal complexity  
+- **Professional management** replaces DAO legal complexity
 - **Industry-standard allocation** similar to financial infrastructure
 - **Clear separation** between governance and operations
 - **Institutional adoption** focus over retail participation
