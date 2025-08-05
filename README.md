@@ -99,10 +99,6 @@ Welcome to CapSign's comprehensive documentation hub. This resource covers the c
 - **[Enterprise Solutions](/pricing/enterprise.md)** - Custom institutional offerings
 - **[CMX Token Utility](/pricing/token-utility.md)** - Token economics and savings
 
-### Advanced Topics
-
-- **[Optional Services](/advanced/optional-services.md)** - Third-party service integrations
-
 ### Help & Support
 
 - **[FAQ](/help/faq.md)** - Frequently asked questions

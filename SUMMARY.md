@@ -63,10 +63,6 @@
 
 - [SOC Compliance](security/soc.md)
 
-## 🔧 Advanced Topics
-
-- [Optional Services](advanced/optional-services.md)
-
 ## ❓ Help & Support
 
 - [FAQ](help/faq.md)
