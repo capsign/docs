@@ -1,4 +1,4 @@
-# CapSign Documentation
+# CMX Protocol Documentation
 
 Welcome to CapSign's comprehensive documentation hub. This resource covers the complete **CMX ecosystem**: the CMX Protocol smart contracts, CMX Network deployment, infrastructure tools, and developer resources.
 
