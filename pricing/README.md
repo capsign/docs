@@ -94,10 +94,18 @@ CapSign offers flexible pricing options to meet the needs of individual develope
 
 ### How to Acquire CMX Tokens
 
-1. **Enterprise Purchase**: Direct from CapSign treasury (recommended for service payments)
-2. **Network Validation**: Earn CMX by running CMX Network validators
-3. **Service Credits**: Convert unused enterprise credits to CMX
-4. **Secondary Markets**: DEX trading available for smaller amounts
+**All CMX tokens are distributed directly through CapSign Inc** to ensure regulatory compliance and proper documentation.
+
+1. **Enterprise Treasury Sales**: Direct purchases from CapSign Inc with full compliance documentation
+2. **Private Sale Warrants**: Limited allocation (2.5% of supply) for strategic investors
+3. **Validator Rewards**: Earn CMX through CMX Network validation participation
+4. **Strategic Partnerships**: CMX allocations tied to formal business development agreements
+
+**Benefits of Corporate Distribution:**
+- **Complete regulatory compliance** and paper trail documentation
+- **No market volatility** affecting service pricing
+- **Enterprise-grade** KYC/AML compliance for all purchasers
+- **Predictable supply** and transparent pricing mechanism
 
 ---
 

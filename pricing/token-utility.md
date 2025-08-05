@@ -82,16 +82,41 @@ _CMX service pricing is set by CapSign at a 20% discount to USD rates, providing
 ### Supply & Distribution
 
 ```
-🪙 CMX Token Supply: 1,000,000,000 CMX
+CMX Token Supply: 1,000,000,000 CMX
 
-📊 Distribution:
-├── 25% - Community & Ecosystem (250M CMX)
-├── 20% - Team & Advisors (200M CMX, 4-year vest)
-├── 20% - Private Sale (200M CMX)
-├── 15% - Public Sale (150M CMX)
-├── 10% - Treasury (100M CMX)
-├── 10% - Liquidity Rewards (100M CMX)
+Corporate-Controlled Distribution:
+├── 87.5% - CapSign Inc Treasury (875M CMX)
+│   ├── Service utility sales
+│   ├── Strategic partnerships  
+│   ├── Team incentives
+│   └── Operational reserves
+├── 10% - Supranational Governance Body (100M CMX)
+│   └── Global capital markets oversight
+├── 2.5% - Private Sale Warrants (25M CMX)
+│   └── Strategic investor warrants
 ```
+
+### Supranational Governance Body
+
+**CapSign will establish an independent supranational entity** to oversee global capital markets protocol governance, receiving 10% of CMX supply (100M CMX).
+
+**Potential Legal Structures:**
+- **Swiss Foundation** - Neutral jurisdiction, established legal framework
+- **Singapore Foundation** - Global financial hub, clear digital asset regulation  
+- **International Treaty Organization** - Multi-jurisdictional oversight authority
+- **Liechtenstein Foundation** - EU access, established financial services law
+
+**Governance Model:**
+- **Independent oversight** of CapSign Protocol standards
+- **Cross-border regulatory coordination** for capital markets
+- **Protocol upgrade governance** for international compliance
+- **Dispute resolution** between jurisdictions
+- **Standard setting** for global digital capital markets
+
+**Similar to Existing Bodies:**
+- **Bank for International Settlements (BIS)** - Central bank coordination
+- **International Organization of Securities Commissions (IOSCO)** - Securities regulation
+- **Financial Stability Board (FSB)** - Global financial stability oversight
 
 ### Demand Drivers
 
@@ -140,45 +165,42 @@ _CMX service pricing is set by CapSign at a 20% discount to USD rates, providing
 
 ---
 
-## Token Acquisition Strategies
+## Token Acquisition Through CapSign Inc
+
+### Corporate-Controlled Distribution
+
+**All CMX tokens are sold directly through CapSign Inc** to maintain proper regulatory compliance and paper trail documentation.
 
 ### For Enterprises
 
-1. **📊 Treasury Purchase**
+1. **Direct Treasury Sales**
+   - Purchase directly from CapSign Inc treasury
+   - Full regulatory compliance and documentation
+   - Structured payment plans available for large volumes
+   - Complete KYC/AML compliance for all purchasers
 
-   - Direct purchase from CapSign treasury
-   - OTC rates for large volumes
-   - Structured payment plans available
+2. **Service Payment Programs**
+   - Monthly CMX purchases for ongoing service payments
+   - Automated procurement through approved channels
+   - Enterprise treasury management integration
 
-2. **🔄 Dollar-Cost Averaging**
+3. **Strategic Partnership Allocations**
+   - CMX allocations for strategic partnerships
+   - Governed by formal partnership agreements
+   - Tied to specific business development milestones
 
-   - Monthly CMX purchases for service payments
-   - Reduces volatility exposure
-   - Automated buying programs
+### For Qualified Investors
 
-3. **💼 Service Credit Conversion**
-   - Convert unused service credits to CMX
-   - Lock in current pricing
-   - Portfolio diversification
+1. **Private Sale Warrants (Limited)**
+   - Only 2.5% of total supply (25M CMX) available
+   - Warrant-based structure for strategic investors
+   - Full accreditation and regulatory compliance required
+   - Exercise tied to network utility milestones
 
-### For Developers
-
-1. **🏊 DEX Trading**
-
-   - Uniswap V3 (Ethereum & Optimism)
-   - Balancer pools with stable liquidity
-   - Best for smaller amounts
-
-2. **⛏️ Network Participation**
-
-   - Run CMX Network validators
-   - Earn CMX through block rewards
-   - Contribute to network security
-
-3. **🎁 Ecosystem Rewards**
-   - CapSign Protocol usage rewards
-   - Community contribution bounties
-   - Developer grant programs
+2. **Validator Participation**
+   - Earn CMX through CMX Network validation
+   - Subject to validator terms and network participation
+   - Contributes to network security and decentralization
 
 ---
 
@@ -189,7 +211,7 @@ _CMX service pricing is set by CapSign at a 20% discount to USD rates, providing
 **Using Managed Service (2 nodes):**
 
 - **USD cost**: $10,000/month
-- **CMX cost**: 8,000 CMX/month 
+- **CMX cost**: 8,000 CMX/month
 - **Guaranteed savings**: $2,000/month (20% discount)
 
 **Annual savings**: $24,000 per year with CMX payments
