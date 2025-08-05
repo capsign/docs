@@ -1,50 +1,50 @@
-# 🚀 CapSign Managed Service
+# CapSign Managed Service
 
 **Focus on building your capital markets applications while we handle the infrastructure.**
 
-## 🎯 **What Is the Managed Service?**
+## What Is the Managed Service?
 
 CapSign's **Fully Managed Service** provides enterprise-grade blockchain infrastructure without the operational complexity. We handle everything from Kubernetes management to security compliance, so you can focus on what matters most: **building amazing capital markets applications**.
 
-## ✅ **What's Included**
+## What's Included
 
-### 🏗️ **Complete Infrastructure Management**
+### Complete Infrastructure Management
 
 - **Hosted CapSign Protocol nodes** - Production-ready blockchain infrastructure
 - **Managed CMX Network** - Optimism L2 with 2-second finality
 - **Auto-scaling Kubernetes** - Handles traffic spikes automatically
 - **Multi-region deployment** - Global availability and disaster recovery
 
-### 🛡️ **Enterprise Security & Compliance**
+### Enterprise Security & Compliance
 
 - **SOC 1/2/3 Type II certified** - Annual third-party audits
 - **99.99% uptime SLA** - Maximum 4.3 minutes downtime per month
 - **24/7 security monitoring** - Real-time threat detection
 - **Automated security patches** - Always up-to-date and secure
 
-### 📞 **White-Glove Support**
+### White-Glove Support
 
 - **24/7 enterprise support** - Phone, email, and chat
 - **Dedicated account manager** - Your single point of contact
 - **< 15 minute response time** - For critical issues
 - **Technical solutions architect** - Custom integration support
 
-### 🔧 **Development & Integration**
+### Development & Integration
 
 - **API endpoints** - RESTful, GraphQL, and WebSocket APIs
 - **SDK libraries** - JavaScript, Python, Go, and more
 - **Webhook integration** - Real-time event notifications
 - **Testing environments** - Staging and development infrastructure
 
-## 💰 **Pricing**
+## Pricing
 
-### **💵 USD Pricing**
+### USD Pricing
 
 - **$5,000/month per node** - Standard enterprise pricing
 - **Volume discounts** available for 5+ nodes
 - **Annual contracts** - Up to 15% discount
 
-### **🪙 CMX Token Pricing (20% Discount)**
+### CMX Token Pricing (20% Discount)
 
 - **4,000 CMX/month per node** - Save $1,000/month per node
 - **Additional volume discounts** - Up to 40% total savings
@@ -52,29 +52,29 @@ CapSign's **Fully Managed Service** provides enterprise-grade blockchain infrast
 
 **📊 Full pricing details**: [Pricing Overview](/pricing/README.md)
 
-## 🏛️ **Perfect for These Organizations**
+## Perfect for These Organizations
 
-### 🏦 **Financial Institutions**
+### Financial Institutions
 
 - Banks and credit unions modernizing operations
 - Investment banks building capital markets infrastructure
 - Asset managers automating compliance and reporting
 
-### 💼 **Capital Markets Participants**
+### Capital Markets Participants
 
 - Hedge funds requiring trading infrastructure
 - Private equity firms managing investor relations
 - Family offices implementing digital wealth management
 
-### 🚀 **Fast-Growing Companies**
+### Fast-Growing Companies
 
 - Startups needing to scale quickly
 - Companies with limited DevOps resources
 - Teams wanting predictable infrastructure costs
 
-## 🚀 **Get Started Today**
+## Get Started Today
 
-### 📞 **Contact Our Team**
+### Contact Our Team
 
 **Ready to get started?** Our solutions team will work with you to:
 

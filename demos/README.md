@@ -2,7 +2,7 @@
 
 Experience CapSign without creating an account! This section provides hands-on interactive demonstrations of the CapSign Protocol and CMX Network functionality using [Arcade](https://arcade.software/) guided walkthroughs.
 
-## 🎯 What You'll Learn
+## What You'll Learn
 
 These interactive demos will guide you through:
 
@@ -12,7 +12,7 @@ These interactive demos will guide you through:
 - **Capital Markets Operations** - Trading, investment, and compliance workflows
 - **CMX Network Integration** - Layer 2 blockchain interactions
 
-## 🔐 Smart Wallet Technology
+## Smart Wallet Technology
 
 All CapSign interactions use **Smart Wallets** based on [Coinbase Smart Wallet](https://www.coinbase.com/wallet/smart-wallet) technology:
 
@@ -21,7 +21,7 @@ All CapSign interactions use **Smart Wallets** based on [Coinbase Smart Wallet](
 - **Transaction Authorization** - Each transaction requires biometric confirmation
 - **Seamless UX** - No seed phrases or complex wallet management
 
-## 📋 Compliance Requirements
+## Compliance Requirements
 
 Every user must complete **identity verification** to access CapSign services:
 
@@ -31,7 +31,7 @@ Every user must complete **identity verification** to access CapSign services:
 - **PEP and sanctions checking**
 - **Jurisdiction compliance validation**
 
-## 🎮 Interactive Walkthroughs
+## Interactive Walkthroughs
 
 ### Getting Started
 
@@ -57,7 +57,7 @@ Coming from the guides section:
 - **Offering Creation** - Launch capital markets offerings
 - **Investment Approval** - Manage and approve investor participation
 
-## 🌐 Platform Integration
+## Platform Integration
 
 These demos showcase integration between:
 
@@ -66,7 +66,7 @@ These demos showcase integration between:
 - **Ethereum Attestation Service** - Decentralized compliance verification
 - **Traditional Finance** - Compliant bridge to existing financial systems
 
-## 🚀 Try It Now
+## Try It Now
 
 Ready to experience CapSign? Start with creating your account and working through the verification process. Each demo builds on the previous one, creating a complete understanding of the CapSign ecosystem.
 
