@@ -68,10 +68,10 @@ Welcome to CapSign's comprehensive documentation hub. This resource covers the c
 ### CMX Network
 
 - **[Network Overview](/cmx-network/README.md)** - L2 network architecture
-- **[CMX Token](/cmx-network/token.md)** - Native tokenomics and utility
-- **[Bridges & Interoperability](/cmx-network/bridges.md)** - Cross-chain asset transfers
-- **[Validator Guide](/cmx-network/validators.md)** - Future validator participation
+- **[CMX Token](/cmx-network/token.md)** - Native token economics
 - **[Network Governance](/cmx-network/governance.md)** - Participation and voting
+- **[Bridges & Interoperability](/cmx-network/bridges.md)** - Cross-chain operations
+- **[Validator Guide](/cmx-network/validators.md)** - Run network validators
 
 ### Self-Hosted Infrastructure
 

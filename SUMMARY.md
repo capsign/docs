@@ -31,8 +31,11 @@
 
 ## 🌐 CMX Network
 
-- [Network Overview](cmx-network/README.md)
-- [Network Governance](cmx-network/governance.md)
+- [Network Overview](/cmx-network/README.md)
+- [CMX Token](/cmx-network/token.md)
+- [Network Governance](/cmx-network/governance.md)
+- [Bridges & Interoperability](/cmx-network/bridges.md)
+- [Validator Guide](/cmx-network/validators.md)
 
 ## 🏗️ Self-Hosted Infrastructure
 
