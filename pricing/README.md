@@ -43,7 +43,7 @@ CapSign offers flexible pricing options to meet the needs of individual develope
 **Pricing:**
 
 - 💵 **USD**: `$2,500/month` per organization
-- 🪙 **CMX**: `2,000 CMX/month` (**20% discount**)
+- 🪙 **CMX**: `$2,000/month` paid in CMX (**20% discount**)
 
 ---
 
@@ -66,7 +66,7 @@ CapSign offers flexible pricing options to meet the needs of individual develope
 **Pricing per node/month:**
 
 - 💵 **USD**: `$5,000/month` per node
-- 🪙 **CMX**: `4,000 CMX/month` (**20% discount**)
+- 🪙 **CMX**: `$4,000/month` paid in CMX (**20% discount**)
 
 **Enterprise Volume Discounts:**
 
@@ -81,32 +81,46 @@ CapSign offers flexible pricing options to meet the needs of individual develope
 ### Why Pay with CapSign Tokens?
 
 1. **💰 Cost Savings**: 20% discount on all services
-2. **🔒 Token Utility**: Direct use case drives CST value across entire network
+2. **🔒 Token Utility**: Direct use case drives CMX value across entire network
 3. **🎯 Ecosystem Alignment**: Support the CapSign ecosystem and open standards
-4. **📈 Network Effects**: More applications on CapSign Network increase token demand
+4. **📈 Network Effects**: More applications on CMX Network increase token demand
 
-### Token Pricing Mechanism
+### Token Payment Mechanism
 
-- **Fixed Service Rates**: CapSign sets CST service prices directly at 20% discount to USD
-- **Monthly Billing**: Consistent CapSign Token amounts for predictable costs
-- **Enterprise Stability**: Annual rate locks available for enterprise contracts
-- **Treasury Control**: No market volatility impact on service pricing
+**How CMX Payments Work:**
 
-### How to Acquire CapSign Tokens
+1. **Choose CMX payment** for automatic 20% discount
+2. **Pay USD equivalent** ($4,000 instead of $5,000 for managed service)
+3. **Automatic conversion** to CMX at current market rate
+4. **Service payment** processed in CMX tokens
+5. **No CMX holding required** - conversion happens just-in-time
 
-**All CapSign Tokens are distributed directly through CapSign Inc.** to ensure regulatory compliance and proper documentation.
+**Benefits:**
+
+- **Predictable USD budgeting** - you know exactly what you'll pay
+- **Automatic 20% savings** without price volatility risk
+- **No token management** required unless you want to hold CMX for investment
+- **Simple billing** - just like any other service payment
+
+### How to Acquire CMX Tokens
+
+**For Service Payments:** No advance acquisition needed - automatic just-in-time conversion when you choose CMX payment option.
+
+**For Investment/Holding (Optional):**
 
 1. **Enterprise Treasury Sales**: Direct purchases from CapSign Inc. with full compliance documentation
-2. **Private Sale Warrants**: Limited allocation (2.5% of supply) for strategic investors
-3. **Validator Rewards**: Earn CST through CapSign Network validation participation
-4. **Strategic Partnerships**: CST allocations tied to formal business development agreements
+2. **Private Sale Warrants**: Limited allocation (5% of supply) for strategic investors  
+3. **Secondary Market Trading**: Once listed on exchanges (future)
+4. **Node Operator Rewards**: Earn CMX through network validation participation
 
-**Benefits of Corporate Distribution:**
+**Benefits of This Model:**
 
 - **Complete regulatory compliance** and paper trail documentation
-- **No market volatility** affecting service pricing
-- **Enterprise-grade** KYC/AML compliance for all purchasers
-- **Predictable supply** and transparent pricing mechanism
+- **No forced token holding** for service usage - pay when you need it
+- **Investment flexibility** - hold CMX if you believe in network growth
+- **Genuine utility** - tokens have real use cases beyond speculation
+
+**Legal Clarity:** CMX has genuine utility (service payments, network gas fees, governance) and operates similar to other established utility tokens like ETH, BTC, and XRP. Holding tokens for investment purposes doesn't change their fundamental utility nature.
 
 ### Open Ecosystem with CapSign Standards
 

@@ -41,14 +41,14 @@ The CMX token is the native utility token of the CMX Network and provides real u
 
 ### Payment Method Comparison
 
-| Service Tier               | USD Price     | CMX Price        | Your Savings      |
+| Service Tier               | USD Price     | CMX Payment      | Your Savings      |
 | -------------------------- | ------------- | ---------------- | ----------------- |
-| **Enterprise Self-Hosted** | $2,500/month  | 2,000 CMX/month  | **$500/month**    |
-| **Managed (1 node)**       | $5,000/month  | 4,000 CMX/month  | **$1,000/month**  |
-| **Managed (5 nodes)**      | $22,500/month | 15,000 CMX/month | **$6,300/month**  |
-| **Managed (10 nodes)**     | $42,500/month | 26,000 CMX/month | **$11,900/month** |
+| **Enterprise Self-Hosted** | $2,500/month  | $2,000/month     | **$500/month**    |
+| **Managed (1 node)**       | $5,000/month  | $4,000/month     | **$1,000/month**  |
+| **Managed (5 nodes)**      | $22,500/month | $18,000/month    | **$4,500/month**  |
+| **Managed (10 nodes)**     | $42,500/month | $34,000/month    | **$8,500/month**  |
 
-_CMX token service pricing is set by CapSign Inc. at a 20% discount to USD rates, providing immediate cost savings_
+_CMX payments automatically convert USD to CMX at market rates, providing 20% discount with just-in-time conversion_
 
 ### Volume Discount Tiers
 
