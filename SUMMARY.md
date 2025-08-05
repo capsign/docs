@@ -20,7 +20,7 @@
 - [Protocol Overview](protocol/README.md)
 - [Smart Contracts](protocol/contracts.md)
 - [Deployment Guide](protocol/deployment.md)
-- [API Reference](protocol/api.md)  
+- [API Reference](protocol/api.md)
 - [Testing Guide](protocol/testing.md)
 
 ## ⚖️ Compliance Framework

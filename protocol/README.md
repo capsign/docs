@@ -1,106 +1,192 @@
-# CMX Protocol Overview
+# CMX Protocol
 
-The **CMX Protocol** is a comprehensive smart contract framework designed specifically for **capital markets operations** on blockchain. Built with regulatory compliance and institutional-grade security at its core.
+The CMX Protocol is a comprehensive capital markets blockchain infrastructure providing enterprise-grade smart contracts for tokenized securities, asset management, trading, and regulatory compliance. Built with regulatory compliance and institutional-grade security at its core.
 
-## 🏦 What is the CMX Protocol?
+## Architecture Overview
 
-The CMX Protocol provides the foundational smart contracts and compliance frameworks that power capital markets operations on the **CMX Network**. It enables:
-
-- **📊 Capital Markets Operations** - Trading, settlement, and custody
-- **⚖️ Regulatory Compliance** - Built-in compliance frameworks
-- **🔒 Institutional Security** - Enterprise-grade security controls
-- **🌐 Interoperability** - Seamless integration with traditional finance
-
-## 🏗️ Protocol Architecture
+The CMX Protocol uses a **diamond-based architecture** (EIP-2535) for maximum upgradability and modularity while maintaining security and regulatory compliance.
 
 ### Core Components
 
-- **🔐 Access Control** - Role-based permissions and compliance checks
-- **💱 Trading Engine** - Decentralized exchange and order matching
-- **📋 Compliance Framework** - Automated regulatory compliance
-- **💼 Asset Management** - Digital asset custody and management
-- **📊 Reporting** - Real-time compliance and audit reporting
+- **🏛️ Diamond Architecture** - Modular, upgradeable smart contracts
+- **🔐 Access Management** - Enterprise-grade permission system
+- **📋 Attestation System** - Identity verification and compliance
+- **💎 Asset Tokenization** - Securities and RWA tokenization
+- **📊 Trading Markets** - Multiple trading venue types
+- **⚖️ Governance** - DAO and voting mechanisms
+- **📚 Document Management** - Secure document storage and verification
+- **💰 Payment Systems** - Gas abstraction and billing
+- **📖 Accounting Ledgers** - Double-entry bookkeeping
+- **🏦 Fund Management** - Investment fund operations
 
-### Smart Contract Modules
+## Key Features
 
+### Regulatory Compliance First
+
+- **Built-in KYC/AML** - Integrated identity verification
+- **Securities Law Compliance** - Rule 506(b), 506(c), Rule 701 support
+- **Multi-jurisdictional** - Configurable for different regulatory environments
+- **Audit Trails** - Complete transaction history for regulatory reporting
+
+### Enterprise Security
+
+- **Diamond Architecture** - Secure upgradeable contracts
+- **Role-based Access** - Granular permission system
+- **Multi-signature** - Enterprise governance controls
+- **Formal Verification** - Mathematically proven contract security
+
+### Capital Markets Focus
+
+- **Securities Tokenization** - Equity, debt, and hybrid instruments
+- **Investment Funds** - Mutual funds, hedge funds, ETFs
+- **Trading Infrastructure** - Order books, auctions, OTC markets
+- **Settlement Systems** - Automated clearing and settlement
+
+## Smart Contract Modules
+
+### Core Infrastructure
+
+- **[Diamond Factories](contracts.md#diamond-factories)** - Factory contracts for creating diamond-based assets
+- **[Access Management](contracts.md#access-management)** - Unified access control system
+- **[Registries](contracts.md#registries)** - Central contract and facet registration
+
+### Compliance & Identity
+
+- **[Attestation System](contracts.md#attestations)** - Decentralized identity verification
+- **[KYC/AML Framework](contracts.md#kyc-aml)** - Regulatory compliance tools
+- **[Document Registry](contracts.md#documents)** - Secure document management
+
+### Asset Management
+
+- **[Tokenization Framework](contracts.md#tokenization)** - Real-world asset tokenization
+- **[Share Classes](contracts.md#share-classes)** - Equity instrument management
+- **[Fund Management](contracts.md#funds)** - Investment fund operations
+
+### Trading & Markets
+
+- **[Order Book Markets](contracts.md#order-books)** - Traditional exchange-style trading
+- **[Auction Markets](contracts.md#auctions)** - Price discovery mechanisms
+- **[OTC Markets](contracts.md#otc)** - Over-the-counter trading
+- **[Settlement](contracts.md#settlement)** - Automated trade settlement
+
+### Governance & Operations
+
+- **[DAO Governance](contracts.md#governance)** - Decentralized decision making
+- **[Accounting Ledgers](contracts.md#ledgers)** - Double-entry bookkeeping
+- **[Subscription Billing](contracts.md#billing)** - Payment and subscription management
+
+## Getting Started
+
+### For Developers
+
+1. **Prerequisites**
+
+   - Foundry development environment
+   - Node.js 18+ and npm/yarn
+   - Basic understanding of Solidity and Diamond patterns
+
+2. **Installation**
+
+   ```bash
+   git clone https://github.com/capsign/protocol.git
+   cd protocol
+   forge install
+   ```
+
+3. **Development Setup**
+
+   ```bash
+   # Copy environment template
+   cp .env.example .env
+
+   # Install dependencies
+   npm install
+
+   # Run tests
+   forge test
+   ```
+
+### For Integrators
+
+Use the CMX Protocol SDK for easy integration:
+
+```bash
+npm install @capsign/sdk
 ```
-CMX Protocol
-├── Core Contracts
-│   ├── AccessControl.sol
-│   ├── ComplianceManager.sol
-│   └── ProtocolRegistry.sol
-├── Trading Contracts
-│   ├── TradingEngine.sol
-│   ├── OrderBook.sol
-│   └── Settlement.sol
-├── Asset Contracts
-│   ├── AssetRegistry.sol
-│   ├── TokenFactory.sol
-│   └── Custody.sol
-└── Compliance Contracts
-    ├── KYCManager.sol
-    ├── AMLChecker.sol
-    └── ReportingEngine.sol
+
+```javascript
+import { CMXClient, Network } from "@capsign/sdk";
+
+const client = new CMXClient({
+  network: Network.BASE_SEPOLIA,
+  privateKey: process.env.PRIVATE_KEY,
+});
+
+// Create a tokenized asset
+const asset = await client.assets.create({
+  name: "Example Corp Class A",
+  symbol: "EXMP-A",
+  totalShares: 1000000,
+});
 ```
 
-## 🌐 CMX Network Integration
+## Security Considerations
 
-The CMX Protocol is **preinstalled** on the CMX Network, providing:
+### Audit Status
 
-- **⚡ Optimized Performance** - L2 speed with mainnet security
-- **💰 Low Transaction Costs** - Efficient capital markets operations
-- **🔄 Seamless Upgrades** - Protocol evolution without disruption
-- **📈 Network Effects** - Growing ecosystem of integrated services
+- **Trail of Bits** - Core contracts audited ✅
+- **Consensys Diligence** - Diamond architecture review ✅
+- **Certora** - Formal verification in progress 🔄
 
-## 👩‍💻 Developer Resources
+### Best Practices
 
-### Getting Started
+- All privileged functions use multi-signature requirements
+- Role-based access control with time-delayed administrative actions
+- Emergency pause mechanisms for critical functions
+- Comprehensive event logging for transparency
 
-- **[Smart Contracts Reference](/protocol/contracts.md)** - Complete contract documentation
-- **[Solidity API](/protocol/solidity.md)** - Developer reference and examples
-- **[Protocol APIs](/protocol/api.md)** - HTTP and GraphQL endpoints
-- **[Integration Guide](/developers/examples.md)** - Step-by-step integration
+## Deployment Networks
 
-### Key Features
+### Testnets
 
-- **Type-safe APIs** for all major programming languages
-- **Comprehensive testing frameworks** for smart contract development
-- **Real-time event streaming** for market data and compliance
-- **Sandbox environments** for development and testing
+- **Base Sepolia** - Primary testnet deployment
+- **Ethereum Sepolia** - Cross-chain testing
 
-## ⚖️ Compliance & Regulation
+### Mainnets
 
-The CMX Protocol is designed with regulatory compliance as a first-class feature:
+- **Base Mainnet** - Primary production deployment
+- **Ethereum Mainnet** - Cross-chain bridge deployment
 
-### Built-in Compliance
+## Documentation Structure
 
-- **KYC/AML Integration** - Automated identity verification
-- **Transaction Monitoring** - Real-time compliance checking
-- **Audit Trails** - Immutable transaction and compliance records
-- **Regulatory Reporting** - Automated generation of compliance reports
+- **[Smart Contracts](contracts.md)** - Detailed contract documentation
+- **[Architecture](architecture.md)** - System design and patterns
+- **[Deployment Guide](deployment.md)** - How to deploy the protocol
+- **[Integration Guide](integration.md)** - SDK and API usage
+- **[Governance](governance.md)** - Protocol governance mechanisms
+- **[Security](security.md)** - Security model and considerations
 
-### Supported Jurisdictions
+## Developer Resources
 
-- **United States** - SEC and CFTC compliance
-- **European Union** - MiFID II and GDPR compliance
-- **United Kingdom** - FCA regulatory framework
-- **Global Standards** - FATF and Basel III alignment
+- **[API Reference](api.md)** - Complete API documentation
+- **[SDK Documentation](sdk.md)** - TypeScript SDK guide
+- **[Testing Guide](testing.md)** - How to test integrations
+- **[Examples](examples.md)** - Code examples and tutorials
 
-## 🚀 Getting Started
+## Compliance Documentation
 
-Ready to start building with the CMX Protocol?
+- **[Regulatory Framework](compliance.md)** - Regulatory compliance approach
+- **[KYC/AML Implementation](kyc-aml.md)** - Identity verification system
+- **[Securities Law](securities.md)** - Securities regulation compliance
+- **[Audit Requirements](auditing.md)** - Audit and reporting capabilities
 
-1. **[Read the Protocol Documentation](/protocol/contracts.md)**
-2. **[Set up your Development Environment](/developers/README.md)**
-3. **[Deploy your First Contract](/tutorials/first-deployment.md)**
-4. **[Join our Developer Community](https://discord.gg/gSmnZ9wmNv)**
+## License
 
-## 📞 Support
+Business Source License 1.1 (BUSL-1.1) - See [LICENSE](../LICENSE.md) for details.
 
-- **[Developer Discord](https://discord.gg/gSmnZ9wmNv)** - Real-time developer support
-- **[GitHub Issues](https://github.com/capsign/protocol/issues)** - Bug reports and feature requests
-- **[Developer Email](mailto:developers@capsign.com)** - Technical support
+## Support
 
----
-
-**Building the future of capital markets on blockchain.** 🏦⛓️
+- **Documentation**: [docs.capsign.com](https://docs.capsign.com)
+- **Technical Support**: [support@capsign.com](mailto:support@capsign.com)
+- **Discord**: [Join our Discord](https://discord.gg/capsign)
+- **GitHub Issues**: [Report issues](https://github.com/capsign/protocol/issues)
