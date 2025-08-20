@@ -1,0 +1,6 @@
+
+
+# Contents
+- [IdentityAccessManagerConfigFacet](IdentityAccessManagerConfigFacet.sol/contract.IdentityAccessManagerConfigFacet.md)
+- [IdentityAccessManagerDeploymentFacet](IdentityAccessManagerDeploymentFacet.sol/contract.IdentityAccessManagerDeploymentFacet.md)
+- [IdentityAccessManagerPaymasterFacet](IdentityAccessManagerPaymasterFacet.sol/contract.IdentityAccessManagerPaymasterFacet.md)

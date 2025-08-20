@@ -26,8 +26,9 @@
 
 ## 👨‍💻 API Reference
 
-- [API Reference](protocol/api-reference/README.md)
 - [API Reference](api-reference/README.md)
+
+- [API Reference](protocol/api-reference/README.md)
 
 ## ⚖️ Compliance Framework
 
