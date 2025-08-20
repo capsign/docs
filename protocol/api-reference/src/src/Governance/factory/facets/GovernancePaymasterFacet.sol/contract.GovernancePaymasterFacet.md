@@ -1,0 +1,287 @@
+# GovernancePaymasterFacet
+[Git Source](https://github.com/capsign/protocol/blob/dfa6820124c5610a6bfa06329447dbae7c24bc0a/src/Governance/factory/facets/GovernancePaymasterFacet.sol)
+
+**Inherits:**
+[IFactoryCMXPaymaster](/src/Diamonds/factory/IFactoryCMXPaymaster.sol/interface.IFactoryCMXPaymaster.md)
+
+Paymaster integration facet for governance factory
+
+*Handles CMX token-based fee payments for governance creation*
+
+
+## State Variables
+### CMX_PAYMASTER_STORAGE_SLOT
+
+```solidity
+bytes32 private constant CMX_PAYMASTER_STORAGE_SLOT = keccak256("capsign.storage.governance_factory.cmx_paymaster");
+```
+
+
+## Functions
+### _getCMXPaymasterStorage
+
+
+```solidity
+function _getCMXPaymasterStorage() internal pure returns (CMXPaymasterLayout storage l);
+```
+
+### onlyFactoryAdmin
+
+
+```solidity
+modifier onlyFactoryAdmin();
+```
+
+### updatePaymasterSupport
+
+Update paymaster support
+
+
+```solidity
+function updatePaymasterSupport(address paymaster, bool supported) external override;
+```
+**Parameters**
+
+|Name|Type|Description|
+|----|----|-----------|
+|`paymaster`|`address`|Paymaster address|
+|`supported`|`bool`|Whether to support this paymaster|
+
+
+### isPaymasterSupported
+
+Check if a paymaster is supported
+
+
+```solidity
+function isPaymasterSupported(address paymaster) external view override returns (bool supported);
+```
+**Parameters**
+
+|Name|Type|Description|
+|----|----|-----------|
+|`paymaster`|`address`|Paymaster address|
+
+**Returns**
+
+|Name|Type|Description|
+|----|----|-----------|
+|`supported`|`bool`|Whether the paymaster is supported|
+
+
+### getSupportedPaymasters
+
+Get all supported paymasters
+
+
+```solidity
+function getSupportedPaymasters() external view override returns (address[] memory paymasters);
+```
+**Returns**
+
+|Name|Type|Description|
+|----|----|-----------|
+|`paymasters`|`address[]`|Array of supported paymaster addresses|
+
+
+### updateCMXPaymasterSupport
+
+Update CMX paymaster support
+
+
+```solidity
+function updateCMXPaymasterSupport(address paymaster, bool supported) external onlyFactoryAdmin;
+```
+**Parameters**
+
+|Name|Type|Description|
+|----|----|-----------|
+|`paymaster`|`address`|CMX paymaster address|
+|`supported`|`bool`|Whether to support this paymaster|
+
+
+### isCMXPaymasterSupported
+
+Check if CMX paymaster is supported
+
+
+```solidity
+function isCMXPaymasterSupported(address paymaster) external view returns (bool supported);
+```
+**Parameters**
+
+|Name|Type|Description|
+|----|----|-----------|
+|`paymaster`|`address`|CMX paymaster address|
+
+**Returns**
+
+|Name|Type|Description|
+|----|----|-----------|
+|`supported`|`bool`|Whether the paymaster is supported|
+
+
+### getSupportedCMXPaymasters
+
+Get all supported CMX paymasters
+
+
+```solidity
+function getSupportedCMXPaymasters() external view returns (address[] memory paymasters);
+```
+**Returns**
+
+|Name|Type|Description|
+|----|----|-----------|
+|`paymasters`|`address[]`|Array of supported paymaster addresses|
+
+
+### getBaseFee
+
+Get base fee for governance operation
+
+
+```solidity
+function getBaseFee(string calldata operationType) public view returns (uint256 fee);
+```
+**Parameters**
+
+|Name|Type|Description|
+|----|----|-----------|
+|`operationType`|`string`|Type of governance operation|
+
+**Returns**
+
+|Name|Type|Description|
+|----|----|-----------|
+|`fee`|`uint256`|Base fee in wei|
+
+
+### calculateTotalFee
+
+Calculate total fee including any multipliers
+
+
+```solidity
+function calculateTotalFee(string calldata operationType, uint256 baseFee) public view returns (uint256 totalFee);
+```
+**Parameters**
+
+|Name|Type|Description|
+|----|----|-----------|
+|`operationType`|`string`|Type of governance operation|
+|`baseFee`|`uint256`|Base fee amount|
+
+**Returns**
+
+|Name|Type|Description|
+|----|----|-----------|
+|`totalFee`|`uint256`|Total fee including multipliers|
+
+
+### validateCMXPayment
+
+Validate CMX paymaster can handle the fee for an operation
+
+
+```solidity
+function validateCMXPayment(address user, address paymaster, string calldata operationType)
+    external
+    view
+    override
+    returns (bool canPay, uint256 cmxRequired, uint256 ethEquivalent);
+```
+**Parameters**
+
+|Name|Type|Description|
+|----|----|-----------|
+|`user`|`address`|User who will pay the fee|
+|`paymaster`|`address`|CMX paymaster address|
+|`operationType`|`string`|Type of operation (for fee calculation)|
+
+**Returns**
+
+|Name|Type|Description|
+|----|----|-----------|
+|`canPay`|`bool`|Whether the user can pay via CMX|
+|`cmxRequired`|`uint256`|CMX amount required|
+|`ethEquivalent`|`uint256`|ETH equivalent amount|
+
+
+### preValidatePayment
+
+Pre-validate payment before operation
+
+
+```solidity
+function preValidatePayment(address user, address paymaster, PackedUserOperation calldata userOp)
+    external
+    view
+    override
+    returns (bool validated);
+```
+**Parameters**
+
+|Name|Type|Description|
+|----|----|-----------|
+|`user`|`address`|User who will pay|
+|`paymaster`|`address`|Paymaster address|
+|`userOp`|`PackedUserOperation`|User operation (for gas estimation)|
+
+**Returns**
+
+|Name|Type|Description|
+|----|----|-----------|
+|`validated`|`bool`|Whether the payment is pre-validated|
+
+
+### preValidateCMXPayment
+
+Pre-validate CMX payment before operation
+
+
+```solidity
+function preValidateCMXPayment(address user, address paymaster, PackedUserOperation calldata userOp)
+    external
+    view
+    override
+    returns (bool validated);
+```
+**Parameters**
+
+|Name|Type|Description|
+|----|----|-----------|
+|`user`|`address`|User who will pay|
+|`paymaster`|`address`|CMX paymaster address|
+|`userOp`|`PackedUserOperation`|User operation (for gas estimation)|
+
+**Returns**
+
+|Name|Type|Description|
+|----|----|-----------|
+|`validated`|`bool`|Whether the payment is pre-validated|
+
+
+## Events
+### CMXPaymasterAdded
+
+```solidity
+event CMXPaymasterAdded(address indexed paymaster);
+```
+
+### CMXPaymasterRemoved
+
+```solidity
+event CMXPaymasterRemoved(address indexed paymaster);
+```
+
+## Structs
+### CMXPaymasterLayout
+
+```solidity
+struct CMXPaymasterLayout {
+    mapping(address => bool) supportedCMXPaymasters;
+    address[] cmxPaymasterList;
+}
+```
+

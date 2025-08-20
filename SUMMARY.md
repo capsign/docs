@@ -23,6 +23,7 @@
 - [ERC-7752 Lot Token](protocol/erc-7752.md)
 - [API Reference](protocol/api.md)
 - [Testing Guide](protocol/testing.md)
+- [API Reference](protocol/api-reference/README.md)
 
 ## ⚖️ Compliance Framework
 
