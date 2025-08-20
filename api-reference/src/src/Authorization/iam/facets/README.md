@@ -1,9 +1,0 @@
-
-
-# Contents
-- [IdentityAccessManagerCoreFacet](IdentityAccessManagerCoreFacet.sol/contract.IdentityAccessManagerCoreFacet.md)
-- [IdentityAccessManagerGovernanceFacet](IdentityAccessManagerGovernanceFacet.sol/contract.IdentityAccessManagerGovernanceFacet.md)
-- [IdentityAccessManagerPaymasterFacet](IdentityAccessManagerPaymasterFacet.sol/contract.IdentityAccessManagerPaymasterFacet.md)
-- [IdentityAccessManagerRoleFacet](IdentityAccessManagerRoleFacet.sol/contract.IdentityAccessManagerRoleFacet.md)
-- [IdentityAccessManagerSubscriptionFacet](IdentityAccessManagerSubscriptionFacet.sol/contract.IdentityAccessManagerSubscriptionFacet.md)
-- [IdentityAccessManagerWalletFacet](IdentityAccessManagerWalletFacet.sol/contract.IdentityAccessManagerWalletFacet.md)
