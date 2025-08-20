@@ -21,9 +21,10 @@
 - [Smart Contracts](protocol/contracts.md)
 - [Deployment Guide](protocol/deployment.md)
 - [ERC-7752 Lot Token](protocol/erc-7752.md)
-- [API Reference](protocol/api.md)
+- [SDK](protocol/sdk.md)
 - [Testing Guide](protocol/testing.md)
 - [API Reference](protocol/api-reference/README.md)
+## 👨‍💻 API Reference
 
 ## ⚖️ Compliance Framework
 
