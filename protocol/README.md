@@ -1,111 +1,200 @@
 # Protocol Overview
 
-CapSign Protocol is a comprehensive smart contract framework for private securities and capital markets built on the Diamond Pattern (EIP-2535).
+CapSign Protocol is a modular smart contract framework for securities tokens and investment offerings built on the Diamond Pattern (EIP-2535).
+
+## Core Features
+
+1. **Wallets** - ERC-4337 smart accounts with biometric authentication
+2. **Tokens** - ERC-7752 securities tokens with lot-based accounting
+3. **Offerings** - Investment offerings with built-in compliance
+4. **Documents** - Blockchain-based document signing
+5. **Identity** - Decentralized attestations via EAS
 
 ## Architecture
 
-The protocol uses a **diamond-based architecture** for maximum upgradability and modularity:
+### Diamond Pattern (EIP-2535)
 
-- **Modular Facets** - Functionality split into separate contracts
-- **Upgradeable** - Add/remove/replace features without redeploying
-- **Single Address** - All functionality accessible via one diamond address
-- **No Size Limit** - Bypass 24KB contract size limit
+All contracts use the Diamond Pattern for:
 
-Learn more: [Architecture](/protocol/architecture.md)
+- **Modularity** - Features split into separate facets
+- **Upgradeability** - Add/replace features without changing address
+- **No size limit** - Bypass 24KB contract limit
+- **Gas efficiency** - Singleton pattern reduces costs
+
+Learn more: [Diamond Pattern](diamond-pattern.md)
+
+### Deployed Contracts
+
+- **Base Mainnet** (Chain ID: 8453)
+- **Base Sepolia** (Chain ID: 84532)
+
+See [Contract Addresses](/reference/contract-addresses.md) for deployed addresses.
 
 ## Core Components
 
-### Smart Accounts (ERC-4337)
+### 1. Wallets
 
-Non-custodial wallets with programmable logic:
+ERC-4337 smart contract wallets:
 
 - Passkey authentication (WebAuthn/P256)
-- EOA wallet support (MetaMask, etc.)
-- Gasless transactions via paymasters
-- Social recovery mechanisms
+- EOA support (MetaMask, etc.)
+- Account abstraction
+- Context switching (multi-entity)
 
-Learn more: [Smart Accounts](/protocol/smart-accounts.md)
+**Architecture:**
+- `WalletFactory` - Deploys wallet diamonds via CREATE2
+- `WalletCoreFacet` - Core ERC-4337 logic
+- `WalletSignatureFacet` - ERC-1271 signature validation
+- `WalletDocumentsFacet` - Document management
+- `WalletIdentityFacet` - Attestation management
 
-### Attestations (EAS Integration)
+Learn more: [Wallet Architecture](wallets.md)
 
-On-chain credentials for identity and compliance:
+### 2. Tokens
 
-- KYC/AML verification
-- Accredited investor status
-- Professional credentials
-- Privacy-preserving proofs
+ERC-7752 securities tokens with lot tracking:
 
-Learn more: [Attestations](/protocol/attestations.md)
+- Standard ERC-20 compatibility
+- Lot-based accounting (cost basis, acquisition date)
+- Transfer restrictions (lockups, vesting, Rule 144, ROFR)
+- Compliance modules
 
-### Document Registry
+**Architecture:**
+- `TokenFactory` - Deploys token diamonds
+- `TokenERC20Facet` - ERC-20 implementation
+- `TokenLotsFacet` - ERC-7752 lot management
+- `TokenTransferFacet` - Transfer logic with compliance
+- `TokenComplianceFacet` - Compliance condition checks
+- `TokenAdminFacet` - Administrative functions
+
+Learn more: [Token Architecture](tokens.md)
+
+### 3. Offerings
+
+Investment offerings with compliance:
+
+- Hybrid escrow (investor protection + issuer control)
+- Reg D (506b, 506c), Reg S, Reg A+ presets
+- Automated token issuance
+- Compliance modules (KYC, accreditation, investor limits)
+
+**Architecture:**
+- `OfferingFactory` - Deploys offering diamonds
+- `OfferingCoreFacet` - Core offering logic (invest, countersign)
+- `OfferingComplianceFacet` - Compliance checks
+- `OfferingDocumentsFacet` - Document management
+- Compliance modules (separate contracts for each rule)
+
+Learn more: [Offering Architecture](offerings.md)
+
+### 4. Documents
 
 Blockchain-based document signing:
 
+- Upload to IPFS/Arweave
 - Cryptographic signatures
-- Immutable records
+- EAS attestations
 - Multi-party signing
-- Verification tools
 
-Learn more: [Documents](/protocol/documents.md)
+**Architecture:**
+- `WalletDocumentsFacet` - Per-wallet document storage
+- Documents stored as EAS attestations
+- Content stored off-chain (IPFS/Arweave)
+- Only content hash on-chain
 
-### Access Control
+Learn more: [Document Architecture](documents.md)
 
-Enterprise-grade permission management:
+### 5. Identity
 
-- Role-based access control (RBAC)
-- Multi-signature requirements
-- Time-delayed actions
-- Emergency pause mechanisms
+Decentralized identity via EAS:
 
-Learn more: [Access Control](/protocol/access-control.md)
+- KYC verification (Persona via Bridge.xyz)
+- Attestations (accreditation, qualifications)
+- Privacy-preserving credentials
+- Smart contract verification
 
-## Smart Contract Modules
+**Architecture:**
+- Ethereum Attestation Service (EAS) for all attestations
+- Schemas for each attestation type
+- CapSign as attester for KYC
+- Issuers as attesters for accreditation
 
-### Wallets
-- `WalletFactory` - Deploys diamond wallets
-- `WalletCoreFacet` - Core wallet functionality
-- `WalletSignatureFacet` - Signature validation
+Learn more: [Identity System](/identity/README.md)
 
-### Attestations
-- `AttestationRegistry` - Manages attestations
-- `AttestationCoreFacet` - Core attestation logic
-- `AttestationQueryFacet` - Query attestations
+## Key Patterns
 
-### Documents
-- `DocumentRegistry` - Document management
-- `DocumentSigningFacet` - Signature logic
-- `DocumentCoreFacet` - Core document operations
+### Factory Pattern
 
-### Access Management
-- `GlobalAccessManager` - System-wide permissions
-- `IdentityAccessManager` - Per-account permissions
-- `AccessControlFacet` - Access checks
+All deployments use factories:
+
+```solidity
+IWallet wallet = WalletFactory.createWallet(config);
+IToken token = TokenFactory.createToken(config);
+IOffering offering = OfferingFactory.createOffering(config);
+```
+
+Benefits:
+- Deterministic addresses (CREATE2)
+- Vanity addresses
+- Consistent initialization
+- Gas optimization
+
+### Multi-Init Pattern
+
+Diamonds initialize multiple facets in one transaction:
+
+```solidity
+MultiInit.init(
+  [
+    abi.encodeCall(WalletCore_init, (...)),
+    abi.encodeCall(AccessControl_init, (...))
+  ]
+);
+```
+
+### Diamond Storage
+
+All state uses diamond storage pattern:
+
+```solidity
+library MyStorage {
+  bytes32 constant STORAGE_SLOT = keccak256("my.storage");
+  
+  struct Layout {
+    mapping(address => uint256) balances;
+  }
+  
+  function layout() internal pure returns (Layout storage l) {
+    bytes32 slot = STORAGE_SLOT;
+    assembly { l.slot := slot }
+  }
+}
+```
 
 ## Development
 
 ### Prerequisites
 
-- Foundry development environment
+- Foundry
 - Node.js 18+
-- pnpm package manager
-- Basic Solidity knowledge
+- pnpm
 
-### Quick Start
+### Setup
 
 ```bash
-# Clone repository
-git clone https://github.com/capsign/protocol.git
+# Clone
+git clone https://github.com/capsign/protocol
 cd protocol
 
-# Install dependencies
-forge install
+# Install
 pnpm install
+forge install
 
-# Run tests
+# Build
+forge build
+
+# Test
 forge test
-
-# Deploy locally
-forge script script/deploy/DeployLocal.s.sol --broadcast
 ```
 
 ### Testing
@@ -115,126 +204,76 @@ forge script script/deploy/DeployLocal.s.sol --broadcast
 forge test
 
 # Run specific test
-forge test --match-test testWalletDeployment
+forge test --match-test testCreateToken
 
-# Run with gas reports
-forge test --gas-report
-
-# Run with coverage
+# Coverage
 forge coverage
-```
 
-Learn more: [Testing](/protocol/testing.md)
+# Gas report
+forge test --gas-report
+```
 
 ### Deployment
 
-Deploy protocol contracts to testnet or mainnet:
-
 ```bash
-# Deploy to Base Sepolia
-forge script script/deploy/DeployBaseSepolia.s.sol --broadcast --verify
+# Set environment
+export PRIVATE_KEY=...
+export RPC_URL=...
 
-# Deploy to Base Mainnet
-forge script script/deploy/DeployBase.s.sol --broadcast --verify
+# Deploy
+forge script script/Deploy.s.sol --broadcast --verify
 ```
-
-Learn more: [Deployment](/protocol/deployment.md)
 
 ## Security
 
-### Audit Status
+### Audits
 
-- Internal security reviews ongoing
-- External audits planned before mainnet
-- Bug bounty program coming soon
+Protocol audited by:
+- [Pending] - Contact for audit report
+
+### Bug Bounty
+
+Report vulnerabilities: security@capsign.com
 
 ### Best Practices
 
-- All privileged functions use access control
-- Emergency pause mechanisms
-- Time delays for critical operations
-- Comprehensive event logging
+- All facets use reentrancy guards
+- Access control on all state-changing functions
+- Pausability for emergency situations
+- Events for all state changes
 
-## Smart Contract Standards
+## Gas Optimization
 
-- **EIP-2535**: Diamond Pattern
-- **ERC-4337**: Account Abstraction
-- **EIP-712**: Typed Data Signing
-- **EIP-1271**: Contract Signature Validation
-- **ERC-7752**: Lot-Based Tokens (CapSign extension)
+### Diamond Pattern Benefits
 
-## Documentation Structure
+- Facets deployed once, reused across diamonds
+- ~90% gas savings on deployment
+- No proxy overhead at runtime
 
-- **[Architecture](/protocol/architecture.md)** - System design and diamond pattern
-- **[Smart Accounts](/protocol/smart-accounts.md)** - ERC-4337 wallets
-- **[Attestations](/protocol/attestations.md)** - Identity credentials
-- **[Documents](/protocol/documents.md)** - Document management
-- **[Access Control](/protocol/access-control.md)** - Permission system
-- **[Deployment](/protocol/deployment.md)** - Deploy contracts
-- **[Testing](/protocol/testing.md)** - Test your contracts
-- **[API Reference](/api-reference/README.md)** - Complete contract API
+### Other Optimizations
 
-## Examples
+- Minimal storage reads/writes
+- Batch operations where possible
+- Efficient data structures
+- Assembly for critical paths
 
-### Deploy a Wallet
+## Guides
 
-```solidity
-// Get factory
-IWalletFactory factory = IWalletFactory(walletFactoryAddress);
-
-// Owner credentials (P256 public key for passkey)
-P256.PublicKey memory owner = P256.PublicKey({
-    x: publicKeyX,
-    y: publicKeyY
-});
-
-// Deploy wallet
-address wallet = factory.createWallet(owner);
-```
-
-### Issue an Attestation
-
-```solidity
-// Get attestation registry
-IAttestationRegistry registry = IAttestationRegistry(registryAddress);
-
-// Attestation data
-AttestationRequest memory request = AttestationRequest({
-    schema: KYC_SCHEMA,
-    recipient: userAddress,
-    expirationTime: block.timestamp + 365 days,
-    revocable: true,
-    data: abi.encode(verificationLevel)
-});
-
-// Issue attestation
-bytes32 attestationUID = registry.attest(request);
-```
-
-### Sign a Document
-
-```solidity
-// Get document registry
-IDocumentRegistry registry = IDocumentRegistry(registryAddress);
-
-// Document hash
-bytes32 documentHash = keccak256(documentContent);
-
-// Sign document
-registry.signDocument(documentHash, signature);
-```
+- [Diamond Pattern](diamond-pattern.md) - Understanding EIP-2535
+- [Wallets](wallets.md) - Wallet architecture
+- [Tokens](tokens.md) - Token implementation
+- [Offerings](offerings.md) - Offering system
+- [Documents](documents.md) - Document management
 
 ## Resources
 
-- **GitHub**: [github.com/capsign/protocol](https://github.com/capsign/protocol)
-- **Discord**: [Join community](https://discord.gg/gSmnZ9wmNv)
-- **Twitter**: [@CapSignInc](https://twitter.com/CapSignInc)
-- **Email**: dev@capsign.com
+- **Contracts:** [GitHub](https://github.com/capsign/protocol)
+- **Deployments:** [Contract Addresses](/reference/contract-addresses.md)
+- **Audits:** Coming soon
+- **Whitepaper:** Coming soon
 
-## License
+## Need Help?
 
-Business Source License 1.1 (BUSL-1.1) - See [LICENSE](/LICENSE) for details.
-
----
-
-**Next**: [Architecture](/protocol/architecture.md) →
+- **Technical Support:** dev@capsign.com
+- **Twitter:** [@CapSignInc](https://twitter.com/CapSignInc)
+- **Discord:** [Coming Soon]

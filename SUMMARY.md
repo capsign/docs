@@ -1,174 +1,56 @@
-# Table of Contents
-
-## Welcome
-
-- [CapSign Documentation](README.md)
+# Summary
 
 ## Getting Started
 
-- [Quickstart Guide](getting-started/quickstart.md)
+- [Introduction](README.md)
+- [Quickstart](quickstart.md)
 - [Key Concepts](getting-started/key-concepts.md)
-- [Frequently Asked Questions](getting-started/faq.md)
+- [FAQ](getting-started/faq.md)
 
-## User Guides
+## Wallets
 
-- [Creating Your Account](guides/creating-your-account.md)
-- [Identity Verification](guides/identity-verification.md)
-- [Managing Your Wallet](guides/managing-your-wallet.md)
-- [Signing Documents](guides/signing-documents.md)
-- [Viewing Attestations](guides/viewing-attestations.md)
-- [Security Best Practices](guides/security-best-practices.md)
+- [Overview](wallets/README.md)
+- [Multi-Entity Accounts](wallets/multi-entity-accounts.md)
 
-## Protocol Documentation
+## Tokens
+
+- [Overview](tokens/README.md)
+- [Creating a Token](tokens/creating-a-token.md)
+- [Issuing Tokens](tokens/issuing-tokens.md)
+- [Lot-Based Accounting](tokens/lot-based-accounting.md)
+
+## Offerings
+
+- [Overview](offerings/README.md)
+- [Creating an Offering](offerings/creating-an-offering.md)
+- [Investing](offerings/investing.md)
+- [Compliance Options](offerings/compliance-options.md)
+
+## Documents
+
+- [Overview](documents/README.md)
+- [Uploading Documents](documents/uploading-documents.md)
+- [Signing Documents](documents/signing-documents.md)
+- [Document Verification](documents/verification.md)
+
+## Identity
+
+- [Overview](identity/README.md)
+- [Persona Verification](identity/persona-verification.md)
+- [Attestations](identity/attestations.md)
+- [Accreditation](identity/accreditation.md)
+
+## Protocol (Developers)
 
 - [Protocol Overview](protocol/README.md)
-- [Architecture](protocol/architecture.md)
-- [Smart Accounts](protocol/smart-accounts.md)
-- [Attestations](protocol/attestations.md)
-- [Documents](protocol/documents.md)
-- [Access Control](protocol/access-control.md)
-- [Deployment Guide](protocol/deployment.md)
-- [Testing](protocol/testing.md)
-
-## Interface Documentation
-
-- [Interface Overview](interface/README.md)
-- [Authentication](interface/authentication.md)
-- [Passkeys](interface/passkeys.md)
-- [Attestations](interface/attestations.md)
-- [Direct Signing](interface/direct-signing.md)
-- [Context Management](interface/context-management.md)
-- [Components](interface/components.md)
-- [API Integration](interface/api-integration.md)
-
-## API Reference
-
-- [Contract API Overview](api-reference/README.md)
-- [AccessManaged](api-reference/abstract.AccessManaged.md)
-- [BaseCollateral](api-reference/abstract.BaseCollateral.md)
-- [BaseMargin](api-reference/abstract.BaseMargin.md)
-- [BaseMarket](api-reference/abstract.BaseMarket.md)
-- [CMXOFTFacet](api-reference/abstract.CMXOFTFacet.md)
-- [DelegateContext](api-reference/abstract.DelegateContext.md)
-- [DiamondCutBase](api-reference/abstract.DiamondCutBase.md)
-- [DiamondLoupeBase](api-reference/abstract.DiamondLoupeBase.md)
-- [ERC1271](api-reference/abstract.ERC1271.md)
-- [ERC165Base](api-reference/abstract.ERC165Base.md)
-- [Facet](api-reference/abstract.Facet.md)
-- [FacetRegistryBase](api-reference/abstract.FacetRegistryBase.md)
-- [FactoryBase](api-reference/abstract.FactoryBase.md)
-- [FactoryConfigFacet](api-reference/abstract.FactoryConfigFacet.md)
-- [OwnableBase](api-reference/abstract.OwnableBase.md)
-- [UnifiedGovernanceBase](api-reference/abstract.UnifiedGovernanceBase.md)
-- [AccessControlFacet](api-reference/AccessControlFacet.md)
-- [AccountManagementFacet](api-reference/AccountManagementFacet.md)
-- [AdvancedDistributionFacet](api-reference/AdvancedDistributionFacet.md)
-- [AssetAdminFacet](api-reference/AssetAdminFacet.md)
-- [AssetConfigFacet](api-reference/AssetConfigFacet.md)
-- [AssetCoreFacet](api-reference/AssetCoreFacet.md)
-- [AssetDeploymentFacet](api-reference/AssetDeploymentFacet.md)
-- [AssetFactory](api-reference/AssetFactory.md)
-- [AssetFactoryStorage](api-reference/AssetFactoryStorage.md)
-- [AssetPaymasterFacet](api-reference/AssetPaymasterFacet.md)
-- [AttestationAdminFacet](api-reference/AttestationAdminFacet.md)
-- [AttestationCoreFacet](api-reference/AttestationCoreFacet.md)
-- [AttestationFacet](api-reference/AttestationFacet.md)
-- [AttestationQueryFacet](api-reference/AttestationQueryFacet.md)
-- [AttestationRegistry](api-reference/AttestationRegistry.md)
-- [AttestationRegistryDeploymentFacet](api-reference/AttestationRegistryDeploymentFacet.md)
-- [AttestationRegistryFactory](api-reference/AttestationRegistryFactory.md)
-- [AttestationRegistryStorage](api-reference/AttestationRegistryStorage.md)
-- [AttestationStorage](api-reference/AttestationStorage.md)
-- [AuctionMarket](api-reference/AuctionMarket.md)
-- [BoardGovernance](api-reference/BoardGovernance.md)
-- [BoardVotingFacet](api-reference/BoardVotingFacet.md)
-- [BrokerNetSettlement](api-reference/BrokerNetSettlement.md)
-- [BulletinBoardMarket](api-reference/BulletinBoardMarket.md)
-- [CapitalAccountFacet](api-reference/CapitalAccountFacet.md)
-- [CapitalCallFacet](api-reference/CapitalCallFacet.md)
-- [CMX](api-reference/CMX.md)
-- [CMXAdminFacet](api-reference/CMXAdminFacet.md)
-- [CMXAssetCoreFacet](api-reference/CMXAssetCoreFacet.md)
-- [CMXERC20CompatibilityFacet](api-reference/CMXERC20CompatibilityFacet.md)
-- [CMXLotManagementFacet](api-reference/CMXLotManagementFacet.md)
-- [CMXPaymasterFactory](api-reference/CMXPaymasterFactory.md)
-- [CMXPaymasterStorage](api-reference/CMXPaymasterStorage.md)
-- [CMXStorage](api-reference/CMXStorage.md)
-- [CMXTransferFacet](api-reference/CMXTransferFacet.md)
-- [CommitteeManagementFacet](api-reference/CommitteeManagementFacet.md)
-- [CompensationFactory](api-reference/CompensationFactory.md)
-- [CompensationProposalFacet](api-reference/CompensationProposalFacet.md)
-- [ComplianceFacet](api-reference/ComplianceFacet.md)
-- [CoreWalletFacet](api-reference/CoreWalletFacet.md)
-- [CustodyBridge](api-reference/CustodyBridge.md)
-- [DebtInstrumentFacet](api-reference/DebtInstrumentFacet.md)
-- [DebtInstrumentStorage](api-reference/DebtInstrumentStorage.md)
-- [DebtUsageExample](api-reference/DebtUsageExample.md)
-- [DelegationFacet](api-reference/DelegationFacet.md)
-- [Diamond](api-reference/Diamond.md)
-- [DiamondCutFacet](api-reference/DiamondCutFacet.md)
-- [DiamondCutStorage](api-reference/DiamondCutStorage.md)
-- [DiamondLoupeFacet](api-reference/DiamondLoupeFacet.md)
-- [DiamondLoupeStorage](api-reference/DiamondLoupeStorage.md)
-- [DirectSettlement](api-reference/DirectSettlement.md)
-- [DistributionFacet](api-reference/DistributionFacet.md)
-- [DocumentAdminFacet](api-reference/DocumentAdminFacet.md)
-- [DocumentCoreFacet](api-reference/DocumentCoreFacet.md)
-- [DocumentRegistry](api-reference/DocumentRegistry.md)
-- [DocumentRegistryDeploymentFacet](api-reference/DocumentRegistryDeploymentFacet.md)
-- [DocumentRegistryFactory](api-reference/DocumentRegistryFactory.md)
-- [DocumentRegistryStorage](api-reference/DocumentRegistryStorage.md)
-- [DocumentSigningFacet](api-reference/DocumentSigningFacet.md)
-- [DocumentTemplateFacet](api-reference/DocumentTemplateFacet.md)
-- [ERC20Collateral](api-reference/ERC20Collateral.md)
-- [ERC20PaymentResolver](api-reference/ERC20PaymentResolver.md)
-- [Escrow](api-reference/Escrow.md)
-- [EsoFacet](api-reference/EsoFacet.md)
-- [EsoStorage](api-reference/EsoStorage.md)
-- [ExemptionLimitFacet](api-reference/ExemptionLimitFacet.md)
-- [ExerciseFacet](api-reference/ExerciseFacet.md)
-- [FacetRegistry](api-reference/FacetRegistry.md)
-- [FacetRegistryStorage](api-reference/FacetRegistryStorage.md)
-- [FacetSelectors](api-reference/FacetSelectors.md)
-- [Factory](api-reference/Factory.md)
-- [FactoryBaseFacet](api-reference/FactoryBaseFacet.md)
-- [FactoryConfigStorage](api-reference/FactoryConfigStorage.md)
-- [FilingsFacet](api-reference/FilingsFacet.md)
-- [FundDeploymentFacet](api-reference/FundDeploymentFacet.md)
-- [FundFactory](api-reference/FundFactory.md)
-- [FundFactoryStorage](api-reference/FundFactoryStorage.md)
-- [FundUnitFacet](api-reference/FundUnitFacet.md)
-- [FundUnitStorage](api-reference/FundUnitStorage.md)
-- [GlobalAccessManager](api-reference/GlobalAccessManager.md)
-- [GlobalAccessManagerCoreFacet](api-reference/GlobalAccessManagerCoreFacet.md)
-- [GlobalAccessManagerEmergencyFacet](api-reference/GlobalAccessManagerEmergencyFacet.md)
-- [GlobalAccessManagerStorage](api-reference/GlobalAccessManagerStorage.md)
-- [GovernanceConfigFacet](api-reference/GovernanceConfigFacet.md)
-- [GovernanceCoreFacet](api-reference/GovernanceCoreFacet.md)
-- [GovernanceCoreFacetImpl](api-reference/GovernanceCoreFacetImpl.md)
-- [GovernanceDeploymentFacet](api-reference/GovernanceDeploymentFacet.md)
-- [GovernanceFactory](api-reference/GovernanceFactory.md)
-- [GovernanceFactoryStorage](api-reference/GovernanceFactoryStorage.md)
-- [GovernancePaymasterFacet](api-reference/GovernancePaymasterFacet.md)
-- [GovernanceRegistryFacet](api-reference/GovernanceRegistryFacet.md)
-- [GovernanceStorage](api-reference/GovernanceStorage.md)
-- [GovernanceTimelockFacet](api-reference/GovernanceTimelockFacet.md)
-- [... and 210 more contract references](api-reference/README.md)
-
-## Advanced Topics
-
-- [ERC-7752 Lot Tokens](advanced/erc-7752.md)
-- [Diamond Upgrades](advanced/diamond-upgrades.md)
-- [Gas Optimization](advanced/gas-optimization.md)
-- [Troubleshooting](advanced/troubleshooting.md)
+- [Diamond Pattern](protocol/diamond-pattern.md)
+- [Wallet Architecture](protocol/wallets.md)
+- [Token Architecture](protocol/tokens.md)
+- [Offering Architecture](protocol/offerings.md)
+- [Document Architecture](protocol/documents.md)
 
 ## Reference
 
-- [Glossary](reference/glossary.md)
 - [Contract Addresses](reference/contract-addresses.md)
 - [Supported Networks](reference/supported-networks.md)
-
-## Additional Resources
-
-- [Contributing](CONTRIBUTING.md)
-- [License](LICENSE)
+- [Glossary](reference/glossary.md)

@@ -1,152 +1,157 @@
 # CapSign Documentation
 
+Welcome to CapSign - a **private investing platform** that makes it easy to create, issue, and invest in securities tokens.
+
 ## What is CapSign?
 
-CapSign is a **private investing platform** that combines cutting-edge blockchain technology with user-friendly design to provide:
+CapSign combines blockchain technology with compliance tools to provide:
 
-- **Smart Accounts** - Non-custodial wallets with biometric authentication (Face ID/Touch ID)
-- **Multi-Entity Workflows** - Access multiple organizations from a single account (e.g., your personal account, corporate entities, investment funds, SPVs)
-- **Digital Identity** - Decentralized identity verification using Ethereum Attestation Service
-- **Document Management** - Secure, verifiable document signing and storage
-- **Compliance Framework** - Built-in KYC/AML and regulatory compliance tools for private markets
+- **30-second account creation** - Create a smart wallet instantly with Face ID or Touch ID (no email required)
+- **Multi-entity support** - Manage personal, corporate, and fund accounts from a single login
+- **Securities tokens** - Issue compliant digital securities with built-in lot tracking (ERC-7752)
+- **Investment offerings** - Create private offerings with Reg D, Reg S, or Reg A+ compliance
+- **Document signing** - Sign legal documents with blockchain-based signatures
+- **Identity verification** - Verify identity through Persona (via Bridge.xyz) when ready to invest
 
 ## Quick Start
 
 ### For Users
 
-Get started with CapSign in minutes:
+1. **[Create Your Account](/getting-started/quickstart.md)** - Set up your wallet in 30 seconds
+2. **Explore the Platform** - Browse offerings and familiarize yourself with features
+3. **[Complete Identity Verification](/identity/verification.md)** - When ready to invest
 
-1. **[Create Your Account](/getting-started/quickstart.md)** - Set up your smart wallet with biometric authentication in 30 seconds
-2. **[Explore Key Concepts](/getting-started/key-concepts.md)** - Understand smart accounts, attestations, and multi-entity workflows
-3. **[Complete Identity Verification](/guides/identity-verification.md)** - Verify your identity when you're ready to invest
+### For Issuers
 
-**New to CapSign?** Check out our **[User Guides](/guides/)** for step-by-step instructions.
-
-### Multi-Entity Support
-
-CapSign supports complex organizational structures through context switching:
-
-- **Individual investors** - Manage your personal investments
-- **Corporate entities** - Access your company's investment accounts
-- **Fund managers** - Switch between multiple SPVs and fund entities
-- **Multi-role users** - Seamlessly transition between roles (e.g., employee of Corp A, LP in Fund B, GP of Fund C)
-
-Switch contexts instantly from the account menu - no need to log in and out.
+1. **[Create Your Account](/getting-started/quickstart.md)** - Set up your entity account
+2. **[Create a Token](/tokens/creating-a-token.md)** - Issue your security token
+3. **[Create an Offering](/offerings/creating-an-offering.md)** - Launch your investment offering
 
 ### For Developers
 
-Build on the CapSign platform:
-
 1. **[Protocol Overview](/protocol/README.md)** - Understand the smart contract architecture
-2. **[Interface Documentation](/interface/README.md)** - Integrate CapSign into your frontend
-3. **[API Reference](/api-reference/README.md)** - Explore the complete contract API
+2. **[Diamond Pattern](/protocol/diamond-pattern.md)** - Learn about our modular contract system
+3. **[Contract Addresses](/reference/contract-addresses.md)** - Find deployed contract addresses
 
-**Building a dApp?** Start with our **[Interface Documentation](/interface/)** to integrate authentication, attestations, and wallet features.
+## Core Features
 
-## Documentation Structure
+### 1. Wallets
 
-### Getting Started
-- **[Quickstart](/getting-started/quickstart.md)** - Create your account and get started
-- **[Key Concepts](/getting-started/key-concepts.md)** - Learn about smart accounts, attestations, and passkeys
-- **[FAQ](/getting-started/faq.md)** - Common questions and answers
+Smart contract wallets (ERC-4337) with biometric authentication:
 
-### User Guides
-- **[Creating Your Account](/guides/creating-your-account.md)** - Account creation walkthrough
-- **[Identity Verification](/guides/identity-verification.md)** - Complete KYC verification
-- **[Managing Your Wallet](/guides/managing-your-wallet.md)** - Wallet operations and management
-- **[Signing Documents](/guides/signing-documents.md)** - Document signing workflow
-- **[Viewing Attestations](/guides/viewing-attestations.md)** - Understand your identity attestations
-- **[Security Best Practices](/guides/security-best-practices.md)** - Keep your account secure
+- **Instant setup** - No seed phrases, no complex onboarding
+- **Biometric security** - Face ID / Touch ID authentication
+- **Multi-entity support** - Switch between personal, corporate, and fund contexts
+- **Account abstraction** - Gasless transactions and sponsored gas
 
-### Protocol Documentation
-- **[Protocol Overview](/protocol/README.md)** - Smart contract architecture
-- **[Architecture](/protocol/architecture.md)** - Diamond pattern and system design
-- **[Smart Accounts](/protocol/smart-accounts.md)** - Wallet contracts and ERC-4337
-- **[Attestations](/protocol/attestations.md)** - Identity verification system
-- **[Documents](/protocol/documents.md)** - Document registry and signing
-- **[Access Control](/protocol/access-control.md)** - Permission management
-- **[Deployment](/protocol/deployment.md)** - Deploy contracts
-- **[Testing](/protocol/testing.md)** - Test your integrations
+**Learn more:** [Wallet Documentation](/wallets/README.md)
 
-### Interface Documentation
-- **[Interface Overview](/interface/README.md)** - Frontend integration guide
-- **[Authentication](/interface/authentication.md)** - Account creation and login
-- **[Passkeys](/interface/passkeys.md)** - Passkey implementation
-- **[Attestations](/interface/attestations.md)** - Attestation UI/UX
-- **[Direct Signing](/interface/direct-signing.md)** - EOA wallet integration
-- **[Context Management](/interface/context-management.md)** - Multi-account switching
-- **[Components](/interface/components.md)** - UI component library
-- **[API Integration](/interface/api-integration.md)** - Backend API usage
+### 2. Tokens
 
-### Advanced Topics
-- **[ERC-7752 Lot Tokens](/advanced/erc-7752.md)** - Lot-based token standard
-- **[Diamond Upgrades](/advanced/diamond-upgrades.md)** - Upgrading diamond contracts
-- **[Gas Optimization](/advanced/gas-optimization.md)** - Performance optimization
-- **[Troubleshooting](/advanced/troubleshooting.md)** - Common issues and solutions
+ERC-7752 securities tokens with lot-based accounting:
 
-### Reference
-- **[API Reference](/api-reference/README.md)** - Complete contract documentation
-- **[Glossary](/reference/glossary.md)** - Technical terms and definitions
+- **Create tokens** - Issue shares, units, or other securities
+- **Lot tracking** - Automatic cost basis and acquisition date tracking
+- **Transfer restrictions** - Lockups, vesting, Rule 144, ROFR
+- **Compliance** - Built-in compliance modules
+
+**Learn more:** [Token Documentation](/tokens/README.md)
+
+### 3. Offerings
+
+Investment offerings with built-in compliance:
+
+- **Create offerings** - Set price, minimum investment, and maximum raise
+- **Compliance presets** - Reg D (506b, 506c), Reg S, Reg A+
+- **Investor management** - Track investments and issue tokens
+- **Hybrid escrow** - Protect both issuers and investors
+
+**Learn more:** [Offering Documentation](/offerings/README.md)
+
+### 4. Documents
+
+Blockchain-based document management:
+
+- **Upload documents** - Store documents on IPFS or Arweave
+- **Sign documents** - Cryptographic signatures with biometric auth
+- **Verify signatures** - Anyone can verify document authenticity
+- **Attestations** - Documents stored as EAS attestations
+
+**Learn more:** [Document Documentation](/documents/README.md)
+
+### 5. Identity
+
+Decentralized identity and attestations:
+
+- **KYC verification** - Identity verification through Persona (via Bridge.xyz)
+- **Attestations** - Privacy-preserving credentials on Ethereum Attestation Service
+- **Issuer attestations** - Issuers can attest to accreditation and qualifications
+- **Portable credentials** - Use your attestations across multiple offerings
+
+**Learn more:** [Identity Documentation](/identity/README.md)
+
+## Multi-Entity Workflows
+
+CapSign supports complex organizational structures through **context switching**:
+
+- **Individual investors** - Personal investment accounts
+- **Corporate entities** - Company investment accounts
+- **Fund managers** - Manage multiple funds and SPVs
+- **Multi-role users** - Switch between roles (GP, LP, employee, etc.)
+
+**Example**: You're a fund manager with 3 SPVs and also an LP in another fund:
+- Context 1: Personal account
+- Context 2: SPV Alpha (GP)
+- Context 3: SPV Beta (GP)
+- Context 4: SPV Gamma (GP)
+- Context 5: XYZ Fund (LP)
+
+Switch contexts instantly from the account menu - no logging in and out.
+
+**Learn more:** [Multi-Entity Accounts](/wallets/multi-entity-accounts.md)
+
+## Technology
+
+### For Users
+
+- **Smart Wallets** - ERC-4337 account abstraction
+- **Passkeys** - WebAuthn biometric authentication
+- **Gasless Transactions** - Platform sponsors gas for certain operations
+- **Base Network** - Low-cost, fast Ethereum L2
+
+### For Developers
+
+- **Diamond Pattern** - Modular, upgradeable contracts (EIP-2535)
+- **ERC-7752** - Lot-based token standard for securities
+- **ERC-4337** - Account abstraction standard
+- **Ethereum Attestation Service** - Decentralized identity credentials
+- **Viem + Wagmi** - Modern TypeScript Ethereum libraries
+
+**Learn more:** [Protocol Documentation](/protocol/README.md)
+
+## Key Concepts
+
+- **Smart Wallet** - A smart contract wallet controlled by biometric authentication (not a traditional EOA)
+- **Attestation** - A cryptographic credential that proves something about you (identity, accreditation, etc.)
+- **Lot** - A group of tokens with the same acquisition date and cost basis (for tax tracking)
+- **Compliance Module** - A smart contract that enforces transfer restrictions or investment requirements
+- **Diamond** - A modular smart contract architecture that allows for upgrades and extensions
+
+**Learn more:** [Glossary](/reference/glossary.md)
+
+## Resources
+
+- **[Quickstart Guide](/getting-started/quickstart.md)** - Get started in 5 minutes
+- **[FAQ](/getting-started/faq.md)** - Frequently asked questions
 - **[Contract Addresses](/reference/contract-addresses.md)** - Deployed contract addresses
-- **[Supported Networks](/reference/supported-networks.md)** - Network information
+- **[Supported Networks](/reference/supported-networks.md)** - Base Mainnet and Base Sepolia
 
-## Key Features
+## Support
 
-### Instant Account Creation
+- **Twitter:** [@CapSignInc](https://twitter.com/CapSignInc)
+- **GitHub:** [github.com/capsign](https://github.com/capsign)
+- **Email:** support@capsign.com
 
-Create your smart wallet in seconds using Face ID or Touch ID - no seed phrases, no complexity. Identity verification can be completed later when you're ready to invest.
+## Legal
 
-### Multi-Entity Management
-
-Access all your roles from a single account:
-
-- **As an investor**: Manage your personal portfolio
-- **As a corporate officer**: Access company investment accounts
-- **As a fund manager**: Manage multiple SPVs and fund entities
-- **As a service provider**: Work with multiple client entities
-
-Switch between entities instantly from the account context menu.
-
-### Private Market Compliance
-
-Built-in compliance tools for private securities:
-
-- KYC/AML verification workflows
-- Accredited investor attestations
-- Document signing and management
-- Regulatory reporting
-
-## Technology Stack
-
-CapSign is built with:
-
-- **Smart Contracts** - Solidity with Diamond Pattern (EIP-2535)
-- **Smart Accounts** - ERC-4337 account abstraction with Coinbase Smart Wallet
-- **Identity** - Ethereum Attestation Service (EAS)
-- **Frontend** - Next.js, TypeScript, Wagmi, Viem
-- **Blockchain** - Base (primary), Ethereum (cross-chain)
-
-## Community & Support
-
-- **Discord** - [Join our community](https://discord.gg/gSmnZ9wmNv)
-- **GitHub** - [View source code](https://github.com/capsign)
-- **Email** - [support@capsign.com](mailto:support@capsign.com)
-- **Twitter** - [@capsign](https://twitter.com/CapSignInc)
-
-## Contributing
-
-We welcome contributions to our documentation! Found an error or want to improve something?
-
-1. Fork the [documentation repository](https://github.com/capsign/docs)
-2. Make your changes
-3. Submit a pull request with a clear description
-
-See our **[Contributing Guide](/CONTRIBUTING.md)** for more details.
-
-## License
-
-The CapSign Protocol is licensed under the Business Source License 1.1 (BUSL-1.1). See [LICENSE](/LICENSE) for details.
-
----
-
-**Ready to get started?** Create your account at [app.capsign.com](https://app.capsign.com) or explore our **[Quickstart Guide](/getting-started/quickstart.md)**.
+CapSign provides technology tools but does not provide legal, financial, or tax advice. You are responsible for ensuring compliance with all applicable laws and regulations. Consult with qualified legal counsel before issuing securities.
