@@ -154,9 +154,13 @@ When you sign a transaction or document in an entity context:
 ### Wallet Ownership
 
 - **Personal context** - You own the smart wallet (passkey-controlled)
-- **Entity context** - The entity owns the wallet (EOA-controlled)
-  - You sign on behalf of the entity with your EOA wallet
-  - Multiple people can be authorized signers
+  - Controlled by your Face ID / Touch ID
+  - Non-custodial and user-controlled
+  
+- **Entity context** - The entity owns the smart wallet (EOA-controlled via EIP-1193)
+  - Sign with your existing wallet (MetaMask, Coinbase Wallet, Fireblocks, etc.)
+  - Compatible with current workflows (MPC, multi-sig, custodians)
+  - Multiple people can be authorized signers with their own wallets
 
 ### Permissions
 
@@ -180,9 +184,14 @@ Different users may have different permissions within an entity:
 ### Wallet Types by Context
 
 - **Personal context** - ERC-4337 smart wallet (passkey-controlled)
-- **Entity context** - ERC-4337 smart wallet (EOA-controlled)
-  - You sign with an EOA wallet (MetaMask, Coinbase Wallet, etc.)
-  - The entity wallet then executes the transaction
+  - Controlled by Face ID / Touch ID
+  - Biometric signature required for all actions
+  
+- **Entity context** - ERC-4337 smart wallet (EOA-controlled via EIP-1193)
+  - Sign with existing wallet (MetaMask, Fireblocks, etc.)
+  - Works with MPC, multi-sig, hardware wallets, custodians
+  - Maintains your current security workflows
+  - The entity wallet executes after EOA signature approval
 
 Learn more: [Wallet Architecture](/protocol/wallets.md)
 

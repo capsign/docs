@@ -6,23 +6,46 @@ CapSign wallets are smart contract wallets (ERC-4337) that use biometric authent
 
 A smart wallet is a smart contract on the blockchain that acts as your account. Unlike traditional wallets (EOAs), smart wallets offer:
 
-- **No seed phrases** - Your wallet is controlled by Face ID / Touch ID
+- **Flexible authentication** - Passkeys for individuals, EOA signers for entities
 - **Account abstraction** - Better UX with gasless transactions
 - **Programmable** - Support for multi-sig, spending limits, and recovery
-- **Secure** - Biometric authentication required for all actions
+- **Secure** - Biometric or existing wallet authentication
+
+### Individual Accounts
+
+**Passkey-controlled:**
+- No seed phrases - controlled by Face ID / Touch ID
+- Biometric authentication required for all actions
+- Non-custodial and user-controlled
+
+### Entity Accounts
+
+**EOA-controlled via EIP-1193:**
+- Use existing wallets (MetaMask, Coinbase Wallet, Fireblocks, etc.)
+- Compatible with current workflows (MPC, multi-sig, custodians)
+- Sign transactions with connected wallet
+- Smart account executes after EOA signature
 
 ## Key Features
 
-### Biometric Authentication
+### Authentication Methods
 
-Your wallet is protected by your device's biometric authentication:
-
+**Individual Accounts (Passkeys):**
 - **Face ID** (iOS, Mac)
 - **Touch ID** (iOS, Mac)
 - **Fingerprint** (Android)
 - **Windows Hello** (Windows)
 
 Every transaction requires biometric confirmation - no one can access your wallet without your biometrics.
+
+**Entity Accounts (EIP-1193 EOA Owners):**
+- **MetaMask** - Browser extension wallet
+- **Coinbase Wallet** - Mobile and browser wallet
+- **Fireblocks** - Institutional custody and MPC
+- **Ledger/Trezor** - Hardware wallets
+- **Multi-sig** - Safe, Gnosis, etc.
+
+Entities sign with their existing wallet infrastructure, maintaining current security practices.
 
 ### Multi-Entity Support
 
@@ -107,15 +130,24 @@ View your transaction history in the app:
 
 ## Account Recovery
 
-### Passkey Recovery
+### Account Recovery
+
+**Individual Accounts:**
 
 Your passkey is stored in your device's secure enclave and synced via:
-
 - **iCloud Keychain** (Apple devices)
 - **Google Password Manager** (Android devices)
 - **Windows Hello** (Windows devices)
 
-If you lose your device, you can recover access on a new device that's signed into the same account.
+If you lose your device, you can recover access on a new device signed into the same account.
+
+**Entity Accounts:**
+
+Recovery handled by your existing wallet:
+- **MetaMask** - Your seed phrase recovery
+- **Fireblocks** - Your institution's backup policies
+- **Multi-sig** - Recover via other signers
+- **Hardware wallet** - Your hardware device backup
 
 ### Social Recovery
 
@@ -166,19 +198,25 @@ See [Contract Addresses](/reference/contract-addresses.md) for wallet factory an
 ## FAQs
 
 **Q: Can I use my own wallet (MetaMask, Coinbase Wallet)?**
-A: Entity accounts can connect an EOA wallet as a signer. Individual accounts use CapSign smart wallets only.
+A: Yes! Entity accounts use your existing wallet (MetaMask, Coinbase Wallet, Fireblocks, etc.) as the signer via EIP-1193. Individual accounts use passkey-controlled smart wallets.
 
 **Q: Where are my private keys?**
-A: Your wallet is controlled by a passkey stored in your device's secure enclave. There are no traditional "private keys."
+A: For individual accounts, your wallet is controlled by a passkey stored in your device's secure enclave (no traditional private keys). For entity accounts, private keys are in your connected wallet (MetaMask, Fireblocks, etc.).
 
 **Q: What if I lose my device?**
-A: Your passkey syncs via iCloud Keychain (Apple) or Google Password Manager (Android). Sign in on a new device to recover access.
+A: For individual accounts, your passkey syncs via iCloud Keychain (Apple) or Google Password Manager (Android). For entity accounts, recover via your connected wallet's backup method (seed phrase, MPC backup, multi-sig, etc.).
 
 **Q: Can someone steal my wallet if they steal my device?**
-A: No. Biometric authentication is required, and biometrics can't be extracted or replicated.
+A: For individual accounts, no - biometric authentication is required and biometrics can't be extracted. For entity accounts, security depends on your connected wallet's protection (password, hardware device, etc.).
 
 **Q: What networks are supported?**
 A: Base Mainnet and Base Sepolia testnet. See [Supported Networks](/reference/supported-networks.md).
+
+**Q: Can I use Fireblocks or other institutional custody?**
+A: Yes! Entity accounts work with any EIP-1193 compatible wallet, including Fireblocks, BitGo, Anchorage, and other institutional custodians.
+
+**Q: Does this work with my existing MPC setup?**
+A: Yes. Entity accounts use your existing wallet infrastructure. If you use MPC wallets (Fireblocks, Qredo, etc.), they work seamlessly as the EOA owner.
 
 ## Need Help?
 
