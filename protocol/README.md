@@ -1,384 +1,240 @@
-# CMX Protocol
+# Protocol Overview
 
-The CMX Protocol is a comprehensive capital markets blockchain infrastructure providing enterprise-grade smart contracts for tokenized securities, asset management, trading, and regulatory compliance. Built with regulatory compliance and institutional-grade security at its core.
+CapSign Protocol is a comprehensive smart contract framework for private securities and capital markets built on the Diamond Pattern (EIP-2535).
 
-## Architecture Overview
+## Architecture
 
-The CMX Protocol uses a **diamond-based architecture** (EIP-2535) for maximum upgradability and modularity while maintaining security and regulatory compliance.
+The protocol uses a **diamond-based architecture** for maximum upgradability and modularity:
 
-### Core Components
+- **Modular Facets** - Functionality split into separate contracts
+- **Upgradeable** - Add/remove/replace features without redeploying
+- **Single Address** - All functionality accessible via one diamond address
+- **No Size Limit** - Bypass 24KB contract size limit
 
-- **🏛️ Diamond Architecture** - Modular, upgradeable smart contracts
-- **🔐 Access Management** - Enterprise-grade permission system
-- **📋 Attestation System** - Identity verification and compliance
-- **💎 Asset Tokenization** - Securities and RWA tokenization
-- **📊 Trading Markets** - Multiple trading venue types
-- **⚖️ Governance** - Corporate governance and voting mechanisms
-- **📚 Document Management** - Secure document storage and verification
-- **💰 Payment Systems** - Gas abstraction and billing
-- **📖 Accounting Ledgers** - Double-entry bookkeeping
-- **🏦 Fund Management** - Investment fund operations
+Learn more: [Architecture](/protocol/architecture.md)
 
-## Key Features
+## Core Components
 
-### Regulatory Compliance First
+### Smart Accounts (ERC-4337)
 
-- **Built-in KYC/AML** - Integrated identity verification
-- **Securities Law Compliance** - Rule 506(b), 506(c), Rule 701 support
-- **Multi-jurisdictional** - Configurable for different regulatory environments
-- **Audit Trails** - Complete transaction history for regulatory reporting
+Non-custodial wallets with programmable logic:
 
-### Enterprise Security
+- Passkey authentication (WebAuthn/P256)
+- EOA wallet support (MetaMask, etc.)
+- Gasless transactions via paymasters
+- Social recovery mechanisms
 
-- **Diamond Architecture** - Secure upgradeable contracts
-- **Role-based Access** - Granular permission system
-- **Multi-signature** - Enterprise governance controls
-- **Security-First Design** - Built with security best practices
+Learn more: [Smart Accounts](/protocol/smart-accounts.md)
 
-### Capital Markets Focus
+### Attestations (EAS Integration)
 
-- **Securities Tokenization** - Equity, debt, and hybrid instruments
-- **Investment Funds** - Mutual funds, hedge funds, ETFs
-- **Trading Infrastructure** - Order books, auctions, OTC markets
-- **Settlement Systems** - Automated clearing and settlement
+On-chain credentials for identity and compliance:
 
+- KYC/AML verification
+- Accredited investor status
+- Professional credentials
+- Privacy-preserving proofs
 
-**For detailed information about our lot-based token implementation, see [ERC-7752: Lot-Based Tokens](erc-7752.md).**
+Learn more: [Attestations](/protocol/attestations.md)
+
+### Document Registry
+
+Blockchain-based document signing:
+
+- Cryptographic signatures
+- Immutable records
+- Multi-party signing
+- Verification tools
+
+Learn more: [Documents](/protocol/documents.md)
+
+### Access Control
+
+Enterprise-grade permission management:
+
+- Role-based access control (RBAC)
+- Multi-signature requirements
+- Time-delayed actions
+- Emergency pause mechanisms
+
+Learn more: [Access Control](/protocol/access-control.md)
 
 ## Smart Contract Modules
 
-### Core Infrastructure
+### Wallets
+- `WalletFactory` - Deploys diamond wallets
+- `WalletCoreFacet` - Core wallet functionality
+- `WalletSignatureFacet` - Signature validation
 
-- **[Diamond Factories](contracts.md#diamond-factories)** - Factory contracts for creating diamond-based assets
-- **[Access Management](contracts.md#access-management)** - Unified access control system
-- **[Registries](contracts.md#registries)** - Central contract and facet registration
+### Attestations
+- `AttestationRegistry` - Manages attestations
+- `AttestationCoreFacet` - Core attestation logic
+- `AttestationQueryFacet` - Query attestations
 
-### Compliance & Identity
+### Documents
+- `DocumentRegistry` - Document management
+- `DocumentSigningFacet` - Signature logic
+- `DocumentCoreFacet` - Core document operations
 
-- **[Attestation System](contracts.md#attestations)** - Decentralized identity verification
-- **[KYC/AML Framework](contracts.md#kyc-aml)** - Regulatory compliance tools
-- **[Document Registry](contracts.md#documents)** - Secure document management
+### Access Management
+- `GlobalAccessManager` - System-wide permissions
+- `IdentityAccessManager` - Per-account permissions
+- `AccessControlFacet` - Access checks
 
-### Asset Management
+## Development
 
-- **[Tokenization Framework](contracts.md#tokenization)** - Real-world asset tokenization
-- **[Share Classes](contracts.md#share-classes)** - Equity instrument management
-- **[Fund Management](contracts.md#funds)** - Investment fund operations
+### Prerequisites
 
-### Trading & Markets
+- Foundry development environment
+- Node.js 18+
+- pnpm package manager
+- Basic Solidity knowledge
 
-- **[Order Book Markets](contracts.md#order-books)** - Traditional exchange-style trading
-- **[Auction Markets](contracts.md#auctions)** - Price discovery mechanisms
-- **[OTC Markets](contracts.md#otc)** - Over-the-counter trading
-- **[Settlement](contracts.md#settlement)** - Automated trade settlement
-
-### Governance & Operations
-
-- **[Corporate Governance](contracts.md#governance)** - Board and shareholder decision making
-- **[Accounting Ledgers](contracts.md#ledgers)** - Double-entry bookkeeping
-- **[Subscription Billing](contracts.md#billing)** - Payment and subscription management
-
-## Getting Started
-
-### For Developers
-
-1. **Prerequisites**
-
-   - Foundry development environment
-   - Node.js 18+ and npm/yarn
-   - Basic understanding of Solidity and Diamond patterns
-
-2. **Installation**
-
-   ```bash
-   git clone https://github.com/capsign/protocol.git
-   cd protocol
-   forge install
-   ```
-
-3. **Development Setup**
-
-   ```bash
-   # Copy environment template
-   cp .env.example .env
-
-   # Install dependencies
-   npm install
-
-   # Run tests
-   forge test
-   ```
-
-### For Integrators
-
-Use the CMX Protocol SDK for easy integration:
+### Quick Start
 
 ```bash
-npm install @capsign/sdk
+# Clone repository
+git clone https://github.com/capsign/protocol.git
+cd protocol
+
+# Install dependencies
+forge install
+pnpm install
+
+# Run tests
+forge test
+
+# Deploy locally
+forge script script/deploy/DeployLocal.s.sol --broadcast
 ```
 
-```javascript
-import { CMXClient, Network } from "@capsign/sdk";
+### Testing
 
-const client = new CMXClient({
-  network: Network.BASE_SEPOLIA,
-  privateKey: process.env.PRIVATE_KEY,
-});
+```bash
+# Run all tests
+forge test
 
-// Create a tokenized asset
-const asset = await client.assets.create({
-  name: "Example Corp Class A",
-  symbol: "EXMP-A",
-  totalShares: 1000000,
-});
+# Run specific test
+forge test --match-test testWalletDeployment
+
+# Run with gas reports
+forge test --gas-report
+
+# Run with coverage
+forge coverage
 ```
 
-## Security Considerations
+Learn more: [Testing](/protocol/testing.md)
 
-### Security Status
+### Deployment
 
-- **Active Development** - Contracts are in active development and testing
-- **Internal Review** - Ongoing internal security review and testing
-- **Future Audits** - Professional security audits planned before mainnet deployment
+Deploy protocol contracts to testnet or mainnet:
+
+```bash
+# Deploy to Base Sepolia
+forge script script/deploy/DeployBaseSepolia.s.sol --broadcast --verify
+
+# Deploy to Base Mainnet
+forge script script/deploy/DeployBase.s.sol --broadcast --verify
+```
+
+Learn more: [Deployment](/protocol/deployment.md)
+
+## Security
+
+### Audit Status
+
+- Internal security reviews ongoing
+- External audits planned before mainnet
+- Bug bounty program coming soon
 
 ### Best Practices
 
-- All privileged functions use multi-signature requirements
-- Role-based access control with time-delayed administrative actions
-- Emergency pause mechanisms for critical functions
-- Comprehensive event logging for transparency
+- All privileged functions use access control
+- Emergency pause mechanisms
+- Time delays for critical operations
+- Comprehensive event logging
 
-## Deployment Networks
+## Smart Contract Standards
 
-### Testnets
-
-- **Base Sepolia** - Primary testnet deployment
-- **Ethereum Sepolia** - Cross-chain testing
-
-### Mainnets
-
-- **Base Mainnet** - Primary production deployment
-- **Ethereum Mainnet** - Cross-chain bridge deployment
+- **EIP-2535**: Diamond Pattern
+- **ERC-4337**: Account Abstraction
+- **EIP-712**: Typed Data Signing
+- **EIP-1271**: Contract Signature Validation
+- **ERC-7752**: Lot-Based Tokens (CapSign extension)
 
 ## Documentation Structure
 
-- **[Smart Contracts](contracts.md)** - Detailed contract documentation
-- **[Architecture](architecture.md)** - System design and patterns
-- **[Deployment Guide](deployment.md)** - How to deploy the protocol
-- **[Integration Guide](integration.md)** - SDK and API usage
-- **[Governance](governance.md)** - Protocol governance mechanisms
-- **[Security](security.md)** - Security model and considerations
+- **[Architecture](/protocol/architecture.md)** - System design and diamond pattern
+- **[Smart Accounts](/protocol/smart-accounts.md)** - ERC-4337 wallets
+- **[Attestations](/protocol/attestations.md)** - Identity credentials
+- **[Documents](/protocol/documents.md)** - Document management
+- **[Access Control](/protocol/access-control.md)** - Permission system
+- **[Deployment](/protocol/deployment.md)** - Deploy contracts
+- **[Testing](/protocol/testing.md)** - Test your contracts
+- **[API Reference](/api-reference/README.md)** - Complete contract API
 
-## Developer Resources
+## Examples
 
-- **[API Reference](api.md)** - Complete API documentation
-- **[SDK Documentation](sdk.md)** - TypeScript SDK guide
-- **[Testing Guide](testing.md)** - How to test integrations
-- **[Examples](examples.md)** - Code examples and tutorials
+### Deploy a Wallet
 
-## Compliance Documentation
+```solidity
+// Get factory
+IWalletFactory factory = IWalletFactory(walletFactoryAddress);
 
-- **[Regulatory Framework](compliance.md)** - Regulatory compliance approach
-- **[KYC/AML Implementation](kyc-aml.md)** - Identity verification system
-- **[Securities Law](securities.md)** - Securities regulation compliance
+// Owner credentials (P256 public key for passkey)
+P256.PublicKey memory owner = P256.PublicKey({
+    x: publicKeyX,
+    y: publicKeyY
+});
+
+// Deploy wallet
+address wallet = factory.createWallet(owner);
+```
+
+### Issue an Attestation
+
+```solidity
+// Get attestation registry
+IAttestationRegistry registry = IAttestationRegistry(registryAddress);
+
+// Attestation data
+AttestationRequest memory request = AttestationRequest({
+    schema: KYC_SCHEMA,
+    recipient: userAddress,
+    expirationTime: block.timestamp + 365 days,
+    revocable: true,
+    data: abi.encode(verificationLevel)
+});
+
+// Issue attestation
+bytes32 attestationUID = registry.attest(request);
+```
+
+### Sign a Document
+
+```solidity
+// Get document registry
+IDocumentRegistry registry = IDocumentRegistry(registryAddress);
+
+// Document hash
+bytes32 documentHash = keccak256(documentContent);
+
+// Sign document
+registry.signDocument(documentHash, signature);
+```
+
+## Resources
+
+- **GitHub**: [github.com/capsign/protocol](https://github.com/capsign/protocol)
+- **Discord**: [Join community](https://discord.gg/gSmnZ9wmNv)
+- **Twitter**: [@CapSignInc](https://twitter.com/CapSignInc)
+- **Email**: dev@capsign.com
 
 ## License
 
-Business Source License 1.1 (BUSL-1.1) - See [LICENSE](../LICENSE.md) for details.
+Business Source License 1.1 (BUSL-1.1) - See [LICENSE](/LICENSE) for details.
 
-## Support
+---
 
-- **Documentation**: [docs.capsign.com](https://docs.capsign.com)
-- **Technical Support**: [support@capsign.com](mailto:support@capsign.com)
-- **Discord**: [Join our Discord](https://discord.gg/capsign)
-- **GitHub Issues**: [Report issues](https://github.com/capsign/protocol/issues)
-
-The CMX Protocol is a comprehensive capital markets blockchain infrastructure providing enterprise-grade smart contracts for tokenized securities, asset management, trading, and regulatory compliance. Built with regulatory compliance and institutional-grade security at its core.
-
-## Architecture Overview
-
-The CMX Protocol uses a **diamond-based architecture** (EIP-2535) for maximum upgradability and modularity while maintaining security and regulatory compliance.
-
-### Core Components
-
-- **🏛️ Diamond Architecture** - Modular, upgradeable smart contracts
-- **🔐 Access Management** - Enterprise-grade permission system
-- **📋 Attestation System** - Identity verification and compliance
-- **💎 Asset Tokenization** - Securities and RWA tokenization
-- **📊 Trading Markets** - Multiple trading venue types
-- **⚖️ Governance** - Corporate governance and voting mechanisms
-- **📚 Document Management** - Secure document storage and verification
-- **💰 Payment Systems** - Gas abstraction and billing
-- **📖 Accounting Ledgers** - Double-entry bookkeeping
-- **🏦 Fund Management** - Investment fund operations
-
-## Key Features
-
-### Regulatory Compliance First
-
-- **Built-in KYC/AML** - Integrated identity verification
-- **Securities Law Compliance** - Rule 506(b), 506(c), Rule 701 support
-- **Multi-jurisdictional** - Configurable for different regulatory environments
-- **Audit Trails** - Complete transaction history for regulatory reporting
-
-### Enterprise Security
-
-- **Diamond Architecture** - Secure upgradeable contracts
-- **Role-based Access** - Granular permission system
-- **Multi-signature** - Enterprise governance controls
-- **Security-First Design** - Built with security best practices
-
-### Capital Markets Focus
-
-- **Securities Tokenization** - Equity, debt, and hybrid instruments
-- **Investment Funds** - Mutual funds, hedge funds, ETFs
-- **Trading Infrastructure** - Order books, auctions, OTC markets
-- **Settlement Systems** - Automated clearing and settlement
-
-## Smart Contract Modules
-
-### Core Infrastructure
-
-- **[Diamond Factories](contracts.md#diamond-factories)** - Factory contracts for creating diamond-based assets
-- **[Access Management](contracts.md#access-management)** - Unified access control system
-- **[Registries](contracts.md#registries)** - Central contract and facet registration
-
-### Compliance & Identity
-
-- **[Attestation System](contracts.md#attestations)** - Decentralized identity verification
-- **[KYC/AML Framework](contracts.md#kyc-aml)** - Regulatory compliance tools
-- **[Document Registry](contracts.md#documents)** - Secure document management
-
-### Asset Management
-
-- **[Tokenization Framework](contracts.md#tokenization)** - Real-world asset tokenization
-- **[Share Classes](contracts.md#share-classes)** - Equity instrument management
-- **[Fund Management](contracts.md#funds)** - Investment fund operations
-
-### Trading & Markets
-
-- **[Order Book Markets](contracts.md#order-books)** - Traditional exchange-style trading
-- **[Auction Markets](contracts.md#auctions)** - Price discovery mechanisms
-- **[OTC Markets](contracts.md#otc)** - Over-the-counter trading
-- **[Settlement](contracts.md#settlement)** - Automated trade settlement
-
-### Governance & Operations
-
-- **[Corporate Governance](contracts.md#governance)** - Board and shareholder decision making
-- **[Accounting Ledgers](contracts.md#ledgers)** - Double-entry bookkeeping
-- **[Subscription Billing](contracts.md#billing)** - Payment and subscription management
-
-## Getting Started
-
-### For Developers
-
-1. **Prerequisites**
-
-   - Foundry development environment
-   - Node.js 18+ and npm/yarn
-   - Basic understanding of Solidity and Diamond patterns
-
-2. **Installation**
-
-   ```bash
-   git clone https://github.com/capsign/protocol.git
-   cd protocol
-   forge install
-   ```
-
-3. **Development Setup**
-
-   ```bash
-   # Copy environment template
-   cp .env.example .env
-
-   # Install dependencies
-   npm install
-
-   # Run tests
-   forge test
-   ```
-
-### For Integrators
-
-Use the CMX Protocol SDK for easy integration:
-
-```bash
-npm install @capsign/sdk
-```
-
-```javascript
-import { CMXClient, Network } from "@capsign/sdk";
-
-const client = new CMXClient({
-  network: Network.BASE_SEPOLIA,
-  privateKey: process.env.PRIVATE_KEY,
-});
-
-// Create a tokenized asset
-const asset = await client.assets.create({
-  name: "Example Corp Class A",
-  symbol: "EXMP-A",
-  totalShares: 1000000,
-});
-```
-
-## Security Considerations
-
-### Security Status
-
-- **Active Development** - Contracts are in active development and testing
-- **Internal Review** - Ongoing internal security review and testing
-- **Future Audits** - Professional security audits planned before mainnet deployment
-
-### Best Practices
-
-- All privileged functions use multi-signature requirements
-- Role-based access control with time-delayed administrative actions
-- Emergency pause mechanisms for critical functions
-- Comprehensive event logging for transparency
-
-## Deployment Networks
-
-### Testnets
-
-- **Base Sepolia** - Primary testnet deployment
-- **Ethereum Sepolia** - Cross-chain testing
-
-### Mainnets
-
-- **Base Mainnet** - Primary production deployment
-- **Ethereum Mainnet** - Cross-chain bridge deployment
-
-## Documentation Structure
-
-- **[Smart Contracts](contracts.md)** - Detailed contract documentation
-- **[Architecture](architecture.md)** - System design and patterns
-- **[Deployment Guide](deployment.md)** - How to deploy the protocol
-- **[Integration Guide](integration.md)** - SDK and API usage
-- **[Governance](governance.md)** - Protocol governance mechanisms
-- **[Security](security.md)** - Security model and considerations
-
-## Developer Resources
-
-- **[API Reference](api.md)** - Complete API documentation
-- **[SDK Documentation](sdk.md)** - TypeScript SDK guide
-- **[Testing Guide](testing.md)** - How to test integrations
-- **[Examples](examples.md)** - Code examples and tutorials
-
-## Compliance Documentation
-
-- **[Regulatory Framework](compliance.md)** - Regulatory compliance approach
-- **[KYC/AML Implementation](kyc-aml.md)** - Identity verification system
-- **[Securities Law](securities.md)** - Securities regulation compliance
-
-## License
-
-Business Source License 1.1 (BUSL-1.1) - See [LICENSE](../LICENSE.md) for details.
-
-## Support
-
-- **Documentation**: [docs.capsign.com](https://docs.capsign.com)
-- **Technical Support**: [support@capsign.com](mailto:support@capsign.com)
-- **Discord**: [Join our Discord](https://discord.gg/capsign)
-- **GitHub Issues**: [Report issues](https://github.com/capsign/protocol/issues)
+**Next**: [Architecture](/protocol/architecture.md) →

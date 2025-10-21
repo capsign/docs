@@ -4,12 +4,17 @@ Complete your identity verification to unlock full access to CapSign features. T
 
 ## Why Identity Verification?
 
-CapSign operates in regulated markets and requires identity verification for:
+CapSign operates in private securities markets and requires KYC (Know Your Customer) compliance for investment activities. This protects both you and the platform while ensuring regulatory compliance.
 
-- **Regulatory compliance** - Meeting KYC/AML legal requirements
-- **Fraud prevention** - Protecting you and the platform from fraud
-- **Access to features** - Unlocking platform capabilities
-- **Trust and security** - Creating a trusted ecosystem
+## Verification Provider
+
+CapSign uses **Persona** for identity verification, integrated through **Bridge.xyz**. This provides:
+
+- Real-time identity verification
+- Global coverage across multiple jurisdictions
+- Advanced fraud detection
+- Compliance with KYC/AML regulations
+- Seamless user experience
 
 ## Verification Process Overview
 
@@ -59,10 +64,11 @@ The verification process typically takes **5-15 minutes** to complete, with **24
 1. Log in to your CapSign account
 2. Navigate to **Settings** → **Verification**
 3. Click **Start Verification**
+4. You'll be redirected to **Persona** (via Bridge.xyz integration)
 
-### Step 2: Personal Information
+### Step 2: Complete Persona Verification
 
-Provide accurate personal details:
+The Persona interface will guide you through:
 
 **Required Information**:
 - Full legal name (as it appears on ID)
@@ -79,6 +85,8 @@ Provide accurate personal details:
 - Use your current, legal residential address
 
 ### Step 3: Upload Documents
+
+Persona will prompt you to upload:
 
 Upload clear photos of your documents:
 
@@ -100,21 +108,23 @@ Upload clear photos of your documents:
 
 ### Step 4: Liveness Check
 
-Take a selfie to confirm you are who you claim to be:
+Persona will guide you through the liveness check:
 
-1. Click **Take Selfie** when prompted
-2. Follow on-screen instructions:
+1. **Take Selfie** when prompted
+2. Follow Persona's on-screen instructions:
    - Look directly at camera
    - Ensure good lighting
    - Remove glasses if prompted
-   - Follow any movement instructions
+   - Follow any movement instructions (Persona's liveness detection)
 3. Submit the photo
 
 **Why Liveness Check?**
 - Prevents fraud using stolen IDs
 - Confirms you are physically present
 - Matches your face to ID photo
-- Required by regulations
+- Required by KYC/AML regulations
+
+Persona uses advanced liveness detection to ensure verification security.
 
 ### Step 5: Additional Questions (If Applicable)
 
@@ -147,34 +157,73 @@ You may be asked additional questions:
 
 ### What Happens During Review:
 
-1. **Automated Checks**:
-   - Document authenticity verification
+**Persona processes your verification**:
+
+1. **Automated Checks** (Real-time):
+   - Document authenticity verification via Persona
    - Data extraction and validation
    - Sanctions and PEP screening
-   - Fraud detection algorithms
+   - Advanced fraud detection algorithms
+   - Liveness detection validation
 
-2. **Manual Review** (if needed):
-   - Human verification of documents
+2. **Manual Review** (if flagged):
+   - Persona's compliance team reviews edge cases
    - Cross-reference information
    - Additional due diligence
    - Quality assurance checks
+
+3. **Bridge.xyz Integration**:
+   - Results synced to CapSign via Bridge.xyz
+   - Attestation automatically created on success
 
 ## After Verification
 
 ### Verification Approved
 
-When approved, you'll receive:
+When Persona approves your verification:
 
-1. **Email Notification** - Confirmation of successful verification
-2. **On-Chain Attestation** - KYC credential issued via Ethereum Attestation Service
-3. **Platform Access** - Full access to CapSign features
-4. **Dashboard Badge** - Verified status displayed on your profile
+1. **Persona Confirmation** - Verification complete notification
+2. **Bridge.xyz Sync** - Results synced to CapSign
+3. **On-Chain Attestation** - KYC credential issued via Ethereum Attestation Service
+4. **Platform Access** - Full access to CapSign investment features
+5. **Dashboard Badge** - Verified status displayed on your profile
 
 Your attestation includes:
-- Verification level (Basic, Enhanced, etc.)
+- Verification level (verified via Persona)
 - Issue date and expiration
-- Issuer (CapSign or verification partner)
-- No personal data (privacy-preserving)
+- Issuer (CapSign via Bridge.xyz/Persona)
+- No personal data stored on-chain (privacy-preserving)
+
+## Issuer-Issued Attestations
+
+Beyond identity verification, **issuers can issue additional attestations** for their users:
+
+### Accreditation Attestations
+
+Issuers (fund managers, companies) can verify and attest to:
+- **Accredited Investor Status** - After reviewing documentation
+- **Qualified Purchaser Status** - For high net worth investors
+- **Professional Investor** - Based on credentials or employment
+
+### How Issuers Issue Attestations
+
+1. Issuer receives investor documentation (income, net worth, etc.)
+2. Issuer reviews and verifies information
+3. Issuer issues attestation through **CapSign UI**:
+   - Navigate to their admin panel
+   - Select user to attest
+   - Choose attestation type (e.g., Accredited Investor)
+   - Sign and issue on-chain attestation
+4. Attestation immediately available to investor
+
+### Why Issuer Attestations?
+
+- **Compliance** - Issuers must verify investor qualifications
+- **Privacy** - Investors don't share financial details with CapSign
+- **Portable** - Attestations can be used across multiple offerings
+- **Transparent** - On-chain verification for regulators
+
+This is used primarily for **investment qualification** in private securities offerings.
 
 ### If Verification Fails
 
@@ -204,11 +253,12 @@ If your verification is rejected:
 
 ### How Your Data is Protected
 
-- **Encryption**: All documents encrypted in transit and at rest
-- **Access Control**: Only authorized compliance personnel can access
+- **Persona Security**: Data encrypted in transit and at rest by Persona
+- **Bridge.xyz Integration**: Secure data flow between Persona and CapSign
+- **Access Control**: Only authorized Persona compliance team can access documents
 - **Audit Logs**: All access is logged and monitored
 - **Compliance**: GDPR, CCPA, and other privacy laws
-- **Data Retention**: Documents stored per regulatory requirements, then deleted
+- **Data Retention**: Documents stored per regulatory requirements by Persona
 
 ### What Goes On-Chain
 

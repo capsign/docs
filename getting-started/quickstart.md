@@ -8,9 +8,8 @@ To create your account, you'll need:
 
 - A device with **Face ID** or **Touch ID** (iOS, Mac, Android with biometric support)
 - A stable **internet connection**
-- An email address
 
-That's it! No government ID needed yet - you can explore the platform immediately.
+That's it! No email, no government ID - just your biometric authentication. You can start exploring immediately.
 
 ## Step 1: Create Your Account
 
@@ -19,11 +18,10 @@ Visit [app.capsign.com](https://app.capsign.com) to create your account.
 ### What Happens:
 
 1. **Click "Sign Up"** or "Get Started"
-2. **Enter your email address** - Used for notifications and account recovery
-3. **Set up biometric authentication**
+2. **Set up biometric authentication**
    - Your device will prompt you to use Face ID or Touch ID
    - This creates a secure passkey stored in your device's secure enclave
-4. **Create your smart wallet**
+3. **Create your smart wallet**
    - A smart account (ERC-4337) is automatically created
    - Your wallet address is derived from your passkey's public key
    - No seed phrases to manage!
@@ -36,9 +34,9 @@ Your CapSign account uses a **smart contract wallet** that:
 - Can be recovered through social recovery mechanisms
 - Works seamlessly across multiple devices
 
-**Time required**: 2-3 minutes
+**Time required**: 30 seconds
 
-## Step 2: Explore the Platform (Optional)
+## Step 2: Explore the Platform
 
 You can now explore CapSign and familiarize yourself with the interface. Many features are available immediately without identity verification.
 
@@ -61,27 +59,31 @@ CapSign operates in private securities markets and requires KYC (Know Your Custo
 ### Verification Process:
 
 1. **Navigate to Settings** → **Identity Verification**
-2. **Provide basic information**
-   - Full legal name
-   - Date of birth
-   - Address
-   - Nationality
-3. **Upload ID documents**
-   - Government-issued ID (passport, driver's license, or national ID)
-   - Proof of address (utility bill, bank statement)
-4. **Complete liveness check**
-   - Take a selfie for identity confirmation
-   - Prevents fraud and ensures you are who you claim to be
-5. **Wait for verification**
-   - Automated checks: 1-5 minutes
-   - Manual review (if needed): 1-24 hours
+2. **Complete verification through Persona**
+   - CapSign uses Persona (via Bridge.xyz integration) for identity verification
+   - Provide basic information and ID documents
+   - Complete liveness check with selfie
+3. **Automated verification**
+   - Persona performs real-time identity checks
+   - Results typically within 1-5 minutes
+   - Manual review if needed: 1-24 hours
 
 ### What Happens Behind the Scenes:
 
-- Your information is verified through third-party KYC providers
+- Your information is verified through **Persona** via **Bridge.xyz integration**
 - An **attestation** is created on-chain via Ethereum Attestation Service (EAS)
 - This attestation proves your identity without revealing personal details
 - The attestation is linked to your wallet address
+
+### Issuer-Issued Attestations
+
+In addition to identity verification, **issuers can issue attestations** for their users directly through the CapSign UI:
+
+- **Accredited Investor Status** - Issuers verify and attest to accreditation
+- **Professional Credentials** - Custom attestations for qualifications
+- **Custom Attestations** - Application-specific credentials
+
+These issuer attestations are used primarily for investment qualification and compliance.
 
 **Time required**: 5-10 minutes (plus review time)
 

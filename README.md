@@ -1,7 +1,5 @@
 # CapSign Documentation
 
-Welcome to CapSign, a comprehensive platform for digital identity, smart accounts, and document management built on blockchain technology.
-
 ## What is CapSign?
 
 CapSign is a **private investing platform** that combines cutting-edge blockchain technology with user-friendly design to provide:

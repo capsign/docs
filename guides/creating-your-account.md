@@ -8,7 +8,6 @@ Before starting, ensure you have:
 
 - A device with **Face ID**, **Touch ID**, or **Windows Hello**
 - A supported browser (Chrome, Safari, Edge, Firefox)
-- A valid email address
 - Stable internet connection
 
 ## Step-by-Step Account Creation
@@ -21,16 +20,7 @@ Navigate to [app.capsign.com](https://app.capsign.com)
 
 On the homepage, click the "Sign Up" or "Get Started" button.
 
-### Step 3: Enter Your Email
-
-1. Enter your email address
-2. This will be used for:
-   - Account notifications
-   - Verification emails
-   - Account recovery
-3. Click "Continue"
-
-### Step 4: Create Your Passkey
+### Step 3: Create Your Passkey
 
 Your browser will prompt you to create a passkey:
 
@@ -49,7 +39,7 @@ Your browser will prompt you to create a passkey:
 - Use PIN, fingerprint, or face recognition
 - Passkey is stored securely on your device
 
-### Step 5: Smart Account Creation
+### Step 4: Smart Account Creation
 
 Once your passkey is created:
 
