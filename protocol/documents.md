@@ -107,7 +107,7 @@ interface IWalletDocuments {
     external view returns (bool signed, uint256 timestamp);
   
   // Get all documents
-  function getWalletDocuments() external view returns (bytes32[] memory);
+  function getAllDocuments() external view returns (bytes32[] memory);
   
   // Get documents by category
   function getDocumentsByCategory(string calldata category) 
@@ -255,7 +255,7 @@ function testUploadDocument() public {
     title: "Test Document"
   });
   
-  assertEq(wallet.getWalletDocuments().length, 1);
+  assertEq(wallet.getAllDocuments().length, 1);
 }
 
 function testSignDocument() public {

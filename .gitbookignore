@@ -1,0 +1,14 @@
+# Files and folders to exclude from GitBook publishing
+# Uncomment the lines below to hide internal docs from public GitBook
+
+# Internal documentation (development notes, roadmaps)
+# internal/
+
+# Draft content
+# drafts/
+
+# Work in progress
+# *.draft.md
+
+# Architecture notes (already in docs but may want to hide)
+# architecture/

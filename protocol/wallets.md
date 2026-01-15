@@ -94,7 +94,7 @@ interface IWalletDocuments {
   function signDocument(bytes32 documentId) external;
   
   // Get documents
-  function getWalletDocuments() external view returns (bytes32[] memory);
+  function getAllDocuments() external view returns (bytes32[] memory);
 }
 ```
 
