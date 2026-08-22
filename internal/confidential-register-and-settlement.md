@@ -1,6 +1,6 @@
 # Confidential Register and Settlement
 
-**Status**: Phase 1 advanced + Phase 4 foundation + selective disclosure UX 2026-08-22 — Poseidon Merkle + Halo2 verifier wired; CapSign-native attestation gates; Anduril demo issues KYC/lot attestations. Real JoinSplit prove→verify e2e via TripleBooks `gen-test-proof --same-asset` + golden fixture (`JoinSplitE2ETest`; see `packages/privacy/PROVER.md`). Genealogy (`acquisitionDate`, `parentCommitment`) and `costBasis` bound in note commitment; two-input merge supports cross-date consolidation with `max(acq)` + value-weighted cost basis + multi-parent `Poseidon(cm0,cm1)`. **Selective disclosure**: `@capsign/privacy-scanner` roles (`public` / `shareholder` / `issuer` / `markets` / `regulator`) via CLI `--role` + `discloseForRole`; interface demo `/demo/confidential-register`; Goldsky deferred. **Markets**: reservation + attested capability (≥ Q under R, no IVK) + confidential settle + `TradePrinted` (`CAPABILITY.md`). **Gas/prove**: local measurements in `packages/privacy/GAS.md` (shield ~2.8M, settle/JoinSplit ~5.9M, prove ~510ms / ~2s wall).  
+**Status**: Phase 1 advanced + Phase 4 foundation + selective disclosure UX 2026-08-22 — Poseidon Merkle + Halo2 verifier wired; CapSign-native attestation gates; Anduril demo issues KYC/lot attestations. Real JoinSplit prove→verify e2e via TripleBooks `gen-test-proof --same-asset` + golden fixture (`JoinSplitE2ETest`; see `packages/privacy/PROVER.md`). Genealogy (`acquisitionDate`, `parentCommitment`) and `costBasis` bound in note commitment; two-input merge supports cross-date consolidation with `max(acq)` + value-weighted cost basis + multi-parent `Poseidon(cm0,cm1)`. **Selective disclosure**: `@capsign/privacy-scanner` roles (`public` / `shareholder` / `issuer` / `markets` / `regulator`) via CLI `--role` + `discloseForRole`; interface demo `/demo/confidential-register`; Goldsky deferred. **Regulator epoch grants**: onchain `RegulatorEpochGrantFacet` + offchain sealed unwrap (`EpochGrantStore`); exam access window demo (issue → view → expire/revoke); Markets barrier enforced. **Markets**: reservation + attested capability (≥ Q under R, no IVK) + confidential settle + `TradePrinted` (`CAPABILITY.md`). **Gas/prove**: local measurements in `packages/privacy/GAS.md` (shield ~2.8M, settle/JoinSplit ~5.9M, prove ~510ms / ~2s wall).  
 **Audience**: CapSign / Eqvista engineering and product  
 **Scope**: Design doc + Phase 1 implementation under `protocol/packages/privacy` (see package README).
 
@@ -213,6 +213,14 @@ Align with Axiomatic privacy keys; CapSign roles map as follows.
 | Markets | Capability proofs only | Prove predicates (accredited, not restricted, inventory ≥ size) without holdings dump |
 | Chain observer | Opt-in aggregates only | No viewing keys |
 
+**Regulator exam access window (engineering):**
+
+1. Issuer/TA issues an onchain grant (`RegulatorEpochGrantFacet`): `[epochStart, epochEnd]`, grantee, scope, `materialCommitment`, optional dual-control approvers.
+2. Offchain custody seals viewing material; commitment is stored onchain — plaintext never onchain or in disclosure APIs.
+3. Regulator presents grant (custody unwrap or token); scanner checks active (armed, in window, correct grantee, not revoked) then decrypts in-session only.
+4. Fail closed after expiry or revoke. Audit: onchain `EpochGrantAccessed` + offchain append-only log keyed by grant id.
+5. Markets role cannot be a grantee (affiliate barrier); Markets stays on capability proofs.
+
 **Custody rules (operator):**
 
 - IVK is read-only relative to spend key; still sensitive (full plaintext of incoming notes in scope).
@@ -355,7 +363,7 @@ Operational split: register scanner under TA / issuer tenancy; Markets under Mar
 
 - [x] Party / certified lot attestations wired into shield / transfer gates — CapSign-native `IRegisterAttestation` on `ConfidentialRegisterFacet` (KYC / accredited / shareholder / certified lot); PII offchain
 - [x] Revocation / expiry handling in attestation validity checks
-- [~] Regulator epoch viewing grant flow — **API/UI stub** (`regulator` role); KMS delivery + counsel instrument still open (§15)
+- [x] Regulator epoch viewing grant flow — **onchain `RegulatorEpochGrantFacet`** (window, revoke, dual-control arming, Markets barrier, access events) + **offchain `EpochGrantStore` unwrap** in scanner; demo UI exam access window; KMS/HSM custody + counsel instrument still open (§15)
 
 ### Phase 4: Markets confidential settle
 
@@ -377,7 +385,7 @@ Operational split: register scanner under TA / issuer tenancy; Markets under Mar
 1. **Affiliate barrier:** If CapSign / Eqvista operates both TA register and Markets, what legal and operational separation is required so Markets access to trade prints and match data does not become "constructive" access to the full confidential register?
 2. **Member tape:** Is price / size / time for signed-in members sufficient for applicable ATS / broker-dealer / state regimes, or are additional fields required (and do any of those re-identify holders)?
 3. **Opt-in public aggregates:** When an issuer publishes authorized / outstanding onchain, does that create Reg FD / disclosure or offering-document consistency obligations?
-4. **Regulator viewing grants:** Preferred legal instrument and retention for epoch IVK / viewing key disclosure (exam, subpoena, ongoing supervision).
+4. **Regulator viewing grants:** Preferred legal instrument and retention for epoch IVK / viewing key disclosure (exam, subpoena, ongoing supervision). **Engineering:** onchain grant registry + offchain sealed unwrap landed; production KMS/HSM dual-control custody and retention policy still counsel-owned.
 5. **Attestations vs transfer agent books of record:** Product framing is cutover to CapSign confidential register as SoR after migration import. Confirm with counsel how books-and-records obligations map when CapSign is authoritative, what transitional dual-run documentation is required during migration, and whether selective disclosure / export to legacy tools satisfies any residual offchain TA requirements.
 6. **Capability proofs in lieu of broker diligence files:** What still must be retained in cleartext offchain for AML / CIP even if Markets never sees full holdings?
 7. **Cross-border:** Any jurisdictions where hiding outstanding from the public chain conflicts with corporate transparency statutes (while still allowing TA visibility)?
@@ -401,8 +409,8 @@ Operational split: register scanner under TA / issuer tenancy; Markets under Mar
 | `docs/tokens/lot-based-accounting.md` | Product lot model |
 | `docs/architecture/TOKEN_DIAMOND_ARCHITECTURE.md` | Diamond / facet layout |
 | `docs/internal/` | Internal design docs (this file) |
-| `protocol/packages/privacy/` | **Phase 1 + Phase 4 + disclosure UX**: ConfidentialRegisterFacet, ConfidentialSettleFacet, LotNoteCrypto, Anduril cutover-import, PROVER.md, CAPABILITY.md, GAS.md |
-| `protocol/packages/privacy/scanner/` | **Selective disclosure + IVK scanner**: `discloseForRole`, CLI `--role`, RPC indexer — **TA tenancy for scans; Markets = capability only** |
+| `protocol/packages/privacy/` | **Phase 1 + Phase 4 + disclosure UX**: ConfidentialRegisterFacet, ConfidentialSettleFacet, **RegulatorEpochGrantFacet**, LotNoteCrypto, Anduril cutover-import, PROVER.md, CAPABILITY.md, GAS.md |
+| `protocol/packages/privacy/scanner/` | **Selective disclosure + IVK scanner**: `discloseForRole`, epoch grant store / unwrap, CLI `--role`, RPC indexer — **TA tenancy for scans; Markets = capability only** |
 | `interface/src/app/demo/confidential-register/` | Anduril role demo UI + `GET /api/demo/confidential-register` |
 | `protocol/packages/ledger/` | ProofRegistry / SnapshotAnchor (REGISTER_ROOT anchoring) |
 
