@@ -7,5 +7,6 @@ This section contains internal development notes, roadmaps, and technical decisi
 ## Contents
 
 - [API Roadmap](api-roadmap.md) - Planned API endpoints and priorities
+- [Confidential Register and Settlement](confidential-register-and-settlement.md) - Design for Halo2 UTXO confidential register, Markets settle, selective disclosure
 - [Seed Script Architecture](seed-script.md) - How the demo seed script works
 - [Technical Debt](technical-debt.md) - Known issues and planned refactoring
