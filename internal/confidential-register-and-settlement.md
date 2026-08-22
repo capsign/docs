@@ -1,6 +1,6 @@
 # Confidential Register and Settlement
 
-**Status**: Phase 1 advanced + Phase 4 foundation + selective disclosure UX 2026-08-22 — Poseidon Merkle + Halo2 verifier wired; CapSign-native attestation gates; Anduril demo issues KYC/lot attestations. Real JoinSplit prove→verify e2e via TripleBooks `gen-test-proof --same-asset` + golden fixture (`JoinSplitE2ETest`; see `packages/privacy/PROVER.md`). Genealogy (`acquisitionDate`, `parentCommitment`) and `costBasis` bound in note commitment; two-input merge supports cross-date consolidation with `max(acq)` + value-weighted cost basis + multi-parent `Poseidon(cm0,cm1)`. **Selective disclosure**: `@capsign/privacy-scanner` roles (`public` / `shareholder` / `issuer` / `markets` / `regulator`) via CLI `--role` + `discloseForRole`; interface demo `/demo/confidential-register`; Goldsky deferred. **Regulator epoch grants**: onchain `RegulatorEpochGrantFacet` + offchain sealed unwrap (`EpochGrantStore`); exam access window demo (issue → view → expire/revoke); Markets barrier enforced. **Markets**: reservation + attested capability (≥ Q under R, no IVK) + confidential settle + `TradePrinted` (`CAPABILITY.md`). **Gas/prove**: local measurements in `packages/privacy/GAS.md` (shield ~2.8M, settle/JoinSplit ~5.9M, prove ~510ms / ~2s wall).  
+**Status**: Phase 1 advanced + Phase 4 foundation + selective disclosure UX + shielded cash DVP 2026-08-22 — Poseidon Merkle + Halo2 verifier wired; CapSign-native attestation gates; Anduril demo issues KYC/lot attestations. Real JoinSplit prove→verify e2e via TripleBooks `gen-test-proof --same-asset` + golden fixture (`JoinSplitE2ETest`; see `packages/privacy/PROVER.md`). Genealogy (`acquisitionDate`, `parentCommitment`) and `costBasis` bound in note commitment; two-input merge supports cross-date consolidation with `max(acq)` + value-weighted cost basis + multi-parent `Poseidon(cm0,cm1)`. **Selective disclosure**: `@capsign/privacy-scanner` roles (`public` / `shareholder` / `issuer` / `markets` / `regulator`) via CLI `--role` + `discloseForRole`; interface demo `/demo/confidential-register`; Goldsky deferred. **Regulator epoch grants**: onchain `RegulatorEpochGrantFacet` + offchain sealed unwrap (`EpochGrantStore`); exam access window demo (issue → view → expire/revoke); Markets barrier enforced. **Markets**: reservation + attested capability (≥ Q under R, no IVK) + confidential settle + `TradePrinted` (`CAPABILITY.md`) + **shielded cash** (`ConfidentialCashFacet` / `settleDvp`; `ShieldedCashDvpTest`). **Gas/prove**: local measurements in `packages/privacy/GAS.md` (shield ~2.8M, settle/JoinSplit ~5.9M, prove ~510ms / ~2s wall).  
 **Audience**: CapSign / Eqvista engineering and product  
 **Scope**: Design doc + Phase 1 implementation under `protocol/packages/privacy` (see package README).
 
@@ -369,6 +369,7 @@ Operational split: register scanner under TA / issuer tenancy; Markets under Mar
 
 - [x] Offchain matcher → settlement intent schema — **onchain `SettlementInstruction`** (`IConfidentialSettle`); matcher remains offchain
 - [x] Onchain confidential settle for matched trades — **`ConfidentialSettleFacet.settleEquity`** (JoinSplit DVP; `MarketsCapabilitySettleTest` with `emergencyOperatorTrustedMode=false`)
+- [x] Shielded cash leg for DVP — **`ConfidentialCashFacet`** (`shieldStablecoin` / cash JoinSplit / unshield) + **`settleDvp`**; `ShieldedCashDvpTest` with real Halo2 same-asset fixture; unshield golden fixture + cash reservation still open
 - [~] Member tape API (price / size / time) — **onchain `TradePrinted`**; authenticated offchain tape API deferred
 - [x] Capability proofs for eligibility (no holdings dump) — **attested path + ZK verifier hook**; full ≥ Q Halo2 circuit deferred ([CAPABILITY.md](../../protocol/packages/privacy/CAPABILITY.md))
 - [x] Enforce Markets vs TA key separation in infra — **roles `MARKETS_ROLE` vs register operator; Markets never receives IVK**; counsel affiliate barrier still open (§15)
@@ -409,7 +410,7 @@ Operational split: register scanner under TA / issuer tenancy; Markets under Mar
 | `docs/tokens/lot-based-accounting.md` | Product lot model |
 | `docs/architecture/TOKEN_DIAMOND_ARCHITECTURE.md` | Diamond / facet layout |
 | `docs/internal/` | Internal design docs (this file) |
-| `protocol/packages/privacy/` | **Phase 1 + Phase 4 + disclosure UX**: ConfidentialRegisterFacet, ConfidentialSettleFacet, **RegulatorEpochGrantFacet**, LotNoteCrypto, Anduril cutover-import, PROVER.md, CAPABILITY.md, GAS.md |
+| `protocol/packages/privacy/` | **Phase 1 + Phase 4 + disclosure UX + shielded cash**: ConfidentialRegisterFacet, ConfidentialCashFacet, ConfidentialSettleFacet, **RegulatorEpochGrantFacet**, LotNoteCrypto, Anduril cutover-import, PROVER.md, CAPABILITY.md, GAS.md |
 | `protocol/packages/privacy/scanner/` | **Selective disclosure + IVK scanner**: `discloseForRole`, epoch grant store / unwrap, CLI `--role`, RPC indexer — **TA tenancy for scans; Markets = capability only** |
 | `interface/src/app/demo/confidential-register/` | Anduril role demo UI + `GET /api/demo/confidential-register` |
 | `protocol/packages/ledger/` | ProofRegistry / SnapshotAnchor (REGISTER_ROOT anchoring) |
@@ -441,4 +442,5 @@ Operational split: register scanner under TA / issuer tenancy; Markets under Mar
 | Updates | Amend this file as counsel answers §15 and Phase 0 encoding choice lands; 2026-08-22 product framing: cutover SoR (not permanent shadow); Phase 4 foundation: Markets reservation + attested capability + confidential JoinSplit settle; selective disclosure UX + GAS.md |
 | Phase 1 | 2026-08-22 — Poseidon + Halo2 verifier + attestation gates + Anduril demo attestations (`protocol/packages/privacy`) |
 | Phase 4 foundation | 2026-08-22 — `ConfidentialSettleFacet` reservation registry, attested capability (ZK deferred), JoinSplit settle + `TradePrinted` |
+| Shielded cash DVP | 2026-08-22 — `ConfidentialCashFacet` + `settleDvp`; public USDC cleartext cash leg replaced for confidential path |
 | Selective disclosure UX | 2026-08-22 — role CLI/API + interface demo; local gas/prove notes in GAS.md |
