@@ -1,33 +1,34 @@
 # Confidential Register and Settlement
 
-**Status**: Phase 1 advanced 2026-08-22 — Poseidon Merkle + Halo2 verifier wired; CapSign-native attestation gates; Anduril demo issues KYC/lot attestations. Real JoinSplit prove→verify e2e via TripleBooks `gen-test-proof --same-asset` + golden fixture (`JoinSplitE2ETest`; see `packages/privacy/PROVER.md`). Genealogy (`acquisitionDate`, `parentCommitment`) and `costBasis` bound in note commitment; two-input merge supports cross-date consolidation with `max(acq)` + value-weighted cost basis + multi-parent `Poseidon(cm0,cm1)`.  
+**Status**: Phase 1 advanced + Phase 4 foundation + selective disclosure UX 2026-08-22 — Poseidon Merkle + Halo2 verifier wired; CapSign-native attestation gates; Anduril demo issues KYC/lot attestations. Real JoinSplit prove→verify e2e via TripleBooks `gen-test-proof --same-asset` + golden fixture (`JoinSplitE2ETest`; see `packages/privacy/PROVER.md`). Genealogy (`acquisitionDate`, `parentCommitment`) and `costBasis` bound in note commitment; two-input merge supports cross-date consolidation with `max(acq)` + value-weighted cost basis + multi-parent `Poseidon(cm0,cm1)`. **Selective disclosure**: `@capsign/privacy-scanner` roles (`public` / `shareholder` / `issuer` / `markets` / `regulator`) via CLI `--role` + `discloseForRole`; interface demo `/demo/confidential-register`; Goldsky deferred. **Markets**: reservation + attested capability (≥ Q under R, no IVK) + confidential settle + `TradePrinted` (`CAPABILITY.md`). **Gas/prove**: local measurements in `packages/privacy/GAS.md` (shield ~2.8M, settle/JoinSplit ~5.9M, prove ~510ms / ~2s wall).  
 **Audience**: CapSign / Eqvista engineering and product  
 **Scope**: Design doc + Phase 1 implementation under `protocol/packages/privacy` (see package README).
 
-This document locks product decisions for a confidential **shadow register for verification** and Markets settlement path on CapSign, reusing TripleBooks / Axiomatic ConfidentialLedger concepts (Halo2 UTXO notes, viewing keys, Rust prover) while preserving CapSign's lot / ERC-7752 model. It does not require replacing the issuer's day-to-day SoR.
+This document locks product decisions for a confidential **register cutover** (CapSign as system of record after migration) and Markets settlement path on CapSign, reusing TripleBooks / Axiomatic ConfidentialLedger concepts (Halo2 UTXO notes, viewing keys, Rust prover) while preserving CapSign's lot / ERC-7752 model.
 
 ---
 
 ## 1. Purpose / goals
 
-Build a **confidential shadow register for verification** (and a **confidential settlement** path for Markets) such that issuers can keep day-to-day systems of record (Carta, Pulley, etc.) while CapSign certifies holdings and identities onchain:
+Build a **confidential CapSign register as system of record** after cutover (and a **confidential settlement** path for Markets). A one-time OCF/CSV snapshot left as a permanent "shadow" goes stale against the day-to-day SoR; that is not the long-term model. Import is a **migration / cutover event**: after cutover, CapSign's confidential register is authoritative. External tools may read via selective disclosure or export; they do not remain a dual SoR.
 
-1. **Import → certify → selectively disclose:** import holdings; certify lots and identities (KYC'd shareholder, certified position); support selective disclosure to authorized parties. The chain is the checkable proof layer, not a forced cutover of the issuer's SoR.
+1. **Import (cutover) → certify → operate as SoR:** migrate holdings from OCF / Carta / equivalent as the cutover event; certify lots and identities (KYC'd shareholder, certified position); thereafter CapSign is the live register. Selective disclosure / export for authorized parties and external consumers.
 2. **Chain observers** do not see holder balances, lot amounts, or default aggregates (authorized / outstanding) unless an issuer opts in.
 3. **Authorized parties** can still operate: issuer / transfer agent (TA) full register view, shareholder own holdings, regulator time-bounded disclosure, Markets capability proofs without full holdings dumps.
 4. **Onchain** remains the certification and conservation layer (KYC'd parties, certified issuers, certified lots / assets; JoinSplit-style value and attribute proofs).
 5. **UX abstracts the chain**: users see register, holdings, and trades; wallets, proofs, and nullifiers stay under the hood (passkeys, sponsored gas; no blockchain jargon in primary flows).
 6. CapSign's existing **UTXO / ERC-7752 lot shape** maps naturally onto Halo2 notes, so genealogy and compliance attributes stay first-class.
 
-Liquidity windows and secondary Markets settlement are **supported use cases** of this stack. They do not define the workstream by themselves.
+Liquidity windows and secondary Markets settlement are **consumers of the live confidential SoR**. They do not define the workstream by themselves. A short **transitional dual-run** during migration is optional if needed; it is not the product.
 
 ---
 
 ## 2. Non-goals
 
-- Replacing the issuer's day-to-day **system of record** (Carta, Pulley, or equivalent) as a mandatory migration. CapSign confidential register is a shadow verification / certification layer; SoR coexistence is the default product framing.
-- Defining this workstream as **liquidity windows first**. Company programs / windows are one potential use case, not the product definition.
-- Replacing CapSign's public lot diamond as the only token model in one cutover. Confidential register is an additive / migration path on CapSign's own stack.
+- Leaving CapSign as a permanent parallel **shadow** of Carta / Pulley / equivalent. Dual SoR is not the long-term model; external tools become readers via selective disclosure / export after cutover.
+- Defining this workstream as **liquidity windows first**. Company programs / windows consume the live confidential SoR; they are not the product definition.
+- Treating a one-time OCF/CSV snapshot import as a finished product without cutover to CapSign as SoR.
+- Replacing CapSign's public lot diamond as the only token model in one engineering step. Confidential register is a migration path on CapSign's own stack (product cutover is still the intent).
 - Making the **operator** (issuer portal / TA server with IVK) unable to see plaintext of notes it is authorized to scan. That is a different problem (FHE / MPC).
 - Public by default disclosure of authorized shares, outstanding shares, or per-holder positions to chain scrapers.
 - Onchain matching of orders (book, price-time priority) as the primary Markets design.
@@ -39,18 +40,26 @@ Liquidity windows and secondary Markets settlement are **supported use cases** o
 
 ## 3. Product positioning (locked)
 
-**Primary framing:** CapSign confidential stack is a **shadow register for verification**, not a mandatory replacement of the issuer's day-to-day SoR (Carta, Pulley, etc.). Flow: import holdings → certify lots and identities (KYC'd shareholder, certified position) → selective disclosure. The chain is the checkable proof layer.
+**Primary framing:** CapSign confidential stack is the **system of record after cutover**, not a permanent shadow verification layer beside Carta / Pulley / equivalent. Flow: migrate (OCF/CSV/Carta import as the cutover event) → certify lots and identities → CapSign confidential register is authoritative. Selective disclosure and export serve external tools and counterparties; they do not keep a second SoR in sync forever.
 
-**Liquidity windows** are a potential use case for this stack. They are not the definition of this workstream.
+**Rationale:** A one-time snapshot kept as a shadow drifts from day-to-day operations. Import is migration, not a long-lived mirror.
+
+**Still allowed:**
+
+- Migration import from OCF / Carta / etc. as the **cutover event**
+- Optional short **transitional dual-run** during migration only (not the product)
+- Liquidity windows / Markets as consumers of the **live** confidential SoR
+
+**Liquidity windows** are a use case for this stack. They are not the definition of this workstream.
 
 **Competitive split:**
 
-| Competitor | What they are | How shadow verification helps |
-|------------|---------------|-------------------------------|
-| **Nasdaq Private Market (NPM)** | Company programs / liquidity windows | Attested holdings and eligibility without spreadsheet email |
-| **Hiive** | Continuous secondary book | Require certified lot + KYC'd wallet before an order is live |
+| Competitor | What they are | How live CapSign register helps |
+|------------|---------------|----------------------------------|
+| **Nasdaq Private Market (NPM)** | Company programs / liquidity windows | Attested holdings and eligibility from the live CapSign SoR, without spreadsheet email |
+| **Hiive** | Continuous secondary book | Require certified lot + KYC'd wallet (from live CapSign register) before an order is live |
 
-Shadow verification helps both models. It does **not** invent top-50 inventory by itself.
+Verification and eligibility check against the **live** CapSign confidential register. CapSign does **not** invent top-50 inventory by itself.
 
 **UX constraints (already agreed):**
 
@@ -316,44 +325,45 @@ Operational split: register scanner under TA / issuer tenancy; Markets under Mar
 - [x] Lock: offchain match, onchain confidential settle
 - [x] Lock: chain as certification layer; PII offchain
 - [x] Lock: abstract blockchain in UX (passkeys, sponsored gas)
-- [x] Lock: shadow register for verification (not mandatory SoR replacement; liquidity windows are a use case, not the definition)
+- [x] Lock: cutover to CapSign confidential register as SoR (import = migration event; optional short transitional dual-run only; liquidity windows / Markets consume the live SoR)
 - [x] Lock: reuse ConfidentialLedger + viewing keys + Rust Halo2 prover conceptually
 - [x] Lock: selective disclosure roles (issuer/TA, shareholder, regulator epoch, Markets capabilities)
 - [ ] Confirm Markets affiliate barrier with counsel / compliance (see §15)
 - [~] Choose note encoding: 1:1 with ERC-7752 lot vs fragment notes — **current assumption: 1:1 lot-like note** (`LotNotePlaintext`); revisit before production cutover
 
-### Phase 1: Contracts + demo fixture (no production cutover)
+### Phase 1: Contracts + cutover-import demo fixture (no production issuer cutover)
 
 - [x] Map CapSign lot fields → note plaintext + attribute commitments — **landed** (`IConfidentialRegister.LotNotePlaintext` + Poseidon `LotNoteCrypto` with genealogy-bound commitment)
 - [x] Stand up verifier + Merkle note tree against a CapSign test diamond — **Poseidon depth-32 Merkle** + `Halo2KZGVerifier` wired; `emergencyOperatorTrustedMode` for demo / emergency
 - [x] Prove JoinSplit conservation for a simple equity lot transfer — **`JoinSplitE2ETest`** with golden fixture from TripleBooks `gen-test-proof --same-asset` (`emergencyOperatorTrustedMode=false`); regen in `packages/privacy/PROVER.md`
 - [x] Genealogy in JoinSplit (transfer/split/merge): bind `acquisitionDate` + `parentCommitment` + `costBasis`; prove single-parent inherit, cross-date `max(acq)`, weighted cost basis, multi-parent `Poseidon(cm0,cm1)` — **landed** (TripleBooks circuit + CapSign `LotNoteCrypto` / fixtures); 3+ input consolidate still chained 2-in
-- [~] IVK scanner materializes a private "cap table" for one issuer — **Foundry** forgeDev decrypt + scan tag; **production** ECDH+AES-GCM in `scripts/note-crypto/`; no production scanner service yet
-- [ ] Document gas / proof size / prove latency on target L2
-- [x] Shadow import demo fixture: fictional Anduril holders → commitments + attestations + `ProofRegistry` `REGISTER_ROOT` anchor (`script/demo/ImportAndurilShadowRegister.s.sol`)
-- [x] Package README + PROVER.md: `protocol/packages/privacy/`
+- [x] IVK scanner materializes a private "cap table" for one issuer — **`@capsign/privacy-scanner`**: RPC `eth_getLogs` indexer, forge-dev (Anduril) + production ECDH decrypt, CLI holdings / holder filter; Goldsky subgraph deferred; spend/nullifier mapping needs spend-key (later)
+- [~] Document gas / proof size / prove latency on target L2 — **local Foundry + prove timings in `packages/privacy/GAS.md`**; Base fee quotes still open
+- [x] Cutover-import demo fixture: fictional Anduril **OCF package** → reduced lots → commitments + attestations + `ProofRegistry` `REGISTER_ROOT` (`script/demo/ImportAndurilShadowRegister.s.sol`; `packages/privacy/scripts/ocf/anduril/`). Markets Issuer stores a **cutover receipt** (classes, holder count, package hash, root if anchored). It does not persist holder quantities. Matching never receives the issuer viewing key.
+- [x] Package README + PROVER.md + GAS.md: `protocol/packages/privacy/`
+- [x] Scanner README + tests: `protocol/packages/privacy/scanner/`
 
 ### Phase 2: Confidential register (issuer / TA / shareholder)
 
 - [ ] Shielded issuance and transfer for one share class
-- [ ] Selective disclosure: issuer full, shareholder own
-- [ ] Opt-in public aggregate commitments (optional flag)
+- [x] Selective disclosure: issuer full, shareholder own — **`discloseForRole` + CLI `--role`**; production per-viewer ECDH library ready; passkey custody UX later
+- [~] Opt-in public aggregate commitments (optional flag) — **CLI/UI `--public-aggregates` demo**; onchain register flag still open
 - [x] Genealogy decryptable to TA; not public by default — **commitment-bound + JoinSplit inheritance**; IVK decrypt for full plaintext graph
-- [ ] UX: register and holdings with no chain jargon
+- [x] UX: register and holdings with no chain jargon — **scanner CLI + `/demo/confidential-register`** (passkeys / sponsored execution language; no JoinSplit copy)
 
 ### Phase 3: Certification hardening
 
 - [x] Party / certified lot attestations wired into shield / transfer gates — CapSign-native `IRegisterAttestation` on `ConfidentialRegisterFacet` (KYC / accredited / shareholder / certified lot); PII offchain
 - [x] Revocation / expiry handling in attestation validity checks
-- [ ] Regulator epoch viewing grant flow
+- [~] Regulator epoch viewing grant flow — **API/UI stub** (`regulator` role); KMS delivery + counsel instrument still open (§15)
 
 ### Phase 4: Markets confidential settle
 
-- [ ] Offchain matcher → settlement intent schema
-- [ ] Onchain confidential settle for matched trades
-- [ ] Member tape API (price / size / time)
-- [ ] Capability proofs for eligibility (no holdings dump)
-- [ ] Enforce Markets vs TA key separation in infra
+- [x] Offchain matcher → settlement intent schema — **onchain `SettlementInstruction`** (`IConfidentialSettle`); matcher remains offchain
+- [x] Onchain confidential settle for matched trades — **`ConfidentialSettleFacet.settleEquity`** (JoinSplit DVP; `MarketsCapabilitySettleTest` with `emergencyOperatorTrustedMode=false`)
+- [~] Member tape API (price / size / time) — **onchain `TradePrinted`**; authenticated offchain tape API deferred
+- [x] Capability proofs for eligibility (no holdings dump) — **attested path + ZK verifier hook**; full ≥ Q Halo2 circuit deferred ([CAPABILITY.md](../../protocol/packages/privacy/CAPABILITY.md))
+- [x] Enforce Markets vs TA key separation in infra — **roles `MARKETS_ROLE` vs register operator; Markets never receives IVK**; counsel affiliate barrier still open (§15)
 
 ### Phase 5: Optional advanced privacy
 
@@ -368,7 +378,7 @@ Operational split: register scanner under TA / issuer tenancy; Markets under Mar
 2. **Member tape:** Is price / size / time for signed-in members sufficient for applicable ATS / broker-dealer / state regimes, or are additional fields required (and do any of those re-identify holders)?
 3. **Opt-in public aggregates:** When an issuer publishes authorized / outstanding onchain, does that create Reg FD / disclosure or offering-document consistency obligations?
 4. **Regulator viewing grants:** Preferred legal instrument and retention for epoch IVK / viewing key disclosure (exam, subpoena, ongoing supervision).
-5. **Attestations vs transfer agent books of record:** Product framing is shadow verification (certified mirror / proof layer) alongside the issuer's day-to-day SoR. Confirm with counsel whether the confidential onchain register may also serve as books and records in any regime, or must remain a cryptographically certified mirror of an offchain TA / issuer SoR.
+5. **Attestations vs transfer agent books of record:** Product framing is cutover to CapSign confidential register as SoR after migration import. Confirm with counsel how books-and-records obligations map when CapSign is authoritative, what transitional dual-run documentation is required during migration, and whether selective disclosure / export to legacy tools satisfies any residual offchain TA requirements.
 6. **Capability proofs in lieu of broker diligence files:** What still must be retained in cleartext offchain for AML / CIP even if Markets never sees full holdings?
 7. **Cross-border:** Any jurisdictions where hiding outstanding from the public chain conflicts with corporate transparency statutes (while still allowing TA visibility)?
 
@@ -391,7 +401,9 @@ Operational split: register scanner under TA / issuer tenancy; Markets under Mar
 | `docs/tokens/lot-based-accounting.md` | Product lot model |
 | `docs/architecture/TOKEN_DIAMOND_ARCHITECTURE.md` | Diamond / facet layout |
 | `docs/internal/` | Internal design docs (this file) |
-| `protocol/packages/privacy/` | **Phase 1**: ConfidentialRegisterFacet (Poseidon Merkle, Halo2 verifier wiring, CapSign-native attestations), LotNoteCrypto, Anduril demo fixture import, PROVER.md |
+| `protocol/packages/privacy/` | **Phase 1 + Phase 4 + disclosure UX**: ConfidentialRegisterFacet, ConfidentialSettleFacet, LotNoteCrypto, Anduril cutover-import, PROVER.md, CAPABILITY.md, GAS.md |
+| `protocol/packages/privacy/scanner/` | **Selective disclosure + IVK scanner**: `discloseForRole`, CLI `--role`, RPC indexer — **TA tenancy for scans; Markets = capability only** |
+| `interface/src/app/demo/confidential-register/` | Anduril role demo UI + `GET /api/demo/confidential-register` |
 | `protocol/packages/ledger/` | ProofRegistry / SnapshotAnchor (REGISTER_ROOT anchoring) |
 
 ### TripleBooks / Axiomatic (reuse conceptually)
@@ -418,5 +430,7 @@ Operational split: register scanner under TA / issuer tenancy; Markets under Mar
 |-------|-------|
 | Created | 2026-08-21 |
 | Owner | CapSign protocol + product |
-| Updates | Amend this file as counsel answers §15 and Phase 0 encoding choice lands |
+| Updates | Amend this file as counsel answers §15 and Phase 0 encoding choice lands; 2026-08-22 product framing: cutover SoR (not permanent shadow); Phase 4 foundation: Markets reservation + attested capability + confidential JoinSplit settle; selective disclosure UX + GAS.md |
 | Phase 1 | 2026-08-22 — Poseidon + Halo2 verifier + attestation gates + Anduril demo attestations (`protocol/packages/privacy`) |
+| Phase 4 foundation | 2026-08-22 — `ConfidentialSettleFacet` reservation registry, attested capability (ZK deferred), JoinSplit settle + `TradePrinted` |
+| Selective disclosure UX | 2026-08-22 — role CLI/API + interface demo; local gas/prove notes in GAS.md |
